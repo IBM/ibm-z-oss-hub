@@ -1,2 +1,2 @@
-# oss-on-ibmz-hub
+# ibm-z-oss-hub
 Open source software hub for IBM Z
