@@ -1,0 +1,88 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    pre {background-color: #eeeeee; display: inline-block; padding: 12px }
+    img {height: 200px; width: auto;}
+    .note {border: 1px solid #cccccc; padding: 10px;}
+  </style>
+
+
+</head>
+<body>
+<div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
+<div class="container" style="padding-top: 30px; padding-bottom: 60px;">
+<h1>rabbitmq</h1>
+<p/><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Rabbitmq_logo.png" width=200 height=200 alt="RabbitMQ"><p/>
+<span>RabbitMQ is open source message broker software (sometimes called message-oriented middleware) that implements the Advanced Message Queuing Protocol (AMQP). The RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover. Client libraries to interface with the broker are available for all major programming languages.RabbitMQ is open source message broker software (sometimes called message-oriented middleware) that implements the Advanced Message Queuing Protocol (AMQP). The RabbitMQ server is written in the Erlang programming language and is built on the Open Telecom Platform framework for clustering and failover. Client libraries to interface with the broker are available for all major programming languages.
+</span>
+<p/>
+<span><em>See <a href="https://www.rabbitmq.com/">rabbitmq.com</a> for more information</em></span>
+<p/>
+<b>This image is built to run on the IBM Z architecture.</b>
+<p/>
+<hr/>
+<p/>
+<b><span>License</span></b>
+<p/>
+View license information <a href="https://www.rabbitmq.com/mpl.html">here</a>
+<p/>
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+<p/>
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
+<p/>
+<hr/>
+<p/>
+<b><span>Versions</span></b>
+<p/>
+Use the pull string below for the version of this image you require.
+
+
+
+<table class="table table-striped table-bordered">
+<td>3.8.9-manage</td>
+
+<td>docker pull icr.io/ibmz/rabbitmq@sha256:2e6456a9e11f0c5cd5b4ce5447e29ddac09297d8c43c975751a2abaedc427b61</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmFkOWNmZTQ3MTU3ZTIwMmE2MzQ0N2Y5YTE1NjYyYzM5NGM2Nzg2NDgyMDFmZTRiOWJkMzE1MzlmZGFkZDVhMzgifQ==/issues">Vulnerability Report</a></td></tr><td>3.8.9</td>
+
+<td>docker pull icr.io/ibmz/rabbitmq@sha256:ad9cfe47157e202a63447f9a15662c394c678648201fe4b9bd31539fdadd5a38</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjJlNjQ1NmE5ZTExZjBjNWNkNWI0Y2U1NDQ3ZTI5ZGRhYzA5Mjk3ZDhjNDNjOTc1NzUxYTJhYmFlZGM0MjdiNjEifQ==/issues">Vulnerability Report</a></td></tr>
+<thead>
+
+<tr>
+
+<th scope="col">Version</th>
+
+<th scope="col">Pull String</th>
+
+<th scope="col">Security (IBM Cloud)</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+</tbody>
+
+</table>
+
+<b><h3>Usage Notes</h3></b>
+<p/>
+
+
+<span> One of the important things to note about RabbitMQ is that it stores data based on what it calls the "Node Name", which defaults to the hostname. What this means for usage in Docker is that we should specify <code>-h/--hostname</code> explicitly for each daemon so that we don't get a random hostname and can keep track of our data: </span>
+
+<span><br><p><pre><code>docker run -d --hostname my-rabbit --name some-rabbit icr.io/ibmz/rabbitmq:3.8.9</code></pre></p></span>
+
+</div>
+</body>
+</html>
+

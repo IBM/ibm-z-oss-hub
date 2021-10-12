@@ -1,0 +1,95 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    pre {background-color: #eeeeee; display: inline-block; padding: 12px }
+    img {height: 200px; width: auto;}
+    .note {border: 1px solid #cccccc; padding: 10px;}
+  </style>
+
+
+</head>
+<body>
+<div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
+<div class="container" style="padding-top: 30px; padding-bottom: 60px;">
+<h1>gcc</h1>
+<p/><img src="https://upload.wikimedia.org/wikipedia/commons/a/af/GNU_Compiler_Collection_logo.svg" width=200 height=200 alt="gcc"><p/>
+<span>The GNU Compiler Collection (GCC) is a compiler system produced by the GNU Project that supports various programming languages. GCC is a key component of the GNU toolchain. The Free Software Foundation (FSF) distributes GCC under the GNU General Public License (GNU GPL). GCC has played an important role in the growth of free software, as both a tool and an example.
+</span>
+<p/>
+<span><em>See <a href="https://gcc.gnu.org/">gcc.gnu.org</a> for more information</em></span>
+<p/>
+<b>This image is built to run on the IBM Z architecture.</b>
+<p/>
+<hr/>
+<p/>
+<b><span>License</span></b>
+<p/>
+View license information <a href="https://www.gnu.org/licenses/gpl-3.0.html">here</a>
+<p/>
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+<p/>
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
+<p/>
+<hr/>
+<p/>
+<b><span>Versions</span></b>
+<p/>
+Use the pull string below for the version of this image you require.
+
+
+
+<table class="table table-striped table-bordered">
+<td>10.2.0</td>
+
+<td>docker pull icr.io/ibmz/gcc@sha256:14b4039f028c62b09bdf9ed02bbaa866109b5548280356af106f6cea9e2b7ed0</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2NjIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoxNGI0MDM5ZjAyOGM2MmIwOWJkZjllZDAyYmJhYTg2NjEwOWI1NTQ4MjgwMzU2YWYxMDZmNmNlYTllMmI3ZWQwIn0=/issues">Vulnerability Report</a></td></tr>
+<thead>
+
+<tr>
+
+<th scope="col">Version</th>
+
+<th scope="col">Pull String</th>
+
+<th scope="col">Security (IBM Cloud)</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+</tbody>
+
+</table>
+
+<b><h3>Usage Notes</h3></b>
+<p/>
+<h2>Start a GCC instance running your app. </h2><br>
+
+The most straightforward way to use this image is to use a gcc container as both the build and runtime environment. In your Dockerfile, writing something along the lines of the following will compile and run your project:
+
+<br><p><pre><code>FROM icr.io/ibmz/gcc:10.2.0
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
+RUN gcc -o myapp main.c
+CMD ["./myapp"]
+</code></pre></p>
+
+Then, build and run the Docker image:<br>
+
+<code>docker build -t my-gcc-app .</code><br><br>
+
+<code>docker run -it --rm --name my-running-app my-gcc-app</code>
+
+</div>
+</body>
+</html>
+
