@@ -1,0 +1,42 @@
+#agreementTextArea {
+	width: 41%;
+    padding-left: 40%;
+    margin: auto;
+}
+
+#agreementIntro {
+	padding-left: 20%;
+}
+
+.centerElements {
+	text-align: center;
+}
+
+.acceptElements {
+	text-align: center;
+}
+
+#ibm-pagetitle-h1 {
+	padding-left: 11%;
+}
+
+#printButton {
+	
+}
+
+.infoText {
+	width: 62%;
+	padding-left: 19%;
+}
+
+.agreeOpts {
+    display: inline-flex;
+    padding-left: 68%;
+}
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff");
+}
