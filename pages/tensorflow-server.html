@@ -1,0 +1,92 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    pre {background-color: #eeeeee; display: inline-block; padding: 5px }
+  </style>
+
+
+</head>
+<body>
+<div class="container">
+<h1>tensorflow-server</h1>
+<p/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/288px-TensorFlowLogo.svg.png" width=200 height=200 alt="tensorflow">
+<p/>
+<span>TensorFlow is an end-to-end open source platform for machine learning/deep learning (ML/DL). It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers and developers easily build and deploy ML/DL models and applications. TensorFlow provides stable Python and C++ APIs, as well as non-guaranteed backward compatible API for other languages.
+</span>
+<p/>
+<span><em>See <a href="https://www.tensorflow.org/">tensorflow.org</a> for more information</em></span>
+<p/>
+<b>This image is built to run on the IBM Z architecture.</b>
+<p/>
+<hr/>
+<p/>
+<b><span>License</span></b>
+<p/>
+View license information <a href="https://github.com/tensorflow/tensorflow/blob/master/LICENSE">here</a>
+<p/>
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+<p/>
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
+<p/>
+<hr/>
+<p/>
+<b><span>Versions</span></b>
+<p/>
+Use the pull string below for the version of this image you require.
+
+
+
+<table class="table table-striped table-bordered">
+<td>2.4.0</td>
+
+<td>docker pull icr.io/ibmz/tensorflow@sha256:fd98b63aa71228c3ca71b42ddbcebb02bfdb77939b258d5caeb8cc03afba1764</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovdGVuc29yZmxvdy1zZXJ2ZXIiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjFhZGZmODVhZDA2ODM2ZmNiNzRiZDk3MTIwYzY5ZmExNWFlMmRlYzNlZDlkYzE0MmY2NmE0ZGFkMWJkZTUyNTQifQ==/issues">Vulnerability Report</a></td></tr>
+<thead>
+
+<tr>
+
+<th scope="col">Version</th>
+
+<th scope="col">Pull String</th>
+
+<th scope="col">Security (IBM Cloud)</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+</tbody>
+
+</table>
+
+<b><h3>Usage Notes</h3></b>
+<p/>
+
+This image contains a notebook server that enables access to TensorFlow through the Jupyter notebook interface.  This interface can be started as follows:
+
+- Run the Docker image, publishing Jupyter's port
+
+`docker run -p 8000:8888 -it tf:2.3.1 /bin/bash`
+
+- Run the notebook server
+
+`jupyter notebook --allow-root --ip 0.0.0.0`
+
+- From a web browser, access the notebook server, using the authentication token from the notebook console.
+
+Additional Python packages are included to support TensorFlow applications.  These include matplotlib, pandas, and scikit-learn.
+
+
+</div>
+</body>
+</html>
