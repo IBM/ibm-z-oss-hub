@@ -59,11 +59,15 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/alpine@sha256:28db8100f30a46a4da5b6e794ffb0d551dea5f289533f76924f204ea4c5b3669</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYWxwaW5lIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoyOGRiODEwMGYzMGE0NmE0ZGE1YjZlNzk0ZmZiMGQ1NTFkZWE1ZjI4OTUzM2Y3NjkyNGYyMDRlYTRjNWIzNjY5In0=/issues">Vulnerability Report</a></td></tr><td>3.14</td>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYWxwaW5lIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoyOGRiODEwMGYzMGE0NmE0ZGE1YjZlNzk0ZmZiMGQ1NTFkZWE1ZjI4OTUzM2Y3NjkyNGYyMDRlYTRjNWIzNjY5In0=/issues">Vulnerability Report</a></td></tr><td>3.14.2</td>
 
-<td>docker pull icr.io/ibmz/alpine@sha256:7cacd1a032732845335306f50cc56dedd2947cab1e01bd02cc7e49de91a3bf65</td>
+<td>docker pull icr.io/ibmz/alpine@sha256:0238e1c4d52626c600f22d1619c5a688183915f919822a82daa16a945c7856d7</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYWxwaW5lIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo3Y2FjZDFhMDMyNzMyODQ1MzM1MzA2ZjUwY2M1NmRlZGQyOTQ3Y2FiMWUwMWJkMDJjYzdlNDlkZTkxYTNiZjY1In0=/issues">Vulnerability Report</a></td></tr><td>3.12</td>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYWxwaW5lIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowMjM4ZTFjNGQ1MjYyNmM2MDBmMjJkMTYxOWM1YTY4ODE4MzkxNWY5MTk4MjJhODJkYWExNmE5NDVjNzg1NmQ3In0=/issues">Vulnerability Report</a></td></tr><td>3.13</td>
+
+<td>docker pull icr.io/ibmz/alpine@sha256:5548e1f67c6b31d96d328ad55165ad85494b280c89910ead4a74719a35413544</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYWxwaW5lIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo1NTQ4ZTFmNjdjNmIzMWQ5NmQzMjhhZDU1MTY1YWQ4NTQ5NGIyODBjODk5MTBlYWQ0YTc0NzE5YTM1NDEzNTQ0In0=/issues">Vulnerability Report</a></td></tr><td>3.12</td>
 
 <td>docker pull icr.io/ibmz/alpine@sha256:9dd09461d54469323c6c1af32bba1552c45e0d477b8aba8b768fb44487768e11</td>
 
@@ -100,13 +104,12 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<span> Primarily used as a base image... </span>
+<span> Primarily used as a base image: </span>
 
-<br><p><pre><code>FROM icr.io/ibmz/alpine:3.7
+<br><p><pre><code>FROM icr.io/ibmz/alpine:[version]
 RUN apk add --no-cache mysql-client
 ENTRYPOINT ["mysql"]</code></pre></p>
 
 </div>
 </body>
 </html>
-

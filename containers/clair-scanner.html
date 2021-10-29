@@ -17,21 +17,16 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>clair-scanner</h1>
 
-<span>Vulnerability scanner tool designed to work alongside Clair. <br>
-
-When you work with containers you are not only packaging your application but also part of the OS. It is crucial to know what kind of libraries might be vulnerable in your container. <br>
-
-One way to find this information is to look at the Docker registry [Hub or Quay.io] security scan. This means your vulnerable image is already on the Docker registry. What you want is a scan as a part of CI/CD pipeline that stops the Docker image push on vulnerabilities: 
+<span><p>Vulnerability scanner tool designed to work alongside Clair.</p>
+<p>When you work with containers you are not only packaging your application but also part of the OS. It is crucial to know what kind of libraries might be vulnerable in your container. </p>
+<p>One way to find this information is to look at the Docker registry [Hub or Quay.io] security scan. This means your vulnerable image is already on the Docker registry. What you want is a scan as a part of CI/CD pipeline that stops the Docker image push on vulnerabilities: </p>
 <ul>
 <li>  Build and test your application. </li>
-
 <li>  Build the container. </li>
-
 <li>  Test the container for vulnerabilities. </li>
-
 <li>  Check the vulnerabilities against allowed ones, if everything is allowed, then pass, otherwise, fail </li>
 </ul>
-This straightforward process is not that easy to achieve when using services like Docker Hub or Quay.io. This is because they work asynchronously, which makes it harder to do a straightforward CI/CD pipeline.
+<p>This straightforward process is not that easy to achieve when using services like Docker Hub or Quay.io. This is because they work asynchronously, which makes it harder to do a straightforward CI/CD pipeline.</p>
 </span>
 <p/>
 <span><em>See <a href="https://github.com/arminc/clair-scanner">official git repo</a> for more information</em></span>
@@ -59,9 +54,9 @@ Use the pull string below for the version of this image you require.
 <table class="table table-striped table-bordered">
 <td>13.0</td>
 
-<td>docker pull icr.io/ibmz/clair-scanner@sha256:55632406fb1dd6a6353a4d036c810b87070c5a2693a49a12464080869adf5ec4</td>
+<td>docker pull icr.io/ibmz/clair-scanner@sha256:88a15a5ccee29c7c77b8ab13980a770e63fd1aba990ca5a88fff60cb467b7bf3</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2xhaXItc2Nhbm5lciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NTU2MzI0MDZmYjFkZDZhNjM1M2E0ZDAzNmM4MTBiODcwNzBjNWEyNjkzYTQ5YTEyNDY0MDgwODY5YWRmNWVjNCJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2xhaXItc2Nhbm5lciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ODhhMTVhNWNjZWUyOWM3Yzc3YjhhYjEzOTgwYTc3MGU2M2ZkMWFiYTk5MGNhNWE4OGZmZjYwY2I0NjdiN2JmMyJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -86,21 +81,12 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-<em>once running clair...</em>
-<ul>
-<li>  Run Clair Scanner.</li>
-
-<li>  Note that docker.sock needs to be mounted to the container because this image runs Docker inside the container. </li>
-</ul>
-<br><p><pre><code>
-docker run --network container:clair --rm -v /var/run/docker.sock:/var/run/docker.sock:ro \
-           quay.io/ibm/clair-scanner:13.0 --threshold="Negligible" --clair="http://localhost:6060" [local_image_to_scan]
-</code></pre></p>
-
-Scan report will then be printed to the console.
+<p>Run Clair Scanner.</p>
+<p><small>Note that docker.sock needs to be mounted to the container because this image runs Docker inside the container. </small></p>
+<p><pre><code>docker run --network container:clair --rm -v /var/run/docker.sock:/var/run/docker.sock:ro \
+           quay.io/ibm/clair-scanner:13.0 --threshold="Negligible" --clair="http://localhost:6060" [local_image_to_scan]</code></pre></p>
+<p>Scan report will then be printed to the console.</p>
 
 </div>
 </body>
 </html>
-

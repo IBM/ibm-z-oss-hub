@@ -43,15 +43,15 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>0.37.5</td>
+<td>0.42.0</td>
+
+<td>docker pull icr.io/ibmz/cAdvisor@sha256:7dac1e929b8abaaac7371b6a63c7af2ae5a5a650399d1fc49805966b0a1b5788</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2Fkdmlzb3IiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjdkYWMxZTkyOWI4YWJhYWFjNzM3MWI2YTYzYzdhZjJhZTVhNWE2NTAzOTlkMWZjNDk4MDU5NjZiMGExYjU3ODgifQ==/issues">Vulnerability Report</a></td></tr><td>0.37.5</td>
 
 <td>docker pull icr.io/ibmz/cAdvisor@sha256:138130ea1de8dbf82d860a893facfca96f157b824895824e082c91ac556257b6</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2Fkdmlzb3IiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjEzODEzMGVhMWRlOGRiZjgyZDg2MGE4OTNmYWNmY2E5NmYxNTdiODI0ODk1ODI0ZTA4MmM5MWFjNTU2MjU3YjYifQ==/issues">Vulnerability Report</a></td></tr><td>0.37.0</td>
-
-<td>docker pull icr.io/ibmz/cAdvisor@sha256:8e5d49cd9be701f07ffcaf2080c9f5df8bdfd47ad888717c9b22499c2e3c966a</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2Fkdmlzb3IiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjhlNWQ0OWNkOWJlNzAxZjA3ZmZjYWYyMDgwYzlmNWRmOGJkZmQ0N2FkODg4NzE3YzliMjI0OTljMmUzYzk2NmEifQ==/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2Fkdmlzb3IiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjEzODEzMGVhMWRlOGRiZjgyZDg2MGE4OTNmYWNmY2E5NmYxNTdiODI0ODk1ODI0ZTA4MmM5MWFjNTU2MjU3YjYifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -76,19 +76,16 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<span>Create user defined network (useful for connecting to other services attached to the same network (e.g. Kibana)):</span>
+Although bind-mounts are generally disabled for security purposes; CAdvisor requires access to some system directories that have been explicitly made available by direct bind mount on the zCX system.
+<p/>
+By default the cAdvisor UI runs on port <b>8080</b>, in the following command the port is mapped to the system <b>8080</b> to allow the UI to be available through a browser at: host-ip:8080
 
-<br><p><pre><code>docker network create somenetwork</code></pre></p>
-
-<span>Run cAdvisor:</span>
-
-<br><p><pre><code>docker run -v /proc:/rootfs/proc:ro -v /media:/rootfs/media:ro \
+<p/>
+<code><pre>docker run -v /proc:/rootfs/proc:ro -v /media:/rootfs/media:ro \
 -v /var/run/docker.sock:/var/run/docker.sock:ro -v /sys:/sys:ro \
 -v /var/lib/docker/:/var/lib/docker:ro -v /dev/disk/:/dev/disk:ro \
--p 8080:8080 -d --network somenetwork --name=cadvisor  icr.io/ibmz/cadvisor:0.37.5 
-</code></pre></p>
+-p 8080:8080 -d --name=cadvisor  icr.io/ibmz/cadvisor:[tag]</pre></code>
 
 </div>
 </body>
 </html>
-

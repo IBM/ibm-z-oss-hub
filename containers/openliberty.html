@@ -44,11 +44,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>21.0.0.6</td>
+<td>full</td>
 
-<td>docker pull icr.io/ibmz/openliberty@sha256:bd833887c5ccde897a96d791fb34c6f2584d3574ac0b83f6c9285a063e577922</td>
+<td>docker pull icr.io/ibmz/openliberty@sha256:75d163759f296d507279b3a2ed4a1eeacd8f93297ce2cf67efc2ea06ab4d8486</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmxpYmVydHkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmJkODMzODg3YzVjY2RlODk3YTk2ZDc5MWZiMzRjNmYyNTg0ZDM1NzRhYzBiODNmNmM5Mjg1YTA2M2U1Nzc5MjIifQ==/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmxpYmVydHkiLCJsb25nRGlnZXN0Ijoic2hhMjU2Ojc1ZDE2Mzc1OWYyOTZkNTA3Mjc5YjNhMmVkNGExZWVhY2Q4ZjkzMjk3Y2UyY2Y2N2VmYzJlYTA2YWI0ZDg0ODYifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -74,10 +74,10 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 
-<h5>Image User</h5
+<h5>Image User:</h5>
 
-This image runs by default with USER 1001 (non-root), as part of group 0. Please make sure you read below to set the appropriate folder and file permissions.
-Updating folder permissions
+This image runs by default with USER 1001 (non-root), as part of group 0. Please make sure you read below to set the appropriate folder and file permissions.<br>
+Updating folder permissions:<br><br>
 
 All of the folders accessed by WebSphere Liberty have been given the appropriate permissions, but if your extending Dockerfile needs permission to another location you can simply temporarily switch into root and provide the needed permissions, example:
 
@@ -87,21 +87,23 @@ USER 1001</code></pre></p>
 
 <p><b>Updating file permissions</b></p>
 
-You have to make sure that all the artifacts you are copying into the image (via COPY or ADD) have the correct permissions to be read and executed by user 1001 or group 0, because the ownership of the file is changed to be root:0 when transferring into the docker image.
+You have to make sure that all the artifacts you are copying into the image (via COPY or ADD) have the correct permissions to be read and executed by user 1001 or group 0, because the ownership of the file is changed to be root:0 when transferring into the docker image.<br><br>
 
-You have a few options for doing this: before copying the file, during copy, or after copy.
-Updating permissions before copying
+You have a few options for doing this: before copying the file, during copy, or after copy.<br>
+Updating permissions before copying:<br><br>
 
-Since the ownership of the file will change to root:0, you can simply set the permissions for the owner's group to be able to read/execute the artifact (i.e. the middle digit of a chmod command). For example, you can do chmod g+rx server.xml to ensure your server.xml can be read and executed by group 0, as well as any artifacts such as the application's EAR or WAR file, JDBC driver, or other files that are placed on the image via COPY or ADD.
-Updating permissions during copy
+Since the ownership of the file will change to root:0, you can simply set the permissions for the owner's group to be able to read/execute the artifact (i.e. the middle digit of a chmod command). For example, you can do chmod g+rx server.xml to ensure your server.xml can be read and executed by group 0, as well as any artifacts such as the application's EAR or WAR file, JDBC driver, or other files that are placed on the image via COPY or ADD.<br>
+Updating permissions during copy:<br><br>
 
 If you're using Docker v17.09.0-ce and newer you can take advantage of the flag 
-<code>--chown=user:group</code> during either ADD or COPY.
+<code>--chown=user:group</code> during either ADD or COPY.<br><br>
 
 <h5>For example:</h5>
-<p><code>COPY --chown=1001:0 jvm.options /config/jvm.options</code></p> 
-This is the preferred approach as you don't need to worry about changing permissions before calling docker build and you also do not duplicate layers in the resulting image.
-Updating permissions after copy
+
+<br><p><pre><code>COPY --chown=1001:0 jvm.options /config/jvm.options</code></pre></p>
+
+This is the preferred approach as you don't need to worry about changing permissions before calling docker build and you also do not duplicate layers in the resulting image.<br>
+Updating permissions after copy:<br><br>
 
 If you need your Dockerfile to work with older versions of Docker CE and don't want to pre-process the permissions of the files you can temporarily switch into root to change the permissions of the needed files. For example:
 
@@ -110,37 +112,37 @@ RUN chown 1001:0 /config/jvm.options
 RUN chown 1001:0 /output/resources/security/ltpa.keys
 USER 1001</code></pre></p>
 
-Please note that this pattern will duplicate the docker layers for those artifacts, which can heavily bloat your resulting docker image (depending on the size of the artifact). So it is recommended to set the permissions before or during copy.
-Using Spring Boot with WebSphere Liberty
+Please note that this pattern will duplicate the docker layers for those artifacts, which can heavily bloat your resulting docker image (depending on the size of the artifact). So it is recommended to set the permissions before or during copy.<br>
+Using Spring Boot with WebSphere Liberty:<br><br>
 
-The full images introduce capabilities specific to the support of all Liberty features, including Spring Boot applications. This image thus includes the springBootUtility used to separate Spring Boot applications into thin applications and dependency library caches. To get these same capabilities without including features you are not using, build instead on top of kernel images and run configure.sh for your server.xml, ensuring that it enables either the springBoot-1.5 or springBoot-2.0 feature.
+The full images introduce capabilities specific to the support of all Liberty features, including Spring Boot applications. This image thus includes the springBootUtility used to separate Spring Boot applications into thin applications and dependency library caches. To get these same capabilities without including features you are not using, build instead on top of kernel images and run configure.sh for your server.xml, ensuring that it enables either the springBoot-1.5 or springBoot-2.0 feature.<br><br>
 
-To elaborate these capabilities this section assumes the standalone Spring Boot 2.0.x application hellospringboot.jar exists in the /tmp directory.
+To elaborate these capabilities this section assumes the standalone Spring Boot 2.0.x application hellospringboot.jar exists in the /tmp directory.<br><br>
 
-    A Spring Boot application JAR deploys to the dropins/spring directory within the default server configuration, not the dropins directory. Liberty allows one Spring Boot application per server configuration. You can create a Spring Boot application layer over this image by adding the application JAR to the dropins/spring directory. In this example we copied hellospringboot.jar from /tmp to the same directory containing the following Dockerfile.
+    A Spring Boot application JAR deploys to the dropins/spring directory within the default server configuration, not the dropins directory. Liberty allows one Spring Boot application per server configuration. You can create a Spring Boot application layer over this image by adding the application JAR to the dropins/spring directory. In this example we copied hellospringboot.jar from /tmp to the same directory containing the following Dockerfile:
 
-<br><p><pre><code>FROM icr.io/ibmz/websphere-liberty:20.0.0.11
+<br><p><pre><code>FROM icr.io/ibmz/openliberty:[version]
 COPY --chown=1001:0 hellospringboot.jar /config/dropins/spring/
 COPY --chown=1001:0 server.xml /config/
 RUN configure.sh</code></pre></p>
 
-    The custom image can be built and run as follows.
+    The custom image can be built and run as follows:
 
     <br><p><pre><code>docker build -t app .</code></pre></p><br>
     <br><p><pre><code>docker run -d -p 8080:9080 app</code></pre></p><br>
 
-    The full images provide the library cache directory, lib.index.cache, which contains an indexed library cache created by the springBootUtility command. Use lib.index.cache to provide the library cache for a thin application.
+    The full images provide the library cache directory, lib.index.cache, which contains an indexed library cache created by the springBootUtility command. Use lib.index.cache to provide the library cache for a thin application.<br><br>
 
-    You can use the springBootUtility command to create thin application and library cache layers over a full image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache.
+    You can use the springBootUtility command to create thin application and library cache layers over a full image. The following example uses docker staging to efficiently build an image that deploys a fat Spring Boot application as two layers containing a thin application and a library cache:<br>
 
-<br><p><pre><code>FROM icr.io/ibmz/websphere-liberty:20.0.0.11 as staging
+<br><p><pre><code>FROM icr.io/ibmz/openliberty:[version] as staging
 COPY --chown=1001:0 hellospringboot.jar /staging/myFatApp.jar
 COPY --chown=1001:0 server.xml /config/
 RUN springBootUtility thin \
 --sourceAppPath=/staging/myFatApp.jar \
 --targetThinAppPath=/staging/myThinApp.jar \
 --targetLibCachePath=/staging/lib.index.cache
-FROM icr.io/ibmz/websphere-liberty:20.0.0.11
+FROM icr.io/ibmz/openliberty:[version]
 COPY --chown=1001:0 server.xml /config
 COPY --from=staging /staging/lib.index.cache /lib.index.cache
 COPY --from=staging /staging/myThinApp.jar /config/dropins/spring/myThinApp.jar
@@ -151,4 +153,3 @@ RUN configure.sh</code></pre></p>
 </div>
 </body>
 </html>
-

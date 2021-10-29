@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>7.0</td>
+<td>7</td>
 
-<td>docker pull icr.io/ibmz/clefos@sha256:ec8bc0025baa4be5c3ea2b2b7758a59c27bd29704d549571f074cae888b9f2b4</td>
+<td>docker pull icr.io/ibmz/clefos@sha256:00efb26fda6176653fdd460d3934901da3399e3a456aa3198396a1f8e3a9c12a</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2xlZm9zIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplYzhiYzAwMjViYWE0YmU1YzNlYTJiMmI3NzU4YTU5YzI3YmQyOTcwNGQ1NDk1NzFmMDc0Y2FlODg4YjlmMmI0In0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2xlZm9zIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowMGVmYjI2ZmRhNjE3NjY1M2ZkZDQ2MGQzOTM0OTAxZGEzMzk5ZTNhNDU2YWEzMTk4Mzk2YTFmOGUzYTljMTJhIn0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,17 +72,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-Primarily used as a base image...
-
-<br><p><pre><code>FROM icr.io/ibmz/clefos:7.0</code></pre></p>
-
-...<br>
-
+Primarily used as a base image:
+<br><p><pre><code>FROM icr.io/ibmz/clefos:[version]</code></pre></p>
 Docker run:
-
-<br><p><pre><code>docker run -it --name clefos icr.io/ibmz/clefos:7.0</code></pre></p>
+<br><p><pre><code>docker run -it --name clefos icr.io/ibmz/clefos:[version]</code></pre></p>
 
 </div>
 </body>
 </html>
-

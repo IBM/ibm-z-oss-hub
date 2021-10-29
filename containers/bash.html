@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>5.0</td>
+<td>5.1.8</td>
 
-<td>docker pull icr.io/ibmz/bash@sha256:d44e55d3021e8f0824c5b6c18782dd6c6f38b6bff98daba4056a7d943e5577c6</td>
+<td>docker pull icr.io/ibmz/bash@sha256:9e65fc42b5ddc515554462d7d0da10d7853951ddd42c20bfde2cabf71fc36230</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYmFzaCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZDQ0ZTU1ZDMwMjFlOGYwODI0YzViNmMxODc4MmRkNmM2ZjM4YjZiZmY5OGRhYmE0MDU2YTdkOTQzZTU1NzdjNiJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYmFzaCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OWU2NWZjNDJiNWRkYzUxNTU1NDQ2MmQ3ZDBkYTEwZDc4NTM5NTFkZGQ0MmMyMGJmZGUyY2FiZjcxZmMzNjIzMCJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,13 +72,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-
-Primarily used as a base image...
-
-<br><p><pre><code>docker run -it --name bash icr.io/ibmz/bash:5.0</code></pre></p>
+Primarily used as a base image:
+<br><p><pre><code>FROM icr.io/ibmz/bash:[version]</code></pre></p>
+Run Statement:
+<br><p><pre><code>docker run -it --name bash icr.io/ibmz/bash:[version]</code></pre></p>
 
 </div>
 </body>
 </html>
-

@@ -43,15 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>6.0</td>
+<td>6.2.5</td>
 
-<td>docker pull icr.io/ibmz/redis@sha256:98bd567d5b5d0036da512485dd7864d25b2d4df3dd780b868c2c6db4b895314b</td>
+<td>docker pull icr.io/ibmz/redis@sha256:cf721fe8d72b9d04e6bc2aca84f56fc8cdea58576893ecc4ae788fdbbfbd79d8</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVkaXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2Ojk4YmQ1NjdkNWI1ZDAwMzZkYTUxMjQ4NWRkNzg2NGQyNWIyZDRkZjNkZDc4MGI4NjhjMmM2ZGI0Yjg5NTMxNGIifQ==/issues">Vulnerability Report</a></td></tr><td>5.0</td>
-
-<td>docker pull icr.io/ibmz/redis@sha256:06bb86a588a2d2ce539e50f59c1fd4310bd4f7b99ce2846f6f2cae0edcadc37f</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVkaXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjA2YmI4NmE1ODhhMmQyY2U1MzllNTBmNTljMWZkNDMxMGJkNGY3Yjk5Y2UyODQ2ZjZmMmNhZTBlZGNhZGMzN2YifQ==/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVkaXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmNmNzIxZmU4ZDcyYjlkMDRlNmJjMmFjYTg0ZjU2ZmM4Y2RlYTU4NTc2ODkzZWNjNGFlNzg4ZmRiYmZiZDc5ZDgifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -80,30 +76,28 @@ Use the pull string below for the version of this image you require.
 
 <span> Start a redis instance: </span>
 
-<p><code>docker run --name some-redis -d icr.io/ibmz/redis:6.0</code></p>
+<br><p><pre><code>docker run --name some-redis -d icr.io/ibmz/redis:[version]</code></pre></p>
 
-<p> Start with persistent storage:</p>
+Start with persistent storage:
 
-<p><code>docker run --name some-redis -d icr.io/ibmz/redis:6.0 redis-server --appendonly yes</code></p>
+<br><p><pre><code>docker run --name some-redis -d icr.io/ibmz/redis:[version] redis-server --appendonly yes</code></pre></p>
 
 <p>If persistence is enabled, data is stored in the VOLUME /data, which can be used with docker volumes.</p>
 
-<p> connecting via redis-cli: </p>
+connecting via redis-cli:
 
-<p><code>docker run -it --network some-network --rm icr.io/ibmz/redis:6.0 redis-cli -h some-redis</code></p>
+<br><p><pre><code>docker run -it --network some-network --rm icr.io/ibmz/redis:[version] redis-cli -h some-redis</code></pre></p>
 
 <span>Additionally, If you want to use your own redis.conf... you can create your own Dockerfile that adds a redis.conf from the context into /data/, like so.</span>
 
-<br><p><pre><code>FROM icr.io/ibmz/redis:6.0
+<br><p><pre><code>FROM icr.io/ibmz/redis:[version]
 COPY redis.conf /usr/local/etc/redis/redis.conf
 CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]</code></pre></p>
   
-<p>Alternatively, you can mount a docker volume that contains the custom config file:</p>
-
+Alternatively, you can mount a docker volume that contains the custom config file:
 <br><p><pre><code>docker run -v <MY_VOLUME>/redis.conf:/usr/local/etc/redis/redis.conf --name myredis \
-        icr.io/ibmz/redis:6.0 redis-server /usr/local/etc/redis/redis.conf</code></pre></p>
+        icr.io/ibmz/redis:[version] redis-server /usr/local/etc/redis/redis.conf</code></pre></p>
 
 </div>
 </body>
 </html>
-

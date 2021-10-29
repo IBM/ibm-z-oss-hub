@@ -17,7 +17,7 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>jenkins-agent</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg" width=200 height=200 alt="jenkins-agent"><p/>
-<span>This is a base image for Docker, which includes JDK and the Jenkins agent executable (agent.jar).
+<span>This is the worker agent for jenkins, which includes a JDK and the Jenkins agent executable (agent.jar).
 This executable is an instance of the Jenkins Remoting library.
 </span>
 <p/>
@@ -44,11 +44,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>4.3</td>
+<td>4.11-1</td>
 
-<td>docker pull icr.io/ibmz/jenkins-agent@sha256:a42f153f3a8a25b0867ad829652d644a7202213000cf671e8eafef3ee00dfbca</td>
+<td>docker pull icr.io/ibmz/jenkins-agent@sha256:67f5272f3bf1794f345bca84af74cd4713a751e55c5746f44014e6ddf93507bd</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YTQyZjE1M2YzYThhMjViMDg2N2FkODI5NjUyZDY0NGE3MjAyMjEzMDAwY2Y2NzFlOGVhZmVmM2VlMDBkZmJjYSJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjdmNTI3MmYzYmYxNzk0ZjM0NWJjYTg0YWY3NGNkNDcxM2E3NTFlNTVjNTc0NmY0NDAxNGU2ZGRmOTM1MDdiZCJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -75,8 +75,8 @@ Use the pull string below for the version of this image you require.
 <p/>
 This image is used as the basis for the Docker Inbound Agent image.
 In that image, the container is launched externally and attaches to Jenkins.
-
-see <a href="https://www.jenkins.io/doc/book/using/using-agents/">jenkins.io</a> for further explanation
+<p/>
+See <a href="https://www.jenkins.io/doc/book/using/using-agents/">jenkins.io</a> for further explanation
 
 </div>
 </body>

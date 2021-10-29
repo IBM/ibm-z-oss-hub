@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.11</td>
+<td>v1.14.0-1.0</td>
 
-<td>docker pull icr.io/ibmz/fluentd@sha256:126e2cdcca367e8f221e76f5fd8423c7232b09c8a1a10755899859553eae8c7d</td>
+<td>docker pull icr.io/ibmz/fluentd@sha256:31463a8542951c275c3fc666cd80bdc0c9ecbd9339d02c46856d2bc4219c2778</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmx1ZW50ZCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MTI2ZTJjZGNjYTM2N2U4ZjIyMWU3NmY1ZmQ4NDIzYzcyMzJiMDljOGExYTEwNzU1ODk5ODU5NTUzZWFlOGM3ZCJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmx1ZW50ZCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MzE0NjNhODU0Mjk1MWMyNzVjM2ZjNjY2Y2Q4MGJkYzBjOWVjYmQ5MzM5ZDAyYzQ2ODU2ZDJiYzQyMTljMjc3OCJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,11 +72,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-Note that you will need to use docker volumes on ZCX, as bind mounts to the filesystem are not permitted.<br>
+Note that you will need to use docker volumes on ZCX, as bind mounts to the filesystem are not permitted.
 
-<code>docker volume create [your_vol]</code><br>
+<br><p><pre><code>docker volume create [your_vol]</code></pre></p>
 
-<code>docker run -d -p 24224:24224 -p 24224:24224/udp -v [your_vol]:/fluentd/log icr.io/ibmz/fluentd:1.11</code><br>
+<br><p><pre><code>docker run -d -p 24224:24224 -p 24224:24224/udp -v [your_vol]:/fluentd/log icr.io/ibmz/fluentd:[version]</code></pre></p>
 
 Default configurations are to:
 <ul>
@@ -84,17 +84,16 @@ Default configurations are to:
 <li> store logs with tag <code>docker.**</code> into <code>/fluentd/log/docker.*.log.</code></li>
 <li> store all other logs into <code>/fluentd/log/data.*.log</code>.</li>
 </ul>
-Providing your own configuration file and additional options
+Providing your own configuration file and additional options: <br><br>
 
-fluentd arguments can be appended to the docker run line
+fluentd arguments can be appended to the docker run line. <br>
 
-For example, to provide a bespoke config and make fluentd verbose, then:
+For example, to provide a bespoke config and make fluentd verbose:
 
-<br><p><pre><code>docker run -ti --rm -v [your_vol]:/fluentd/etc icr.io/ibmz/fluentd:1.11 -c /fluentd/etc/[conf] -v</code></pre></p>
+<br><p><pre><code>docker run -ti --rm -v [your_vol]:/fluentd/etc icr.io/ibmz/fluentd:[version] -c /fluentd/etc/[conf] -v</code></pre></p>
 
-The first <code>-v</code> tells Docker to share your docker volume and mount it at <code>/fluentd/etc</code> The <code>-c</code> after the container name (fluentd) tells fluentd where to find the config file The second <code>-v</code> is passed to fluentd to tell it to be verbose.
+The first <code>-v</code> tells Docker to share your docker volume and mount it at <code>/fluentd/etc</code> The <code>-c</code> after the container name (fluentd) tells fluentd where to find the config file. The second <code>-v</code> is passed to set fluentd to verbose mode.
 
 </div>
 </body>
 </html>
-
