@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>musl</td>
+<td>1.33.1</td>
 
-<td>docker pull icr.io/ibmz/busybox@sha256:6269a72bfcf2ad42b8091100f1373b83fff97c366f0b2e2b7e4b255a521b6ef6</td>
+<td>docker pull icr.io/ibmz/busybox@sha256:d77edfa3d87c8f61bab964eb7d2ccdeca98d0a903cd021b914598258d3a09604</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVzeWJveCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjI2OWE3MmJmY2YyYWQ0MmI4MDkxMTAwZjEzNzNiODNmZmY5N2MzNjZmMGIyZTJiN2U0YjI1NWE1MjFiNmVmNiJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVzeWJveCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZDc3ZWRmYTNkODdjOGY2MWJhYjk2NGViN2QyY2NkZWNhOThkMGE5MDNjZDAyMWI5MTQ1OTgyNThkM2EwOTYwNCJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,14 +72,12 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-Primarily used as a base image...
-
-<br><p><pre><code>docker run -it --rm icr.io/ibmz/busybox:musl</code></pre></p>
-
+Primarily used as a base image:
+<br><p><pre><code>FROM icr.io/ibmz/busybox:[version]</code></pre></p>
+Run statement:
+<br><p><pre><code>docker run -it --rm icr.io/ibmz/busybox:[version]</code></pre></p>
 This will drop you into an sh shell to allow you to do what you want inside a BusyBox system.
 
 </div>
 </body>
 </html>
-

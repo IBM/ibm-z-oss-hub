@@ -43,7 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>3.9</td>
+<td>3.9.7-bullseye</td>
+
+<td>docker pull icr.io/ibmz/python@sha256:696b636c7d3cb92736add7be166559f964ad7294515d9e7b2dd76e84cc956adf</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcHl0aG9uIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo2OTZiNjM2YzdkM2NiOTI3MzZhZGQ3YmUxNjY1NTlmOTY0YWQ3Mjk0NTE1ZDllN2IyZGQ3NmU4NGNjOTU2YWRmIn0=/issues">Vulnerability Report</a></td></tr><td>3.9</td>
 
 <td>docker pull icr.io/ibmz/python@sha256:d26e3b37795e231883ddf8aeebbf714905edfb2f34cf9a353c74bc6aa87633a9</td>
 
@@ -77,9 +81,9 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 
-Create a Dockerfile in your Python app project
+Create a Dockerfile in your Python app project:
 
-<br><p><pre><code>FROM icr.io/ibmz/python:3.9
+<br><p><pre><code>FROM icr.io/ibmz/python:[version]
 
 WORKDIR /usr/src/app
 COPY requirements.txt ./
@@ -89,10 +93,9 @@ CMD [ "python", "./your-daemon-or-script.py" ]</code></pre></p>
 
 You can then build and run the Docker image:
 
-<p><code>docker build -t my-python-app .</code></p>
-<p><code>docker run -it --rm --name my-running-app my-python-app</code></p>
+<p><pre><code>docker build -t my-python-app .</code></pre></p>
+<p><pre><code>docker run -it --rm --name my-running-app my-python-app</code></pre></p>
 
 </div>
 </body>
 </html>
-

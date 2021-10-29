@@ -17,7 +17,7 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>couchdb</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Apache_CouchDB_logo.svg" width=200 height=200 alt="couchDB"><p/>
-<span>Apache CouchDB is an open-source document-oriented NoSQL database, implemented in Erlang. CouchDB uses multiple formats and protocols to store, transfer, and process its data. It uses JSON to store data, JavaScript as its query language using MapReduce, and HTTP for an API.
+<span><p>Apache CouchDB is an open-source document-oriented NoSQL database, implemented in Erlang. CouchDB uses multiple formats and protocols to store, transfer, and process its data. It uses JSON to store data, JavaScript as its query language using MapReduce, and HTTP for an API.</p>
 </span>
 <p/>
 <span><em>See <a href="https://couchdb.apache.org/">couchdb.apache.org</a> for more information</em></span>
@@ -45,9 +45,9 @@ Use the pull string below for the version of this image you require.
 <table class="table table-striped table-bordered">
 <td>3.1.1</td>
 
-<td>docker pull icr.io/ibmz/couchdb@sha256:eb8232df6cffa8940a178700bd9b28271651e89da8c3bd27feed6e6390227cf8</td>
+<td>docker pull icr.io/ibmz/couchdb@sha256:039914316372daf7d3711a4abcceea4b7b29a4bd42313108ee7bf66afc92fc10</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY291Y2hkYiIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZWI4MjMyZGY2Y2ZmYTg5NDBhMTc4NzAwYmQ5YjI4MjcxNjUxZTg5ZGE4YzNiZDI3ZmVlZDZlNjM5MDIyN2NmOCJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY291Y2hkYiIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MDM5OTE0MzE2MzcyZGFmN2QzNzExYTRhYmNjZWVhNGI3YjI5YTRiZDQyMzEzMTA4ZWU3YmY2NmFmYzkyZmMxMCJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,17 +72,14 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-To start CouchDB server run the below command:<br>
-
-<code>docker run --name -p [port]:5984 -d icr.io/ibmz/couchdb:3.1.1</code><br><br>
-
-<code>docker run --name -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -p [port]:5984 -d icr.io/ibmz/couchdb:3.1.1</code><br><br>
-
-To test the CouchDB service:<br>
-
-<code>curl http://[host-ip]:[port]</code>
+<p>Exposed Ports: <code>5984</code> (Main CouchDB endpoint), <code>4369</code> (epmd), <code>9100</code> (CouchDB cluster comm port)</p>
+<span>To start CouchDB server run the below command:</span>
+<p><pre><code>docker run -p [port]:5984 -d icr.io/ibmz/couchdb:3.1.1</code></pre></p>
+<span> Or run specifying the user and pass at runtime</span>
+<p><pre><code>docker run -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -p [port]:5984 -d icr.io/ibmz/couchdb:[version]</code></pre></p>
+<span>To test the CouchDB service:</span>
+<p><pre><code>curl http://[host-ip]:[port]</code></pre></p>
 
 </div>
 </body>
 </html>
-

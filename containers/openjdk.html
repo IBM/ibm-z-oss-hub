@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>11.0.8</td>
+<td>17.0.1-jdk-oraclelinux8</td>
 
-<td>docker pull icr.io/ibmz/openjdk@sha256:f55aca6ae3cb4e2b644554f6fc3a2a98e2855c8152c94061caa4bc203f3772ca</td>
+<td>docker pull icr.io/ibmz/openjdk@sha256:48a359abf28c3f5ad12abdab86dd9e689e51099843b714c423577a4001567f45</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZjU1YWNhNmFlM2NiNGUyYjY0NDU1NGY2ZmMzYTJhOThlMjg1NWM4MTUyYzk0MDYxY2FhNGJjMjAzZjM3NzJjYSJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NDhhMzU5YWJmMjhjM2Y1YWQxMmFiZGFiODZkZDllNjg5ZTUxMDk5ODQzYjcxNGM0MjM1NzdhNDAwMTU2N2Y0NSJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -75,7 +75,7 @@ Use the pull string below for the version of this image you require.
 
 The most straightforward way to use this image is to use a Java container as both the build and runtime environment. In your Dockerfile, writing something along the lines of the following will compile and run your project:
 
-<br><p><pre><code>FROM icr.io/ibmz/openjdk:11.0.8
+<br><p><pre><code>FROM icr.io/ibmz/openjdk:[version]
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN javac Main.java
@@ -83,11 +83,11 @@ CMD ["java", "Main"]</code></pre></p>
 
 You can then run and build the Docker image:
 
-<br><p><pre><code>docker build -t my-java-app .</code></p><br>
-<br><p><pre><code>docker run -it --rm --name my-running-app my-java-app</code></p><br>
+<p><pre><code>docker build -t my-java-app .</code></pre></p>
+
+<p><pre><code>docker run -it --rm --name my-running-app my-java-app</code></pre></p>
 
 
 </div>
 </body>
 </html>
-

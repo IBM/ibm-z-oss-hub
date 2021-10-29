@@ -43,15 +43,27 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>3.8.9-manage</td>
+<td>3.9.7</td>
+
+<td>docker pull icr.io/ibmz/rabbitmq@sha256:d71413bccaa3f4665d470e9dd01651c1bbab14320fe0470cea89d40a3144a8b6</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmQ3MTQxM2JjY2FhM2Y0NjY1ZDQ3MGU5ZGQwMTY1MWMxYmJhYjE0MzIwZmUwNDcwY2VhODlkNDBhMzE0NGE4YjYifQ==/issues">Vulnerability Report</a></td></tr><td>3.9-manage</td>
+
+<td>docker pull icr.io/ibmz/rabbitmq@sha256:146b343a0ed089e48b288012edeab58b7b04d72b1180140538abaa2553d4b8fe</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjE0NmIzNDNhMGVkMDg5ZTQ4YjI4ODAxMmVkZWFiNThiN2IwNGQ3MmIxMTgwMTQwNTM4YWJhYTI1NTNkNGI4ZmUifQ==/issues">Vulnerability Report</a></td></tr><td>3.9</td>
+
+<td>docker pull icr.io/ibmz/rabbitmq@sha256:ed585987ceb75d884aaca24fab59f14681af57caa8f42878ea714395018e7b6f</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmVkNTg1OTg3Y2ViNzVkODg0YWFjYTI0ZmFiNTlmMTQ2ODFhZjU3Y2FhOGY0Mjg3OGVhNzE0Mzk1MDE4ZTdiNmYifQ==/issues">Vulnerability Report</a></td></tr><td>3.8.9-manage</td>
 
 <td>docker pull icr.io/ibmz/rabbitmq@sha256:2e6456a9e11f0c5cd5b4ce5447e29ddac09297d8c43c975751a2abaedc427b61</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmFkOWNmZTQ3MTU3ZTIwMmE2MzQ0N2Y5YTE1NjYyYzM5NGM2Nzg2NDgyMDFmZTRiOWJkMzE1MzlmZGFkZDVhMzgifQ==/issues">Vulnerability Report</a></td></tr><td>3.8.9</td>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjJlNjQ1NmE5ZTExZjBjNWNkNWI0Y2U1NDQ3ZTI5ZGRhYzA5Mjk3ZDhjNDNjOTc1NzUxYTJhYmFlZGM0MjdiNjEifQ==/issues">Vulnerability Report</a></td></tr><td>3.8.9</td>
 
 <td>docker pull icr.io/ibmz/rabbitmq@sha256:ad9cfe47157e202a63447f9a15662c394c678648201fe4b9bd31539fdadd5a38</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjJlNjQ1NmE5ZTExZjBjNWNkNWI0Y2U1NDQ3ZTI5ZGRhYzA5Mjk3ZDhjNDNjOTc1NzUxYTJhYmFlZGM0MjdiNjEifQ==/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmFiYml0bXEiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmFkOWNmZTQ3MTU3ZTIwMmE2MzQ0N2Y5YTE1NjYyYzM5NGM2Nzg2NDgyMDFmZTRiOWJkMzE1MzlmZGFkZDVhMzgifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -80,9 +92,8 @@ Use the pull string below for the version of this image you require.
 
 <span> One of the important things to note about RabbitMQ is that it stores data based on what it calls the "Node Name", which defaults to the hostname. What this means for usage in Docker is that we should specify <code>-h/--hostname</code> explicitly for each daemon so that we don't get a random hostname and can keep track of our data: </span>
 
-<span><br><p><pre><code>docker run -d --hostname my-rabbit --name some-rabbit icr.io/ibmz/rabbitmq:3.8.9</code></pre></p></span>
+<span><br><p><pre><code>docker run -d --hostname my-rabbit --name some-rabbit icr.io/ibmz/rabbitmq:[version]</code></pre></p></span>
 
 </div>
 </body>
 </html>
-

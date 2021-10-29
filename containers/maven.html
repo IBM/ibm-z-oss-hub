@@ -44,11 +44,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>3.6.3</td>
+<td>3.8.3-openjdk-17</td>
 
-<td>docker pull icr.io/ibmz/maven@sha256:1ff737693658954a4fc4f4ddd622788cd06937e5fbbc8b0b6f7de38c22115d04</td>
+<td>docker pull icr.io/ibmz/maven@sha256:eed4c0381a81436f3c592248666cc6a0c298ad140aa5c37e1f2cf10e56b46e37</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbWF2ZW4iLCJsb25nRGlnZXN0Ijoic2hhMjU2OjFmZjczNzY5MzY1ODk1NGE0ZmM0ZjRkZGQ2MjI3ODhjZDA2OTM3ZTVmYmJjOGIwYjZmN2RlMzhjMjIxMTVkMDQifQ==/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbWF2ZW4iLCJsb25nRGlnZXN0Ijoic2hhMjU2OmVlZDRjMDM4MWE4MTQzNmYzYzU5MjI0ODY2NmNjNmEwYzI5OGFkMTQwYWE1YzM3ZTFmMmNmMTBlNTZiNDZlMzcifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -74,15 +74,15 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 
-<h5>Create a Dockerfile to build an image the builds your Maven project.</h5>
-<p><pre><code>FROM icr.io/ibmz/maven:3.6.3
+<h5>Create a Dockerfile to build an image the builds your Maven project:</h5>
+<p><pre><code>FROM icr.io/ibmz/maven:[version]
 COPY . /usr/src
 WORKDIR /usr/src/{Your maven project folder}
 CMD [ "mvn", "valid", "maven" "options" ]
 </pre></code><br>
 
 
-<h5>Build the image.</h5>
+<h5>Build the image:</h5>
 
 <pre><code>docker build . --tag {custom maven image}</code></pre><p/>
 
@@ -90,11 +90,11 @@ CMD [ "mvn", "valid", "maven" "options" ]
 
 <pre><code>docker run --name {maven container} {custom maven image}</code></pre><p/>
 
-<h5>Multi-stage Builds</h5>
+<h4>Multi-stage Builds:</h4>
 
 You can build your application with Maven and package it in an image that does not include Maven using multi-stage builds.
 
-<br><p><pre><code>FROM icr.io/ibmz/maven:3.6.3
+<br><p><pre><code>FROM icr.io/ibmz/maven:[version]
 WORKDIR /usr/src/app
 COPY pom.xml .
 RUN mvn -B -e -C -T 1C org.apache.maven.plugins:maven-dependency-plugin:3.1.1:go-offline

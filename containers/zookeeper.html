@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>3.6.2</td>
+<td>3.7.0</td>
 
-<td>docker pull icr.io/ibmz/zookeeper@sha256:99bf5faca55a4d64a93a6103b00ef0cc364efc0d1a463f7b1a9b2834e799f6c5</td>
+<td>docker pull icr.io/ibmz/zookeeper@sha256:fb28dee5f582ef813441eb4a5ab43048c357bb97873bd827b88f317e5dc48f3a</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovem9va2VlcGVyIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo5OWJmNWZhY2E1NWE0ZDY0YTkzYTYxMDNiMDBlZjBjYzM2NGVmYzBkMWE0NjNmN2IxYTliMjgzNGU3OTlmNmM1In0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovem9va2VlcGVyIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpmYjI4ZGVlNWY1ODJlZjgxMzQ0MWViNGE1YWI0MzA0OGMzNTdiYjk3ODczYmQ4MjdiODhmMzE3ZTVkYzQ4ZjNhIn0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -75,19 +75,18 @@ Use the pull string below for the version of this image you require.
 
 <b>Start a Zookeeper server instance:</b><br>
 
-<span><br><p><pre><code>docker run --name some-zookeeper --restart always -d icr.io/ibmz/zookeeper:3.6.2</code></pre></p></span>
+<span><br><p><pre><code>docker run --name some-zookeeper --restart always -d icr.io/ibmz/zookeeper:[version]</code></pre></p></span>
 
 This image includes <code>EXPOSE 2181 2888 3888 8080</code> (the zookeeper client port, follower port, election port, AdminServer port respectively), so standard container linking will make it automatically available to the linked containers. Since the Zookeeper "fails fast" it's better to always restart it.<br><br>
 
 <b>Connect to Zookeeper from an application in another Docker container:</b><br>
 
-<span><br><p><pre><code>docker run --name some-app --link some-zookeeper:icr.io/ibmz/zookeeper:3.6.2 -d application-that-uses-zookeeper</code></pre></p></span>
+<span><br><p><pre><code>docker run --name some-app --link some-zookeeper:icr.io/ibmz/zookeeper:[version] -d application-that-uses-zookeeper</code></pre></p></span>
 
 <b>Connect to Zookeeper from the Zookeeper command line client:</b><br>
 
-<span><br><p><pre><code>docker run -it --rm --link some-zookeeper:icr.io/ibmz/zookeeper:3.6.2 zookeeper zkCli.sh -server zookeeper</code></pre></p></span>
+<span><br><p><pre><code>docker run -it --rm --link some-zookeeper:icr.io/ibmz/zookeeper:[version] zookeeper zkCli.sh -server zookeeper</code></pre></p></span>
 
 </div>
 </body>
 </html>
-

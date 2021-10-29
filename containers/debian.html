@@ -74,9 +74,9 @@ Use the pull string below for the version of this image you require.
 
 <td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGViaWFuIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoyNDQ1OTg0MzZmY2FiN2JjMzhhZDJhNjYyNTA0MjkyMmQ1ZDVhOThhMzBhZGE5MDgxOWRkZmU3MjM5YzA2NTgxIn0=/issues">Vulnerability Report</a></td></tr><td>bullseye</td>
 
-<td>docker pull icr.io/ibmz/debian@sha256:87892468739246c184aabe275b1008197f4cbf4fa2daf2afd3a08f7027ab934f</td>
+<td>docker pull icr.io/ibmz/debian@sha256:e214c9dfb3e665927db788535d8dd3ed47b0f50c95034e7ab2240183185ddedf</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGViaWFuIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo4Nzg5MjQ2ODczOTI0NmMxODRhYWJlMjc1YjEwMDgxOTdmNGNiZjRmYTJkYWYyYWZkM2EwOGY3MDI3YWI5MzRmIn0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGViaWFuIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplMjE0YzlkZmIzZTY2NTkyN2RiNzg4NTM1ZDhkZDNlZDQ3YjBmNTBjOTUwMzRlN2FiMjI0MDE4MzE4NWRkZWRmIn0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -101,19 +101,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-
-<em>Primarily used as a base image...</em><br>
-
-<code>FROM icr.io/ibmz/debian:buster</code><br>
-
-...<br>
-
-<strong>Docker run:</strong><br>
-
-<br><p><pre><code>docker run -it --name deb icr.io/ibmz/debian:buster</code></pre></p>
+Primarily used as a base image:
+<br><p><pre><code>FROM icr.io/ibmz/debian:[version]</code></pre></p>
+Run statement:
+<br><p><pre><code>docker run -it --name deb icr.io/ibmz/debian:[version]</code></pre></p>
 
 </div>
 </body>
 </html>
-

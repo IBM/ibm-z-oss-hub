@@ -65,9 +65,9 @@ Use the pull string below for the version of this image you require.
 
 <td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVpbGRwYWNrLWRlcHMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmU5NmZlNjE0ZWU2N2ZiZjM5YzU3MzM4YzRiMmJhZjcxZGI2ZTExYTYzYTM0NjMwMzI2NDA0NjNiY2Y3MTFjNDEifQ==/issues">Vulnerability Report</a></td></tr><td>bullseye</td>
 
-<td>docker pull icr.io/ibmz/buildpack-deps@sha256:9d7c2fb0bcaa458cd9063592ab8fe875524d4bafb7f2add8983339643b894241</td>
+<td>docker pull icr.io/ibmz/buildpack-deps@sha256:f3b1b62cccf56f68eedd178b785b1ec226515cf0fd5f8e156ccdc5a214dd4296</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVpbGRwYWNrLWRlcHMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjlkN2MyZmIwYmNhYTQ1OGNkOTA2MzU5MmFiOGZlODc1NTI0ZDRiYWZiN2YyYWRkODk4MzMzOTY0M2I4OTQyNDEifQ==/issues">Vulnerability Report</a></td></tr><td>bionic-scm</td>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVpbGRwYWNrLWRlcHMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmYzYjFiNjJjY2NmNTZmNjhlZWRkMTc4Yjc4NWIxZWMyMjY1MTVjZjBmZDVmOGUxNTZjY2RjNWEyMTRkZDQyOTYifQ==/issues">Vulnerability Report</a></td></tr><td>bionic-scm</td>
 
 <td>docker pull icr.io/ibmz/buildpack-deps@sha256:106c75cfed3ccd3988714b4515c4b188e2d0a0d1cd75afd1669dfbd8a1789c79</td>
 
@@ -100,18 +100,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-<em>Primarily used as a base image...</em>
-
-<br><p><pre><code>FROM icr.io/ibmz/buildpack-deps:buster</code></pre></p>
-
-<p><span>....</span></p>
-
-<strong>docker run </strong>
-
-<br><p><pre><code>docker run -it --name bpdeps icr.io/ibmz/buildpack-deps:buster</code></pre></p>
+Primarily used as a base image:
+<br><p><pre><code>FROM icr.io/ibmz/buildpack-deps:[version]</code></pre></p>
+docker run:
+<br><p><pre><code>docker run -it --name bpdeps icr.io/ibmz/buildpack-deps:[version]</code></pre></p>
 
 </div>
 </body>
 </html>
-

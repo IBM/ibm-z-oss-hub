@@ -47,7 +47,11 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/memcached@sha256:ee4ce66f5ca5281195dfeacad416563d4efe00092f220a2c813c5b8ff663e7ea</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbWVtY2FjaGVkIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplZTRjZTY2ZjVjYTUyODExOTVkZmVhY2FkNDE2NTYzZDRlZmUwMDA5MmYyMjBhMmM4MTNjNWI4ZmY2NjNlN2VhIn0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbWVtY2FjaGVkIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplZTRjZTY2ZjVjYTUyODExOTVkZmVhY2FkNDE2NTYzZDRlZmUwMDA5MmYyMjBhMmM4MTNjNWI4ZmY2NjNlN2VhIn0=/issues">Vulnerability Report</a></td></tr><td>1.6.10</td>
+
+<td>docker pull icr.io/ibmz/memcached@sha256:b8f24fd0b55d989903426906661521667d2674c3291113cd76b70e812c5b880d</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbWVtY2FjaGVkIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpiOGYyNGZkMGI1NWQ5ODk5MDM0MjY5MDY2NjE1MjE2NjdkMjY3NGMzMjkxMTEzY2Q3NmI3MGU4MTJjNWI4ODBkIn0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,8 +76,8 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-<p><pre><code>docker run --name my-memcache -d icr.io/ibmz/memcached:1.6.8 memcached -m 64</pre></code><br>
+Run statement:
+<p><pre><code>docker run --name my-memcache -d icr.io/ibmz/memcached:[version] memcached -m 64</pre></code><br>
 
 This would set the Memcached server to use 64 megabytes for storage.
 <p/>

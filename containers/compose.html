@@ -44,11 +44,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.27.4</td>
+<td>2.0.1</td>
 
-<td>docker pull icr.io/ibmz/compose@sha256:3196def77670ec992dab36d76aa5efd49f6352d3286dfdf0455536acc2dd2e32</td>
+<td>docker pull icr.io/ibmz/compose@sha256:126c60bbf4d48673cf7451fcb4d5c5ed17440ccae208117480ee340cec4d1645</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY29tcG9zZSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MzE5NmRlZjc3NjcwZWM5OTJkYWIzNmQ3NmFhNWVmZDQ5ZjYzNTJkMzI4NmRmZGYwNDU1NTM2YWNjMmRkMmUzMiJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY29tcG9zZSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MTI2YzYwYmJmNGQ0ODY3M2NmNzQ1MWZjYjRkNWM1ZWQxNzQ0MGNjYWUyMDgxMTc0ODBlZTM0MGNlYzRkMTY0NSJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -73,37 +73,46 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-Create your <code>docker-compose.yml</code> file and other resources required for the containers specified in <code>docker-compose.yml</code>.
-
-<br><p><pre><code>version: '2'
-
+Docker-compose can be used stand-alone or as the basis for another image that is responsible for performing compose processes.
+<p/><br/>
+<b>Create your <code>docker-compose.yml</code> file and other resources required for the containers specified in <code>docker-compose.yml</code>.</b>
+<p/>
+<pre><code>version: '2'
 services:
   java:
     image: icr.io/ibmz/openjdk:11.0.8
-    command: java --version
-</code></pre></p>
+    command: java --version</code></pre>
+<br>
 
+<b>If you want to use docker-compose stand-alone</b>
+<p>
+<div style="margin-left: 5%">
+Add your <code>docker-compose.yml</code> to a docker volume.
+<p/><br/>
+Run the docker-compose image with your volume mounted and specifying the path to the <code>docker-compose.yml</code> at the mount location. Ensure that you are mounting <code>docker.sock</code> to the container as it is required to access the docker daemon.
+<pre><code>docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock:ro -v myvolume:/config/ icr.io/ibmz/compose:[tag] --env-file /config/docker-compose.yml up</code></pre>
+</div>
+
+<b>If you want to create an image based on docker-compose</b>
+<p>
+<div style="margin-left: 5%">
 Create a Dockerfile that builds an image that contains your <code>docker-compose.yml</code> file, and other resources required for the containers specified in <code>docker-compose.yml</code>.
-
-<br><p><pre><code>FROM icr.io/ibmz/compose:1.27.4
-
+<p/>
+<pre><code>FROM icr.io/ibmz/compose:[tag]
 COPY docker-compose.yml /home/
-
 ENV COMPOSE_FILE=/home/docker-compose.yml
-
-CMD ["docker-compose", "up"]
-</code></pre></p>
-
+CMD ["docker-compose", "up"]</code></pre>
+<br>
 Build the image.
+<p/>
+<pre><code>docker build -t docker-compose-app .</code></pre>
+<br>
 
-<br><p><pre><code>docker build -t docker-compose-app .</code></pre></p>
-
-Run a container using the image you just built. (Ensure that you are mounting <code>docker.sock</code> to the container)
-
-<br><p><pre><code>docker run --name app -v /var/run/docker.sock:/var/run/docker.sock:ro docker-compose-app</code></pre></p>
+Run a container using the image you just built. (Ensure that you are mounting <code>docker.sock</code> to the container). This will cause the <code>java --version</code> docker-compose to run the <code>icr.io/ibmz/openjdk:11.0.8</code> image  with the <code>java --version</code> command.
+<p/>
+<pre><code>docker run --name app -v /var/run/docker.sock:/var/run/docker.sock:ro docker-compose-app</code></pre>
+</div>
 
 </div>
 </body>
 </html>
-

@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>0.15.2</td>
+<td>1.2.2</td>
 
-<td>docker pull icr.io/ibmz/node_exporter@sha256:9292b879451f3284b7711c3e1eb0217661b53f5163478ca00511e430194c97b3</td>
+<td>docker pull icr.io/ibmz/node_exporter@sha256:e5157eb16cdd478cf389d49148fec03449bc70d6e7e73806dfcda668c4f008ec</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbm9kZV9leHBvcnRlciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OTI5MmI4Nzk0NTFmMzI4NGI3NzExYzNlMWViMDIxNzY2MWI1M2Y1MTYzNDc4Y2EwMDUxMWU0MzAxOTRjOTdiMyJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbm9kZV9leHBvcnRlciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZTUxNTdlYjE2Y2RkNDc4Y2YzODlkNDkxNDhmZWMwMzQ0OWJjNzBkNmU3ZTczODA2ZGZjZGE2NjhjNGYwMDhlYyJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,16 +72,13 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-<span>Create user defined network (useful for connecting to other services attached to the same network (e.g. Kibana)):</span>
-<span><br><p><pre><code>docker network create somenetwork</pre></code><br></span>
-
-<span>Run node_exporter</span>
+Although bind-mounts are generally disabled for security purposes; Node Exporter requires access to some system directories that have been explicitly made available by direct bind mount on the zCX system.
+<p><br>
+<span><b>Run node_exporter</b></span>
 
 <p><pre><code>docker run --name nodeexporter -v /sys:/host/sys:ro \
 -v /media:/rootfs/media:ro -v /etc/hostname:/etc/host_hostname:ro
--v /proc:/host/proc:ro -p 9100:9100 -d --network somenetwork icr.io/ibmz/node_exporter:0.15.2
-</pre></code><br>
+-v /proc:/host/proc:ro -p 9100:9100 -d icr.io/ibmz/node_exporter:[tag]</pre></code><br>
 
 Metrics are now available at port 9100 of the ZCX instance.
 

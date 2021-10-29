@@ -79,15 +79,14 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
+<p>Exposed Ports: <code>389</code></p>
 <span>The most simple form would be to start the application like so:</span>
 
-<span><br><p><pre><code>docker run -d -p 389:389 -e SLAPD_PASSWORD=mysecretpassword -e SLAPD_DOMAIN=ldap.example.org 
-        icr.io/ibmz/openldap:2.4.44</code></pre></p></span>
+<p><pre><code>docker run -d -p 389:389 -e SLAPD_PASSWORD=mysecretpassword -e SLAPD_DOMAIN=ldap.example.org 
+        icr.io/ibmz/openldap:2.4.44</code></pre></p>
         
 <p><em>see <a href="https://www.openldap.org/doc/">the official website</a> for more information</em></p>
 
 </div>
 </body>
 </html>
-

@@ -45,11 +45,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>4.5.0.2216</td>
+<td>4.6.2.2472</td>
 
-<td>docker pull icr.io/ibmz/sonar-scanner-cli@sha256:3830b49a8b81eb02fd250044836c1b558185d5a9b40c68df1e87904e4f1f3718</td>
+<td>docker pull icr.io/ibmz/sonar-scanner-cli@sha256:b997b964e9fe14fb5ef6b235d44498dd5539872d8fbb12297cc7a9744daece3b</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXJxdWJlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkMjAyY2M1Y2Y5ZDg3ODk0MDFkNzAzZjVlMjY2ZDhiYTg0MGNhYWNjYjNhN2NmNzdiNDE3OTRiMWM3MGUyNmM1In0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXItc2Nhbm5lci1jbGkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmI5OTdiOTY0ZTlmZTE0ZmI1ZWY2YjIzNWQ0NDQ5OGRkNTUzOTg3MmQ4ZmJiMTIyOTdjYzdhOTc0NGRhZWNlM2IifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -78,32 +78,37 @@ Use the pull string below for the version of this image you require.
 
 <p>Wait about 40 seconds for SonarQube to be ready before attempting to perform static code analysis.</p>
 
-<p>Create a Docker volume place your source code, and a sonar-project.properties file in the root directory of that volume.</p>
-<p><code>docker volume namedvolume</code></p>
+<b>Create a Docker volume place your source code, and a sonar-project.properties file in the root directory of that volume.</b>
+<p/>
+<pre><code>docker volume namedvolume</code></pre>
+</p>
 
-<br><p><pre><code># sonar-project.properties
-sonar.projectKey=<arbitrary.project.key>
-sonar.projectName=<name of your project>
+<b>Contents of sonar-project.properties</b>
+<p/>
+<pre><code>sonar.projectKey=arbitrary.project.key
+sonar.projectName=name of your project
 sonar.sources=/usr/src
-sonar.language=<Language the source code is written in>
-sonar.sourceEncoding=<encoding (ie., UTF-8)></code></pre></p>
+sonar.language=Language the source code is written in
+sonar.sourceEncoding=encoding (ie., UTF-8)></code></pre>
+<p>
 
-    Once SonarQube is ready, run SonarScanner CLI to perform static code analysis on your code.
+<b>Check that SonarQube is ready.</b>
+<p>
+<pre><code>curl -u admin:admin http://[host/ip where sonarqube is running]:[port]/api/system/health</code></pre></p>
 
-   <p><code>curl -u admin:admin http://<host/ip where sonarqube is running>:<port>/api/system/health</code></p>
-    
-<br><p><pre><code>
-Total    % Received % Xferd  Average Speed   Time    Time      Current
+<b>Example Results</b>
+<p/>
+<pre><code>Total    % Received % Xferd  Average Speed   Time    Time      Current
                              Dload  Upload   Total   Spent     Speed
-100    30  100    30    0     0     41      0 --:--:-- --:--:--   41{"health":"GREEN","causes":[]}</code></pre></p>
-    
-<br><p><pre><code>docker run --rm \
--e SONAR_HOST_URL="http://<host/ip where sonarqube is running>:<port>/api/system/health" \
--v <name of your project>:/usr/src \
-icr.io/ibmz/sonar-scanner-cli:4.5.0.2216 \</code></pre></p>
-
+100    30  100    30    0     0     41      0 --:--:-- --:--:--   41{"health":"GREEN","causes":[]}</code></pre>
+<p>
+<b>Run SonarScanner CLI to perform static code analysis on your code.</b>
+<p/>
+<pre><code>docker run --rm \
+-e SONAR_HOST_URL="http://[host/ip where sonarqube is running]:[port]" \
+-v [namedvolume]:/usr/src \
+icr.io/ibmz/sonar-scanner-cli:4.5.0.2216 </code></pre>
 
 </div>
 </body>
 </html>
-

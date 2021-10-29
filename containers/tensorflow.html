@@ -17,7 +17,7 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>tensorflow</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/288px-TensorFlowLogo.svg.png" width=200 height=200 alt="tensorflow"><p/>
-<span>TensorFlow is an end-to-end open source platform for machine learning/deep learning (ML/DL). It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers and developers easily build and deploy ML/DL models and applications. TensorFlow provides stable Python and C++ APIs, as well as non-guaranteed backward compatible API for other languages.
+<span><p>TensorFlow is an end-to-end open source platform for machine learning/deep learning (ML/DL). It has a comprehensive, flexible ecosystem of tools, libraries, and community resources that lets researchers and developers easily build and deploy ML/DL models and applications. TensorFlow provides stable Python and C++ APIs, as well as non-guaranteed backward compatible API for other languages.</p>
 </span>
 <p/>
 <span><em>See <a href="https://www.tensorflow.org/">tensorflow.org</a> for more information</em></span>
@@ -47,11 +47,7 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/tensorflow@sha256:f7358d3e6fa9f73d91cc497ef0674af9da4efa73cbde5bb8522660a1aed3833c</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovdGVuc29yZmxvdyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZjczNThkM2U2ZmE5ZjczZDkxY2M0OTdlZjA2NzRhZjlkYTRlZmE3M2NiZGU1YmI4NTIyNjYwYTFhZWQzODMzYyJ9/issues">Vulnerability Report</a></td></tr><td>2.3.1</td>
-
-<td>docker pull icr.io/ibmz/tensorflow@sha256:ade7e12a1c0fdde8004d4a667c9ffb9aa8e8a863f1519895c58c94c9a5dbbe72</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovdGVuc29yZmxvdyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YWRlN2UxMmExYzBmZGRlODAwNGQ0YTY2N2M5ZmZiOWFhOGU4YTg2M2YxNTE5ODk1YzU4Yzk0YzlhNWRiYmU3MiJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovdGVuc29yZmxvdyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZjczNThkM2U2ZmE5ZjczZDkxY2M0OTdlZjA2NzRhZjlkYTRlZmE3M2NiZGU1YmI4NTIyNjYwYTFhZWQzODMzYyJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -76,23 +72,12 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-This image contains a notebook server that enables access to TensorFlow through the Jupyter notebook interface.  This interface can be started as follows:
-<ul>
-<li>Run the Docker image, publishing Jupyter's port</li>
-
-<li><code>docker run -p 8000:8888 -it tf:2.3.1 /bin/bash</code></li>
-
-<li>Run the notebook server</li>
-
-<li><code>jupyter notebook --allow-root --ip 0.0.0.0</code></li>
-
-<li>From a web browser, access the notebook server, using the authentication token from the notebook console.</li>
-</ul>
-Additional Python packages are included to support TensorFlow applications.  These include matplotlib, pandas, and scikit-learn.
-
+<p>Exposed Ports: <code>8888</code></p>
+<p>To start container from image & start an application in production mode:</p>
+<p><pre><code>docker run --name tensorflow -it icr.io/ibmz/tensorflow:[version] bash</code></pre></p>
+<p> Prouction mode with exposed ports:</p>
+<p><pre><code>docker run --name tensorflow -it -p 8888:8888 icr.io/ibmz/tensorflow:[version]</code></pre></p>
 
 </div>
 </body>
 </html>
-

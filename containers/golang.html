@@ -43,15 +43,15 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.15</td>
+<td>1.17.1-bullseye</td>
 
-<td>docker pull icr.io/ibmz/golang@sha256:0185361abf4deaf64c50df9b9fbad510e25536979d53ee20ad45c0f230c1cf37</td>
+<td>docker pull icr.io/ibmz/golang@sha256:53f89b210eb296cfc5a931a8fd1edce87f45ce4b763e3702fa28c2188e03fcd2</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ29sYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowMTg1MzYxYWJmNGRlYWY2NGM1MGRmOWI5ZmJhZDUxMGUyNTUzNjk3OWQ1M2VlMjBhZDQ1YzBmMjMwYzFjZjM3In0=/issues">Vulnerability Report</a></td></tr><td>1.14</td>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ29sYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo1M2Y4OWIyMTBlYjI5NmNmYzVhOTMxYThmZDFlZGNlODdmNDVjZTRiNzYzZTM3MDJmYTI4YzIxODhlMDNmY2QyIn0=/issues">Vulnerability Report</a></td></tr><td>1.17-alpine3.13</td>
 
-<td>docker pull icr.io/ibmz/golang@sha256:01ab009f174347c4acfb5b2f9ea5668cdf63642648b16999a9d72c29c656f939</td>
+<td>docker pull icr.io/ibmz/golang@sha256:ea85d141cb78f274bd76630d6b9ee46a0a1931d4c5f6d18e57641309f8cad8c5</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ29sYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowMWFiMDA5ZjE3NDM0N2M0YWNmYjViMmY5ZWE1NjY4Y2RmNjM2NDI2NDhiMTY5OTlhOWQ3MmMyOWM2NTZmOTM5In0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ29sYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplYTg1ZDE0MWNiNzhmMjc0YmQ3NjYzMGQ2YjllZTQ2YTBhMTkzMWQ0YzVmNmQxOGU1NzY0MTMwOWY4Y2FkOGM1In0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -76,14 +76,14 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<h5>Building and Running a Go Binary in a Container</h5>
+<h5>Building and Running a Go Binary in a Container:</h5>
 
 <span>The most straightforward way to use this
 image is to use a Go container as both the build and runtime environment.
 In your Dockerfile, writing something along the lines of the following
 will compile and run your project:</span>
 
-<p><pre><code>FROM icr.io/ibmz/golang:1.14
+<p><pre><code>FROM icr.io/ibmz/golang:[version]
 
 WORKDIR /go/src/app
 COPY . .
@@ -101,21 +101,21 @@ CMD ["app"]
 <p><pre><code>docker run -it --rm --name my-running-app my-golang-app</pre></code><p/>
 
 
-<h5>Compile your app inside the Docker container</h5>
+<h5>Compile your app inside the Docker container:</h5>
 
 <span>There may be occasions where it is not appropriate to run your app inside a container. To compile, but not run your app inside the Docker instance, you can write something like:</span>
 <p/>
 <div class="note"><b>Note:</b> As a security measure, bind mounts are disabled in ZCX. Instead, please use Docker Volumes as illustrated below.</div>
 
-<p><pre><code>docker create volume {<your_volume}</pre></code>
+<br><p><pre><code>docker create volume [your_volume]</code></pre></p>
 
-<p><pre><code>docker run --rm -v {your_volume}:/usr/src/myapp -w /usr/src/myapp icr.io/ibmz/golang:1.14 go build -v</pre></code><br>
+<br><p><pre><code>docker run --rm -v [your_volume]:/usr/src/myapp -w /usr/src/myapp icr.io/ibmz/golang:[version] go build -v</code></pre></p><br>
 
 <span>This will add your current directory as a volume to the container, set the working directory to the volume, and run the command go build which will tell go to compile the project in the working directory and output the executable to myapp. Alternatively, if you have a Makefile, you can run the make command inside your container.</span>
 
-<p><pre><code>docker run --rm -v {your_volume}:/usr/src/myapp -w /usr/src/myapp icr.io/ibmz/golang:1.14 make</pre></code><br>
+<br><p><pre><code>docker run --rm -v [your_volume]:/usr/src/myapp -w /usr/src/myapp icr.io/ibmz/golang:[version] make</code></pre></p><br>
 
-<div class="note"><b>Note:</b> /go is world-writable to allow flexibility in the user which runs the container (for example, in a container started with <code>--user 1000:1000</code>, running go get github.com/example/... will succeed). While the 777 directory would be insecure on a regular host setup, there are not typically other processes or users inside the container, so this is equivilant to 700 for Docker usage, but allowing for <code>--user</code> flexibility.</div>
+<div class="note"><b>Note:</b> /go is world-writable to allow flexibility in the user which runs the container (for example, in a container started with <code>--user 1000:1000</code>, running <code>go get github.com/example/...</code> will succeed). While the 777 directory would be insecure on a regular host setup, there are not typically other processes or users inside the container, so this is equivilant to 700 for Docker usage, but allowing for <code>--user</code> flexibility.</div>
 
 </div>
 </body>

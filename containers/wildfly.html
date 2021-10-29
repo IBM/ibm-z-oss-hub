@@ -17,7 +17,7 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>wildfly</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Wildfly_logo.png" width=200 height=200 alt="Wildfly"><p/>
-<span>This is a Docker image with the WildFly Application Server.
+<span><p>This is a Docker image with the WildFly Application Server.</p>
 </span>
 <p/>
 <span><em>See <a href="https://wildfly.org/">wildfly.org</a> for more information</em></span>
@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>23.01</td>
+<td>24.0.0.Final</td>
 
-<td>docker pull icr.io/ibmz/wildfly@sha256:ced0329a47c2228971f7c158ca2b34138a736404cafae62f49cb76ed1a7ec2d2</td>
+<td>docker pull icr.io/ibmz/wildfly@sha256:505b61045c13e2be9e6bda78dd0bb68ec0b254396f71b7c236e16ed50b8fb62a</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovd2lsZGZseSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6Y2VkMDMyOWE0N2MyMjI4OTcxZjdjMTU4Y2EyYjM0MTM4YTczNjQwNGNhZmFlNjJmNDljYjc2ZWQxYTdlYzJkMiJ9/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovd2lsZGZseSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NTA1YjYxMDQ1YzEzZTJiZTllNmJkYTc4ZGQwYmI2OGVjMGIyNTQzOTZmNzFiN2MyMzZlMTZlZDUwYjhmYjYyYSJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,16 +72,13 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-<p><b>To boot in standalone mode:</b></p>
-
-<br><p><pre><code>docker run -it icr.io/ibmz/wildfly:20.0.1</code></pre></p><br>
-
-<p><b>To boot in domain mode:</b></p>
-<br><p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:23.01 domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p><br>
+<p>Exposed Ports: <code>8080 9990</code></p>
+<span><b>To boot in standalone mode:</b></span>
+<p><pre><code>docker run -it icr.io/ibmz/wildfly:24.0.0.Final</code></pre></p>
+<span><b>To boot in domain mode:</b></span>
+<p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:24.0.0.Final domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p>
 
 
 </div>
 </body>
 </html>
-

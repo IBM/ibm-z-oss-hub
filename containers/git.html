@@ -45,13 +45,9 @@ Use the pull string below for the version of this image you require.
 <table class="table table-striped table-bordered">
 <td>2.32.0</td>
 
-<td>docker pull icr.io/ibmz/git@sha256:c8a0c919c319d7fda34e35e6bdf1876593fcb0569267b2d7992c6474b9758298</td>
+<td>docker pull icr.io/ibmz/git@sha256:ca548553b9c92bb27d441f5fd538d95e95d4cae4566a29af1cdaf030c5e4b1ad</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2l0IiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpjOGEwYzkxOWMzMTlkN2ZkYTM0ZTM1ZTZiZGYxODc2NTkzZmNiMDU2OTI2N2IyZDc5OTJjNjQ3NGI5NzU4Mjk4In0=/issues">Vulnerability Report</a></td></tr><td>2.26.2</td>
-
-<td>docker pull icr.io/ibmz/git@sha256:09df47c9d3f7eb36ccc21ddd25128570bb72456bc47700edeff9fa647365cd40</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2l0IiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowOWRmNDdjOWQzZjdlYjM2Y2NjMjFkZGQyNTEyODU3MGJiNzI0NTZiYzQ3NzAwZWRlZmY5ZmE2NDczNjVjZDQwIn0=/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2l0IiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpjYTU0ODU1M2I5YzkyYmIyN2Q0NDFmNWZkNTM4ZDk1ZTk1ZDRjYWU0NTY2YTI5YWYxY2RhZjAzMGM1ZTRiMWFkIn0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -76,13 +72,14 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<span>Clone repository into a mounted volume:</span>
+The git image can be used in conjunction with a docker volume to perform git related tasks. For example:
+<p><br>
 
-<br><p><pre><code>docker run -ti --rm -v [docker_volume]:/root -v [docker_volume]:/git \
-        icr.io/ibmz/git:2.32.0 clone [repo]
-</code></pre></p>
+<span><b>Clone repository into a mounted volume:</b></span>
+
+<pre><code>docker run -ti --rm -v [docker_volume]:/root -v [docker_volume]:/git \
+        icr.io/ibmz/git:[tag] clone [repo]</code></pre>
 
 </div>
 </body>
 </html>
-

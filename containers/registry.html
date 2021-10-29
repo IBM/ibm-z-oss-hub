@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>2.7.0</td>
+<td>2.7.1</td>
 
-<td>docker pull icr.io/ibmz/registry@sha256:fd98b63aa71228c3ca71b42ddbcebb02bfdb77939b258d5caeb8cc03afba1764</td>
+<td>docker pull icr.io/ibmz/registry@sha256:e80a4111f559fb5332eb3e7018184ac6c3e766d036ba56463df37387372c59f5</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVnaXN0cnkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmZkOThiNjNhYTcxMjI4YzNjYTcxYjQyZGRiY2ViYjAyYmZkYjc3OTM5YjI1OGQ1Y2FlYjhjYzAzYWZiYTE3NjQifQ==/issues">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVnaXN0cnkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmU4MGE0MTExZjU1OWZiNTMzMmViM2U3MDE4MTg0YWM2YzNlNzY2ZDAzNmJhNTY0NjNkZjM3Mzg3MzcyYzU5ZjUifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,20 +72,17 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-
-
 <span> Docker run: </span>
-
-<br><p><pre><code>docker run -d -p 5000:5000 --restart always --name registry icr.io/ibmz/registry:2.7.0</pre></code></p><br>
+<br><p><pre><code>docker run -d -p 5000:5000 --restart always --name registry icr.io/ibmz/registry:[version]</code></pre></p>
 
 <span>Now use this image within docker:</span>
-<br><p><pre><code>docker pull image</pre></code></p><br>
+<p><pre><code>docker pull image</code></pre></p>
 
-<br><p><pre><code>>docker tag image localhost:5000/image</pre></code></p><br>
+<p><pre><code>docker tag image localhost:5000/image</code></pre></p>
 
-<br><p><pre><code>>docker push localhost:5000/image</pre></code></p><br>
+<p><pre><code>docker push localhost:5000/image</code></pre></p>
+
 
 </div>
 </body>
 </html>
-

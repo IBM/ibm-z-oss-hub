@@ -43,7 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>11.0-jdk11</td>
+<td>9.4.44</td>
+
+<td>docker pull icr.io/ibmz/jetty@sha256:fde88d9fd4066a1dba05bf72032179d15cecb01b5f9d84e00ceeec139dd0b7fd</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamV0dHkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmZkZTg4ZDlmZDQwNjZhMWRiYTA1YmY3MjAzMjE3OWQxNWNlY2IwMWI1ZjlkODRlMDBjZWVlYzEzOWRkMGI3ZmQifQ==/issues">Vulnerability Report</a></td></tr><td>11.0-jdk11</td>
 
 <td>docker pull icr.io/ibmz/jetty@sha256:4ba64dc6f813e0399b378da9dc27c0028187ccef382321748bc7cec6889dfaac</td>
 
@@ -74,17 +78,17 @@ Use the pull string below for the version of this image you require.
 <p/>
 <span>To run the default Jetty server in the background, use the following command with the values for <code>{http_port}</code> and <code>{https_port}</code> replaced with your desired ports.</span>
 
-<br><p><pre><code>docker run -d --name jetty -p {http_port}:8080 -p {https_port}:8443 icr.io/ibmz/jetty:11.0-jdk11</pre></code><br>
+<br><p><pre><code>docker run -d --name jetty -p {http_port}:8080 -p {https_port}:8443 icr.io/ibmz/jetty:[version]</pre></code><br>
 
 <span>You can test it by visiting container-ip:8080 or container-ip:8443/ in a browser. </span>
 <p/>
-<h5>Environment</h5>
+<h5>Environment:</h5>
 The default Jetty environment in the image is:
 <p><pre><code>JETTY_HOME    =  /usr/local/jetty
 JETTY_BASE    =  /var/lib/jetty
 TMPDIR        =  /tmp/jetty</pre></code><p>
 
-<h5>Deployment</h5>
+<h5>Deployment:</h5>
 Webapps can be deployed under <code>/var/lib/jetty/webapps</code> in the usual ways (WAR file, exploded WAR directory, or context XML file). To deploy your application to the <code>/</code> context, use the name <code>ROOT.war</code>, the directory name ROOT, or the context file <code>ROOT.xml</code> (case insensitive).
 
 </div>
