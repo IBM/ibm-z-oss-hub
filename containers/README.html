@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>IBM Z and LinuxONE Open Source Channel</h1>
+      <img src="images/IBM/ibm_z14_full_banner.png" alt="banner" width="1000px" height="200px">
+      <br/><br/>
+      <span>Welcome to the IBM Z open source software (OSS) channel.</span>
+      <br/><br/>
+      <span>Please review and agree to the terms of use before proceeding to download.</span>
+      <br/><br/>
+      <h2>IBM Open Source Container Image Agreement</h2>
+        These container images are third party offerings made available through this registry as a convenience 
+        to Client. Each of these third party offerings are "Separately Licensed Code" (or "non-IBM Product(s) 
+        under IBM's Customer Relationship Agreement and Cloud Services Agreement) made available by the third 
+        party to Client under the terms of the applicable third party license agreement(s), and not any agreement 
+        Client may have with IBM. Client may proceed with downloading the container images if such third-party 
+        license terms are acceptable. If these third-party terms are not acceptable, Client may not download 
+        or otherwise use or execute the container images.
+      
+        IBM support of the container images is available only through a separate open source service and support 
+        contract. A vulnerability report prepared as a result of a static code analysis may be included in the 
+        image posting. No other analysis, certification, testing or verification has been or will be performed 
+        by IBM on the images included in the container.
+      
+        NOTE: With respect to the Separately Licensed Code and any analysis of the code provided by IBM: (a) 
+        IBM provides it to Client WITHOUT WARRANTIES OF ANY KIND AND DISCLAIMS ANY AND ALL EXPRESS AND IMPLIED 
+        WARRANTIES AND CONDITIONS INCLUDING, BUT NOT LIMITED TO, THE WARRANTY OF TITLE, NON-INFRINGEMENT OR 
+        NON-INTERFERENCE, AND THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY AND FITNESS FOR A 
+        PARTICULAR PURPOSE; and (b) IBM is not liable for any direct, indirect, incidental, special, exemplary, 
+        punitive or consequential damages including, but not limited to, lost data, lost savings, and lost 
+        profits.
+      
+        IBM Open Source Container Image Agreement (February 2021)
+      <p/>
+      <span>The images in this registry have several key characteristics:</span>
+      <ul>
+        <li>The IBM team has built these images from source - they are not assembled from images hosted at other registries.</li>
+        <li>For images that include a build test, the IBM team runs these tests, and ensures that the images start as documented. No other tests have been performed.</li>
+        <li>These images have been scanned for known vulnerabilities and a report can be seen by clicking on the issues listed under the Security status on the details page for each image.</li>
+        <li>The sha256 hash for each image has been published for reference purposes. These hash strings can be comapred after pull to verify image contents.
+          Although not required, we recommend using these strings when pulling any of these images.</li>
+      </ul>
+      <p/>
+
+    </div>
+
+  </body>
+  <script type="text/javascript">
+    var options = {
+      valueNames: [ 'name', 'tags' ]
+    };
+
+    var hackerList = new List('imageList', options);
+  </script>
+</html>
