@@ -17,6 +17,9 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>sonarqube</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sonar-logo.png" width=200 height=200 alt="sonarqube"><p/>
+
+<div class="note"><b>Note:</b> Due to a vulnerability in log4j this image is currently disabled as we rebuild a new version. For more information about the vulnerability please visit: <br><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228</a></div><br><p/>
+
 <span>SonarQube is an open source product for continuous inspection of code quality.
 </span>
 <p/>
@@ -36,39 +39,6 @@ As for any pre-built image usage, it is the image user's responsibility to ensur
 <p/>
 <hr/>
 <p/>
-<b><span>Versions</span></b>
-<p/>
-Use the pull string below for the version of this image you require.
-
-
-
-<table class="table table-striped table-bordered">
-<td>8.5.1.38104</td>
-
-<td>docker pull icr.io/ibmz/sonarqube@sha256:d202cc5cf9d8789401d703f5e266d8ba840caaccb3a7cf77b41794b1c70e26c5</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXJxdWJlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkMjAyY2M1Y2Y5ZDg3ODk0MDFkNzAzZjVlMjY2ZDhiYTg0MGNhYWNjYjNhN2NmNzdiNDE3OTRiMWM3MGUyNmM1In0=/issues" target="_blank">Vulnerability Report</a></td></tr>
-<thead>
-
-<tr>
-
-<th scope="col">Version</th>
-
-<th scope="col">Pull String</th>
-
-<th scope="col">Security (IBM Cloud)</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-</tbody>
-
-</table>
 
 <b><h3>Usage Notes</h3></b>
 <p/>
@@ -86,7 +56,7 @@ To quickly run a demo instance, see Using Docker on the Get Started in Two Minut
 
 By default, the image will use an embedded H2 database that is not suited for production.<br>
 
-    
+
     <p><em>Warning: Only a single instance of SonarQube can connect to a database schema. If you're using a Docker Swarm or Kubernetes, make sure that multiple SonarQube instances are never running on the same database schema simultaneously. This will cause SonarQube to behave unpredictably and data will be corrupted. There is no safeguard until SONAR-10362.</em></p>
 
 Set up a database by following the "Installing the Database" section of <a href="https://docs.sonarqube.org/latest/setup/install-server/">the official docs</a>.<br>
