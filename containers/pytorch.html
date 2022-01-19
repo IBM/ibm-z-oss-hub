@@ -15,12 +15,12 @@
 <body>
 <div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
-<h1>wildfly</h1>
-<p/><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Wildfly_logo.png" width=200 height=200 alt="Wildfly"><p/>
-<span><p>This is a Docker image with the WildFly Application Server.</p>
+<h1>pytorch</h1>
+<p/><img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/PyTorch_logo_black.svg" width=200 height=200 alt="pytorch"><p/>
+<span><p>PyTorch is an open source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, primarily developed by Facebook's AI Research lab. It is free and open-source software released under the Modified BSD license. Although the Python interface is more polished and the primary focus of development, PyTorch also has a C++ interface.</p>
 </span>
 <p/>
-<span><em>See <a href="https://wildfly.org/">wildfly.org</a> for more information</em></span>
+<span><em>See <a href="https://pytorch.org/">pytorch.org</a> for more information</em></span>
 <p/>
 <b>This image is built to run on the IBM Z architecture.</b>
 <p/>
@@ -28,7 +28,7 @@
 <p/>
 <b><span>License</span></b>
 <p/>
-View license information <a href="https://github.com/jboss-dockerfiles/wildfly/blob/master/LICENSE">here</a>
+View license information <a href="https://github.com/pytorch/pytorch/blob/master/LICENSE">here</a>
 <p/>
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 <p/>
@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>26.0.0.Final</td>
+<td>1.10</td>
 
-<td>docker pull icr.io/ibmz/wildfly@sha256:357a6cdda0e3694a221e9dd2d2fb65878546ae86c7e61b7258133b4cdcb57e7e</td>
+<td>docker pull icr.io/ibmz/pytorch@sha256:f22d367cb505170e6ab184201849c98531fdaf4c6e53e621221b8cd57d0b013e</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovdWJ1bnR1IiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowZmFlZmNhOWNmMzg1MTA5NmM5MjU3OGJkOTZiMDJhMzY5YTAwYjFiY2MyZmZmOTQ2N2EyZGZkYTRhNjMwMmY2In0=/issues" target="_blank">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcHl0aG9uIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo2OTZiNjM2YzdkM2NiOTI3MzZhZGQ3YmUxNjY1NTlmOTY0YWQ3Mjk0NTE1ZDllN2IyZGQ3NmU4NGNjOTU2YWRmIn0=/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,12 +72,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<p>Exposed Ports: <code>8080 9990</code></p>
-<span><b>To boot in standalone mode:</b></span>
-<p><pre><code>docker run -it icr.io/ibmz/wildfly:26.0.0.Final</code></pre></p>
-<span><b>To boot in domain mode:</b></span>
-<p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:26.0.0.Final domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p>
+<span>A basic instance of Pytorch can be started by running the container with a docker volume containing your python code mounted at the root path <code>/</code> as shown below.</span>
 
+<p><pre><code>docker run --rm -it -v {volume_containing_your_python_code}:/ icr.io/ibmz/pytorch:1.10 python3 {your_python_code.py} </pre></code><p>
+
+<span>For full Pytorch documentation and usage notes see <a href="https://pytorch.org/docs/stable/index.html">the official website</a>.</span>
 
 </div>
 </body>
