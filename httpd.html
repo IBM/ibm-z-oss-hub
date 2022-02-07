@@ -1,0 +1,110 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    pre {background-color: #eeeeee; display: inline-block; padding: 12px }
+    img {height: 200px; width: auto;}
+    .note {border: 1px solid #cccccc; padding: 10px;}
+  </style>
+
+
+</head>
+<body>
+<div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
+<div class="container" style="padding-top: 30px; padding-bottom: 60px;">
+<h1>httpd</h1>
+<p/><img src="https://www.apache.org/logos/res/httpd/default.png" width=200 height=200 alt="httpd"><p/>
+<span><span>The Apache HTTP Server, colloquially called Apache, is a Web server application notable for playing a key role in the initial growth of the World Wide Web. Originally based on the NCSA HTTPd server, development of Apache began in early 1995 after work on the NCSA code stalled. Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and has remained the most popular HTTP server in use since April 1996.</span>
+</span>
+<p/>
+<span><em>See <a href="https://httpd.apache.org/">httpd.apache.org</a> for more information</em></span>
+<p/>
+<b>This image is built to run on the IBM Z architecture.</b>
+<p/>
+<hr/>
+<p/>
+<b><span>License</span></b>
+<p/>
+View license information <a href="https://github.com/docker-library/httpd/blob/master/LICENSE">here</a>
+<p/>
+As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
+<p/>
+As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
+<p/>
+<hr/>
+<p/>
+<b><span>Versions</span></b>
+<p/>
+Use the pull string below for the version of this image you require.
+
+
+
+<table class="table table-striped table-bordered">
+<td>2.4.52</td>
+
+<td>docker pull icr.io/ibmz/httpd@sha256:5915588c5564d27320fc9b52653798531a8d8778294e6d77ea952c662db4fe5a</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjU5MTU1ODhjNTU2NGQyNzMyMGZjOWI1MjY1Mzc5ODUzMWE4ZDg3NzgyOTRlNmQ3N2VhOTUyYzY2MmRiNGZlNWEifQ==/issues" target="_blank">Vulnerability Report</a></td></tr><td>2.4.46</td>
+
+<td>docker pull icr.io/ibmz/httpd@sha256:3e316cb396952b64ce1fcdc466a528ad600ce15f6d11df40d2720ed72e573086</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjNlMzE2Y2IzOTY5NTJiNjRjZTFmY2RjNDY2YTUyOGFkNjAwY2UxNWY2ZDExZGY0MGQyNzIwZWQ3MmU1NzMwODYifQ==/issues" target="_blank">Vulnerability Report</a></td></tr>
+<thead>
+
+<tr>
+
+<th scope="col">Version</th>
+
+<th scope="col">Pull String</th>
+
+<th scope="col">Security (IBM Cloud)</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+</tbody>
+
+</table>
+
+<b><h3>Usage Notes</h3></b>
+<p/>
+<p>This image only contains Apache httpd with the defaults from upstream. If you want to run a simple HTML server, create a simple Dockerfile to your project alongside a folder <code>public-html/</code> containing your HTML to be hosted.</p>
+<span>Create a webpage in public-html/index.html as such: </span>
+<p><code>
+&#60;!DOCTYPE html&#62;<br>
+&#60;html lang="en"&#62;<br>
+        &#60;head&#62;<br>
+                    &#60;meta charset="UTF-8"&#62;<br>
+                        &#60;title&#62;Successfully hosted content on httpd!&#60;/title&#62;<br>
+        &#60;/head&#62;<br>
+        &#60;body&#62;<br>
+                    &#60;h1&#62;Successfully hosted content on httpd!&#60;/h1&#62;<br>
+        &#60;/body&#62;<br>
+&#60;/html&#62;
+</p></code>
+<span>Create a Dockerfile in the same directory as public-html:</span>
+<p><code>
+FROM icr.io/ibmz/httpd:[version]<br>
+COPY ./public-html/index.html /usr/local/apache2/htdocs/<br>
+EXPOSE 80
+</p></code>
+<p>Now you can run the commands to build and run the image:</p>
+<p><code>
+docker build -t my-httpd . <br>
+docker run -dit --name my-running-app -p 8097:80 my-httpd
+</p></code>
+<p>Now, visit <code>[your system IP]:8097</code> on a web broswer to see the contents of <code>index.html</code> hosted!</p>
+<p>Further usage notes and instructions can be found on the <a href="https://github.com/docker-library/docs/tree/master/httpd">docker httpd docs page.</a>
+</p>
+
+</div>
+</body>
+</html>
