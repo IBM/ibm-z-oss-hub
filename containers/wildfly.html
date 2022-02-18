@@ -43,7 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>26.0.0.Final</td>
+<td>26.0.1.Final</td>
+
+<td>docker pull icr.io/ibmz/wildfly@sha256:62bdb2655213cd7078d25df9a66f64905ca8dd7efa360bacd6e4d50eddf7b52a</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovd2lsZGZseSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjJiZGIyNjU1MjEzY2Q3MDc4ZDI1ZGY5YTY2ZjY0OTA1Y2E4ZGQ3ZWZhMzYwYmFjZDZlNGQ1MGVkZGY3YjUyYSJ9/issues" target="_blank">Vulnerability Report</a></td></tr><td>26.0.0.Final</td>
 
 <td>docker pull icr.io/ibmz/wildfly@sha256:357a6cdda0e3694a221e9dd2d2fb65878546ae86c7e61b7258133b4cdcb57e7e</td>
 
@@ -74,9 +78,9 @@ Use the pull string below for the version of this image you require.
 <p/>
 <p>Exposed Ports: <code>8080 9990</code></p>
 <span><b>To boot in standalone mode:</b></span>
-<p><pre><code>docker run -it icr.io/ibmz/wildfly:26.0.0.Final</code></pre></p>
+<p><pre><code>docker run -it icr.io/ibmz/wildfly:{tag}</code></pre></p>
 <span><b>To boot in domain mode:</b></span>
-<p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:26.0.0.Final domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p>
+<p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:{tag} domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p>
 
 
 </div>

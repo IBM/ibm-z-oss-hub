@@ -43,7 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>2.30.3</td>
+<td>2.33.3</td>
+
+<td>docker pull icr.io/ibmz/prometheus@sha256:ca01cbbefe0d18008af7c8658e9465cdabe5d0a62b8f602d60cd898eb20502a0</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcHJvbWV0aGV1cyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6Y2EwMWNiYmVmZTBkMTgwMDhhZjdjODY1OGU5NDY1Y2RhYmU1ZDBhNjJiOGY2MDJkNjBjZDg5OGViMjA1MDJhMCJ9/issues" target="_blank">Vulnerability Report</a></td></tr><td>2.30.3</td>
 
 <td>docker pull icr.io/ibmz/prometheus@sha256:29c6b630407a286b197f0d0a91e3531485b2a023b3cf3f3a33c56ba0a848fe35</td>
 
@@ -76,7 +80,7 @@ Use the pull string below for the version of this image you require.
 <span>Create user defined network:</span>
 <p><pre><code>docker network create somenetwork</code></pre></p>
 <span>Run Prometheus:</span>
-<p><pre><code>docker run --name prometheus --network somenetwork -p 9090:9090 -d icr.io/ibmz/prometheus:2.30.3 </code></pre></p>
+<p><pre><code>docker run --name prometheus --network somenetwork -p 9090:9090 -d icr.io/ibmz/prometheus:[version] </code></pre></p>
 
 </div>
 </body>

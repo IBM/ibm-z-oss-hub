@@ -74,7 +74,7 @@ Use the pull string below for the version of this image you require.
 <p/>
 <p>Exposed Ports: <code>5984</code> (Main CouchDB endpoint), <code>4369</code> (epmd), <code>9100</code> (CouchDB cluster comm port)</p>
 <span>To start CouchDB server run the below command:</span>
-<p><pre><code>docker run -p [port]:5984 -d icr.io/ibmz/couchdb:3.1.1</code></pre></p>
+<p><pre><code>docker run -p [port]:5984 -d icr.io/ibmz/couchdb:[version]</code></pre></p>
 <span> Or run specifying the user and pass at runtime</span>
 <p><pre><code>docker run -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -p [port]:5984 -d icr.io/ibmz/couchdb:[version]</code></pre></p>
 <span>To test the CouchDB service:</span>

@@ -17,8 +17,7 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>elasticsearch</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Elasticsearch_logo.svg" width=200 height=200 alt="Elasticsearch"><p/>
-<div class="note"><b>Note:</b> Due to a vulnerability in log4j this image is currently disabled as we rebuild a new version. For more information about the vulnerability please visit: <br><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228</a></div><br><p/>
-<span><p>Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.</p>
+<span>Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 </span>
 <p/>
 <span><em>See <a href="https://www.elastic.co/products/elasticsearch">elastic.co</a> for more information</em></span>
@@ -37,19 +36,52 @@ As for any pre-built image usage, it is the image user's responsibility to ensur
 <p/>
 <hr/>
 <p/>
+<b><span>Versions</span></b>
+<p/>
+Use the pull string below for the version of this image you require.
+
+
+
+<table class="table table-striped table-bordered">
+<td>7.9.1</td>
+
+<td>docker pull icr.io/ibmz/Elasticsearch@sha256:f9f8f8cde80064a0b7133c1699423b6fc2c24316dc0102ebe25675241779d237</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZWxhc3RpY3NlYXJjaCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZjlmOGY4Y2RlODAwNjRhMGI3MTMzYzE2OTk0MjNiNmZjMmMyNDMxNmRjMDEwMmViZTI1Njc1MjQxNzc5ZDIzNyJ9/issues">Vulnerability Report</a></td></tr>
+<thead>
+
+<tr>
+
+<th scope="col">Version</th>
+
+<th scope="col">Pull String</th>
+
+<th scope="col">Security (IBM Cloud)</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+</tbody>
+
+</table>
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<p>Exposed Ports: <code>9200 9300</code></p>
-
 <span>Create user defined network (useful for connecting to other services attached to the same network (e.g. Kibana)):</span>
 
-<p><pre><code>docker network create somenetwork</code></pre></p>
+<br><p><pre><code>docker network create somenetwork</code></pre></p>
 
 <span>Run Elasticsearch:</span>
 
-<p><pre><code>docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
-        -e "discovery.type=single-node" icr.io/ibmz/elasticsearch:7.10</code></pre></p>
+<br><p><pre><code>
+docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 \
+        -e "discovery.type=single-node" icr.io/ibmz/elasticsearch:7.9.1
+</code></pre></p>
 
 </div>
 </body>
