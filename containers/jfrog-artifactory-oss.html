@@ -47,7 +47,11 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/jfrog-artifactory-oss@sha256:3c583976760758a8819b6e768a26b0896672435b901e9527d415d8d3e1c33c76</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamZyb2ctYXJ0aWZhY3Rvcnktb3NzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjozYzU4Mzk3Njc2MDc1OGE4ODE5YjZlNzY4YTI2YjA4OTY2NzI0MzViOTAxZTk1MjdkNDE1ZDhkM2UxYzMzYzc2In0=/issues" target="_blank">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamZyb2ctYXJ0aWZhY3Rvcnktb3NzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjozYzU4Mzk3Njc2MDc1OGE4ODE5YjZlNzY4YTI2YjA4OTY2NzI0MzViOTAxZTk1MjdkNDE1ZDhkM2UxYzMzYzc2In0=/issues" target="_blank">Vulnerability Report</a></td></tr><td>6.23.38</td>
+
+<td>docker pull icr.io/ibmz/jfrog-artifactory-oss@sha256:4727ca74b1019dc61f5b7a46b165e2b504c41467d131cede2d0e3f985347aba4</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamZyb2ctYXJ0aWZhY3Rvcnktb3NzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo0NzI3Y2E3NGIxMDE5ZGM2MWY1YjdhNDZiMTY1ZTJiNTA0YzQxNDY3ZDEzMWNlZGUyZDBlM2Y5ODUzNDdhYmE0In0=/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,7 +76,7 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-Start the artifactory container with port <code>8081</code> exposed so that you can interact with Artifactory.
+Start the artifactory container with port <code>8081</code> exposed so that you can interact with Artifactory. (on 7.x versions, expose port 8082)
 
  <br><p><pre><code>docker run --name artifactory -p 8081:8081 -p 8082:8082 -d icr.io/ibmz/jfrog-artifactory-oss:[version]</pre></code><br>
 
