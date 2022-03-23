@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.2.0</td>
+<td>1.3.0</td>
 
-<td>docker pull icr.io/ibmz/opensearch@sha256:40ecfef63e12eae047b36986c29ebff48f4fbd90b5e0ad0109500f40ffaf65ad</td>
+<td>docker pull icr.io/ibmz/opensearch@sha256:9a936233314e589f90cb5b47a86371d2d93428a0ee7c7e503367739057b807d6</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbnNlYXJjaCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NDBlY2ZlZjYzZTEyZWFlMDQ3YjM2OTg2YzI5ZWJmZjQ4ZjRmYmQ5MGI1ZTBhZDAxMDk1MDBmNDBmZmFmNjVhZCJ9/issues" target="_blank">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbnNlYXJjaCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OWE5MzYyMzMzMTRlNTg5ZjkwY2I1YjQ3YTg2MzcxZDJkOTM0MjhhMGVlN2M3ZTUwMzM2NzczOTA1N2I4MDdkNiJ9/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -76,6 +76,7 @@ Use the pull string below for the version of this image you require.
 Please note that this image is currently configured with <code>discovery.type: single-node</code> enabled. <br>
 Exposed Ports: 
   <br><pre><code>9200 9300 9600 9650</code></pre>
+
 
 <p>Start an opensearch container:</p>
 <p><pre><code>docker run --name opensearch -d -p 9200:9200 icr.io/ibmz/opensearch:[version]</code></pre></p>

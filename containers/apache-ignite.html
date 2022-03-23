@@ -15,12 +15,12 @@
 <body>
 <div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
-<h1>grafana</h1>
-<p/><img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Grafana_logo.svg" width=200 height=200 alt="grafana"><p/>
-<span>Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources. Grafana Enterprise version with additional capabilities is also available. It is expandable through a plug-in system. End users can create complex monitoring dashboards using interactive query builders.
+<h1>apache-ignite</h1>
+<p/><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Apache_Ignite_logo.svg" width=200 height=200 alt="apache-ignite"><p/>
+<span>Apache Ignite is a distributed database management system for high-performance computing. 
 </span>
 <p/>
-<span><em>See <a href="https://grafana.com/">grafana.com</a> for more information</em></span>
+<span><em>See <a href="https://ignite.apache.org/">ignite.apache.org</a> for more information</em></span>
 <p/>
 <b>This image is built to run on the IBM Z architecture.</b>
 <p/>
@@ -28,7 +28,7 @@
 <p/>
 <b><span>License</span></b>
 <p/>
-View license information <a href="https://github.com/grafana/grafana/blob/master/LICENSE">here</a>
+View license information <a href="https://github.com/apache/ignite/blob/master/LICENSE">here</a>
 <p/>
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 <p/>
@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>8.2.3</td>
+<td>2.12.0</td>
 
-<td>docker pull icr.io/ibmz/grafana@sha256:9282267953d00d5a988ab4bb4dad835b424b124240cc88a7b051e922214c23c3</td>
+<td>docker pull icr.io/ibmz/apache-ignite@sha256:62a7764df6ffaba21c72764440e60fe5dc3225fda1bdebb122c5555b2fb29e71</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ3JhZmFuYSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OTI4MjI2Nzk1M2QwMGQ1YTk4OGFiNGJiNGRhZDgzNWI0MjRiMTI0MjQwY2M4OGE3YjA1MWU5MjIyMTRjMjNjMyJ9/issues" target="_blank">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBhY2hlLWlnbml0ZSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjJhNzc2NGRmNmZmYWJhMjFjNzI3NjQ0NDBlNjBmZTVkYzMyMjVmZGExYmRlYmIxMjJjNTU1NWIyZmIyOWU3MSJ9/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -72,12 +72,13 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<p>Exposed Ports: <code>3000</code></p>
-<span>Start your container binding the external port 3000. Replace the <code>{grafana-port}</code> with the desired port that the grafana should be accessible at.</span>
+Exposed Ports: <pre><code>11211 47100 47500 49112 10800</code></pre>
 
-<p><pre><code>docker run -d --name grafana -p {grafana-port}:3000 icr.io/ibmz/grafana:7.3.5</pre></code><br>
+<p>Start a running apache-ignite node on port 10800:</p>
 
-Further documentation can be found at <a href="https://grafana.com/docs/grafana/latest/installation/docker/">Grafana.com</a>
+<p><pre><code>docker run -d -p 10800:10800 icr.io/ibmz/apache-ignite:2.12.0</code></pre></p>
+
+[Please refer to the official documentation for more information.](https://ignite.apache.org/docs/latest/)
 
 </div>
 </body>
