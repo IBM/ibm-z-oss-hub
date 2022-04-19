@@ -75,7 +75,7 @@ Use the pull string below for the version of this image you require.
 <p>Exposed Ports: <code>3000</code></p>
 <span>Start your container binding the external port 3000. Replace the <code>{grafana-port}</code> with the desired port that the grafana should be accessible at.</span>
 
-<p><pre><code>docker run -d --name grafana -p {grafana-port}:3000 icr.io/ibmz/grafana:7.3.5</pre></code><br>
+<p><pre><code>docker run -d --name grafana -p {grafana-port}:3000 icr.io/ibmz/grafana:{version}</pre></code><br>
 
 Further documentation can be found at <a href="https://grafana.com/docs/grafana/latest/installation/docker/">Grafana.com</a>
 
