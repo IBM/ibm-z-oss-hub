@@ -45,9 +45,9 @@ Use the pull string below for the version of this image you require.
 <table class="table table-striped table-bordered">
 <td>26.0.1.Final</td>
 
-<td>docker pull icr.io/ibmz/wildfly@sha256:54c636f80e5f48b8acbe58fb472be29ff7b9c0e5e9ed4da579380e5ba79192cb</td>
+<td>docker pull icr.io/ibmz/wildfly@sha256:9e1aad0c2a6788473153e0785f4abe63f95e36961f07a7878cd0372ef11f1d74</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovd2lsZGZseSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NTRjNjM2ZjgwZTVmNDhiOGFjYmU1OGZiNDcyYmUyOWZmN2I5YzBlNWU5ZWQ0ZGE1NzkzODBlNWJhNzkxOTJjYiJ9/issues" target="_blank">Vulnerability Report</a></td></tr><td>26.0.0.Final</td>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovd2lsZGZseSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OWUxYWFkMGMyYTY3ODg0NzMxNTNlMDc4NWY0YWJlNjNmOTVlMzY5NjFmMDdhNzg3OGNkMDM3MmVmMTFmMWQ3NCJ9/issues" target="_blank">Vulnerability Report</a></td></tr><td>26.0.0.Final</td>
 
 <td>docker pull icr.io/ibmz/wildfly@sha256:357a6cdda0e3694a221e9dd2d2fb65878546ae86c7e61b7258133b4cdcb57e7e</td>
 
@@ -77,11 +77,13 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 <p>Exposed Ports: <code>8080 9990</code></p>
-<span><b>To boot in standalone mode:</b></span>
-<p><pre><code>docker run -it icr.io/ibmz/wildfly:{tag}</code></pre></p>
-<span><b>To boot in domain mode:</b></span>
-<p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:{tag} domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p>
 
+<p><b>To boot in standalone mode:</b></p>
+
+<p><pre><code>docker run -it icr.io/ibmz/wildfly:20.0.1</code></pre></p><br>
+
+<p><b>To boot in domain mode:</b></p>
+<p><pre><code>docker run -it --name wildfly -p 8088:8080 -p 9990:9990 icr.io/ibmz/wildfly:23.01 domain.sh -b 0.0.0.0 -bmanagement 0.0.0.0</code></pre></p><br>
 
 </div>
 </body>

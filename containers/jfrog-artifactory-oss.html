@@ -78,9 +78,9 @@ Use the pull string below for the version of this image you require.
 <p/>
 Start the artifactory container with port <code>8081</code> exposed so that you can interact with Artifactory. (on 7.x versions, expose port 8082 as well)
 
-<p><pre><code>docker run --name artifactory -p 8081:8081 -p 8082:8082 -d icr.io/ibmz/jfrog-artifactory-oss:[7.x]</pre></code></p>
+ <br><p><pre><code>docker run --name artifactory -p 8081:8081 -p 8082:8082 -d icr.io/ibmz/jfrog-artifactory-oss:[7.x]</pre></code><br>
   
-<p><pre><code>docker run --name artifactory -p 8081:8081 -d icr.io/ibmz/jfrog-artifactory-oss:[6.x]</pre></code></p>
+ <br><p><pre><code>docker run --name artifactory -p 8081:8081 -d icr.io/ibmz/jfrog-artifactory-oss:[6.x]</pre></code><br>
 
 After waiting a minute for Artifactory to be ready, open the Artifactory UI from a web browser. If you are able to access the Artifactory web UI, that is an indication that Artifactory is working properly.
 

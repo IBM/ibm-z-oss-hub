@@ -43,7 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>2.8.1</td>
+<td>2.7.0</td>
+
+<td>docker pull icr.io/ibmz/registry@sha256:fd98b63aa71228c3ca71b42ddbcebb02bfdb77939b258d5caeb8cc03afba1764</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVnaXN0cnkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmZkOThiNjNhYTcxMjI4YzNjYTcxYjQyZGRiY2ViYjAyYmZkYjc3OTM5YjI1OGQ1Y2FlYjhjYzAzYWZiYTE3NjQifQ==/issues" target="_blank">Vulnerability Report</a></td></tr><td>2.8.1</td>
 
 <td>docker pull icr.io/ibmz/registry@sha256:de50e0e8c99b1f58a1d76cd3e846f30d80bf94ce557ecde2d3222db234330649</td>
 
@@ -51,11 +55,7 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/registry@sha256:9419170104b9a0f242c8ff3d5c0a6831c8ecaa2741a533768670305386846aee</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVnaXN0cnkiLCJsb25nRGlnZXN0Ijoic2hhMjU2Ojk0MTkxNzAxMDRiOWEwZjI0MmM4ZmYzZDVjMGE2ODMxYzhlY2FhMjc0MWE1MzM3Njg2NzAzMDUzODY4NDZhZWUifQ==/issues" target="_blank">Vulnerability Report</a></td></tr><td>2.7.0</td>
-
-<td>docker pull icr.io/ibmz/registry@sha256:fd98b63aa71228c3ca71b42ddbcebb02bfdb77939b258d5caeb8cc03afba1764</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVnaXN0cnkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmZkOThiNjNhYTcxMjI4YzNjYTcxYjQyZGRiY2ViYjAyYmZkYjc3OTM5YjI1OGQ1Y2FlYjhjYzAzYWZiYTE3NjQifQ==/issues" target="_blank">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcmVnaXN0cnkiLCJsb25nRGlnZXN0Ijoic2hhMjU2Ojk0MTkxNzAxMDRiOWEwZjI0MmM4ZmYzZDVjMGE2ODMxYzhlY2FhMjc0MWE1MzM3Njg2NzAzMDUzODY4NDZhZWUifQ==/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -81,14 +81,12 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 <span> Docker run: </span>
-<br><p><pre><code>docker run -d -p 5000:5000 --restart always --name registry icr.io/ibmz/registry:[version]</code></pre></p>
+<pre><code>docker run -d -p 5000:5000 --restart always --name registry icr.io/ibmz/registry:{version}</pre></code>
 
 <span>Now use this image within docker:</span>
-<p><pre><code>docker pull image</code></pre></p>
-
-<p><pre><code>docker tag image localhost:5000/image</code></pre></p>
-
-<p><pre><code>docker push localhost:5000/image</code></pre></p>
+<p><pre><code>docker pull image</pre></code></p>
+<p><pre><code>docker tag image localhost:5000/image</pre></code></p>
+<p><pre><code>docker push localhost:5000/image</pre></code></p>
 
 
 </div>
