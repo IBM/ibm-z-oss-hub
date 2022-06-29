@@ -15,12 +15,23 @@
 <body>
 <div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
-<h1>jenkins</h1>
-<p/><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg" width=200 height=200 alt="jenkins"><p/>
-<span>Jenkins is an open source build automation tool.
+<h1>ibmz-optimized-for-tensorflow</h1>
+
+<span><p>Welcome to our Open-Beta program for IBM Z Optimized for TensorFlow.</p>
+
+<p><a href="https://www.tensorflow.org/">TensorFlow</a> is an open source machine learning framework. 
+It has a comprehensive set of tools that enable model development, training, and inference. It also features a rich, robust ecosystem.</p>
+
+<p>On IBM z16™ hardware, TensorFlow can leverage new inference acceleration capabilities.
+Specifically, TensorFlow core 2.7 is now available with support for the IBM Integrated Accelerator for AI that leverages the 
+<a href="https://github.com/IBM/zDNN">IBM z Deep Neural Network Library</a>. 
+This enablement will allow TensorFlow core 2.7 to transparently target the accelerator for a number of compute-intensive operations. 
+The Open-Beta container image has been released through the IBM Z and LinuxONE Container Registry. 
+Versions of this container image can be viewed below on this webpage.</p>
+
 </span>
 <p/>
-<span><em>See <a href="https://jenkins.io">jenkins.io</a> for more information</em></span>
+<span><em>See <a href="https://github.com/IBM/ibmz-optimized-for-tensorflow">IBM Z Optimized for TensorFlow</a> for more information</em></span>
 <p/>
 <b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
 <p/>
@@ -28,7 +39,7 @@
 <p/>
 <b><span>License</span></b>
 <p/>
-View license information <a href="https://www.jenkins.io/license/">here</a>
+View license information <a href="https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?li_formnum=L-BMYR-CEPKAE">here</a>
 <p/>
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 <p/>
@@ -43,11 +54,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>2.235.1</td>
+<td>1.0 latest</td>
 
-<td>docker pull icr.io/ibmz/jenkins@sha256:cec822e8cf11c9cc16bb5a48e6dee13a8bf9fc5414ba4aa5765a650da06b95db</td>
+<td>docker pull icr.io/ibmz/ibmz-optimized-for-tensorflow@sha256:cd2bf6b37bc72c52712bf96c22c959372549d419c835d71d6e5d4b94aa7e4cf1</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6Y2VjODIyZThjZjExYzljYzE2YmI1YTQ4ZTZkZWUxM2E4YmY5ZmM1NDE0YmE0YWE1NzY1YTY1MGRhMDZiOTVkYiJ9/issues" target="_blank">Vulnerability Report</a></td><td>06-06-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaWJtei1vcHRpbWl6ZWQtZm9yLXRlbnNvcmZsb3ciLCJsb25nRGlnZXN0Ijoic2hhMjU2OmNkMmJmNmIzN2JjNzJjNTI3MTJiZjk2YzIyYzk1OTM3MjU0OWQ0MTljODM1ZDcxZDZlNWQ0Yjk0YWE3ZTRjZjEifQ==/issues" target="_blank">Vulnerability Report</a></td><td>06-24-2022</td></tr>
 <thead>
 
 <tr>
@@ -74,9 +85,7 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-Use the following command to start the Jenkins image, replace the <code>[host_port]</code> with the port that you would like the UI to be accessible at. By default the jenkins image will store data at <code>/var/jenkins_home</code> so it usually desirable to run the container with a volume mounted at that location so that data is not lost when the container exits.
-
-<br><p><pre><code>docker run --name jenkins -p [host_port]:8080 -v  [jenkins-persistence-volume]:/var/jenkins_home -d icr.io/ibmz/jenkins:[tag]</pre></code><br>
+<p>For documentation and samples for the IBM Z Optimized for TensorFlow container image, please visit the GitHub Repository <a href="https://github.com/IBM/ibmz-optimized-for-tensorflow">here</a>.</p>
 
 </div>
 </body>
