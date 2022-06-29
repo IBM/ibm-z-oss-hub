@@ -22,7 +22,7 @@
 <p/>
 <span><em>See <a href="https://www.erlang.org/">the official website</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -43,27 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>24.3.0.0</td>
-
-<td>docker pull icr.io/ibmz/erlang@sha256:b1e2f8d038b187d46a3d6baef23198e580ab5ee604b4d6d2a79f5a87d9d0c83c</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXJsYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpiMWUyZjhkMDM4YjE4N2Q0NmEzZDZiYWVmMjMxOThlNTgwYWI1ZWU2MDRiNGQ2ZDJhNzlmNWE4N2Q5ZDBjODNjIn0=/issues" target="_blank">Vulnerability Report</a></td><td>03-15-2022</td></tr><td>24.1.2.0</td>
+<td>24.1.2.0</td>
 
 <td>docker pull icr.io/ibmz/erlang@sha256:a9cf61501cb5eccbea201466b3fff86f452fa8aba8561ce5b5c7e09f8d297de0</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXJsYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjphOWNmNjE1MDFjYjVlY2NiZWEyMDE0NjZiM2ZmZjg2ZjQ1MmZhOGFiYTg1NjFjZTViNWM3ZTA5ZjhkMjk3ZGUwIn0=/issues" target="_blank">Vulnerability Report</a></td><td>10-22-2021</td></tr><td>24.2.1.0</td>
-
-<td>docker pull icr.io/ibmz/erlang@sha256:a5616d0da4f00d4e319d56240bb187050d716ebbafe86b170f8d2dce1a940675</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXJsYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjphNTYxNmQwZGE0ZjAwZDRlMzE5ZDU2MjQwYmIxODcwNTBkNzE2ZWJiYWZlODZiMTcwZjhkMmRjZTFhOTQwNjc1In0=/issues" target="_blank">Vulnerability Report</a></td><td>02-17-2022</td></tr><td>24 24.3 24.3.4 24.3.4.0</td>
-
-<td>docker pull icr.io/ibmz/erlang@sha256:86fba2cd83efec47aed0a75c91c56c52d4b6124a18a462f74563ce731cf4fec6</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXJsYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo4NmZiYTJjZDgzZWZlYzQ3YWVkMGE3NWM5MWM1NmM1MmQ0YjYxMjRhMThhNDYyZjc0NTYzY2U3MzFjZjRmZWM2In0=/issues" target="_blank">Vulnerability Report</a></td><td>05-18-2022</td></tr><td>25 25.0 25.0.0 25.0.0.0</td>
-
-<td>docker pull icr.io/ibmz/erlang@sha256:6af629fb4a5b204f20c72106985f1b50722d1d109e82dc41f387c17bb6d900c6</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXJsYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo2YWY2MjlmYjRhNWIyMDRmMjBjNzIxMDY5ODVmMWI1MDcyMmQxZDEwOWU4MmRjNDFmMzg3YzE3YmI2ZDkwMGM2In0=/issues" target="_blank">Vulnerability Report</a></td><td>06-06-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXJsYW5nIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjphOWNmNjE1MDFjYjVlY2NiZWEyMDE0NjZiM2ZmZjg2ZjQ1MmZhOGFiYTg1NjFjZTViNWM3ZTA5ZjhkMjk3ZGUwIn0=/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -73,8 +57,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -104,7 +86,8 @@ WORKDIR /home
 
 COPY script.erl .
 
-CMD [ "escript", "script.erl" ]</code></pre></p>
+CMD [ "escript", "script.erl" ]
+</code></pre></p>
 
 Build the image:
 

@@ -22,7 +22,7 @@
 <p/>
 <span><em>See <a href="https://openjdk.java.net/">openjdk.java.net</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -43,23 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>11</td>
+<td>17.0.1-jdk-oraclelinux8</td>
 
-<td>docker pull icr.io/ibmz/openjdk@sha256:d57066a7757f6c063e4fb207c85edfd6e3881a268fdf70a3a6b406f4498f7018</td>
+<td>docker pull icr.io/ibmz/openjdk@sha256:48a359abf28c3f5ad12abdab86dd9e689e51099843b714c423577a4001567f45</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZDU3MDY2YTc3NTdmNmMwNjNlNGZiMjA3Yzg1ZWRmZDZlMzg4MWEyNjhmZGY3MGEzYTZiNDA2ZjQ0OThmNzAxOCJ9/issues" target="_blank">Vulnerability Report</a></td><td>05-19-2022</td></tr><td>16</td>
-
-<td>docker pull icr.io/ibmz/openjdk@sha256:cb9125daa2248b8e7ddb33aea3f7874ae47600fd94e537176169674429d8feeb</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6Y2I5MTI1ZGFhMjI0OGI4ZTdkZGIzM2FlYTNmNzg3NGFlNDc2MDBmZDk0ZTUzNzE3NjE2OTY3NDQyOWQ4ZmVlYiJ9/issues" target="_blank">Vulnerability Report</a></td><td>06-10-2022</td></tr><td>14</td>
-
-<td>docker pull icr.io/ibmz/openjdk@sha256:8287bc779ccf1a0272f72a360f7e05f803d2ba0bcaa7d4b0359a7c884f8a7866</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ODI4N2JjNzc5Y2NmMWEwMjcyZjcyYTM2MGY3ZTA1ZjgwM2QyYmEwYmNhYTdkNGIwMzU5YTdjODg0ZjhhNzg2NiJ9/issues" target="_blank">Vulnerability Report</a></td><td>06-10-2022</td></tr><td>17</td>
-
-<td>docker pull icr.io/ibmz/openjdk@sha256:71f665e40df94705b0aa4ed555250603ea6e8955590a94ce8c6ca34bdd4e808e</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NzFmNjY1ZTQwZGY5NDcwNWIwYWE0ZWQ1NTUyNTA2MDNlYTZlODk1NTU5MGE5NGNlOGM2Y2EzNGJkZDRlODA4ZSJ9/issues" target="_blank">Vulnerability Report</a></td><td>05-19-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbmpkayIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NDhhMzU5YWJmMjhjM2Y1YWQxMmFiZGFiODZkZDllNjg5ZTUxMDk5ODQzYjcxNGM0MjM1NzdhNDAwMTU2N2Y0NSJ9/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -69,8 +57,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -95,9 +81,11 @@ WORKDIR /usr/src/myapp
 RUN javac Main.java
 CMD ["java", "Main"]</code></pre></p>
 
-<p>You can then run and build the Docker image:</p>
-<pre><code>docker build -t my-java-app .</code></pre>
-<pre><code>docker run -it --rm --name my-running-app my-java-app</code></pre>
+You can then run and build the Docker image:
+
+<p><pre><code>docker build -t my-java-app .</code></pre></p>
+
+<p><pre><code>docker run -it --rm --name my-running-app my-java-app</code></pre></p>
 
 
 </div>

@@ -17,13 +17,13 @@
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>jenkins-agent</h1>
 <p/><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jenkins_logo_with_title.svg" width=200 height=200 alt="jenkins-agent"><p/>
-<span>This is the worker agent for jenkins, which includes a JDK and the Jenkins agent executable.
+<span>This is the worker agent for jenkins, which includes a JDK and the Jenkins agent executable (agent.jar).
 This executable is an instance of the Jenkins Remoting library.
 </span>
 <p/>
 <span><em>See <a href="https://www.jenkins.io/doc/book/using/using-agents/">jenkins.io</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -44,23 +44,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>4.13-2</td>
-
-<td>docker pull icr.io/ibmz/jenkins-agent@sha256:b09aad3c811a6b96308240395797d8b6786e84a784bbca719d5817e8957b8e9e</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YjA5YWFkM2M4MTFhNmI5NjMwODI0MDM5NTc5N2Q4YjY3ODZlODRhNzg0YmJjYTcxOWQ1ODE3ZTg5NTdiOGU5ZSJ9/issues" target="_blank">Vulnerability Report</a></td><td>06-06-2022</td></tr><td>4.11-1</td>
+<td>4.11-1</td>
 
 <td>docker pull icr.io/ibmz/jenkins-agent@sha256:67f5272f3bf1794f345bca84af74cd4713a751e55c5746f44014e6ddf93507bd</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjdmNTI3MmYzYmYxNzk0ZjM0NWJjYTg0YWY3NGNkNDcxM2E3NTFlNTVjNTc0NmY0NDAxNGU2ZGRmOTM1MDdiZCJ9/issues" target="_blank">Vulnerability Report</a></td><td>10-26-2021</td></tr><td>4.13-1</td>
-
-<td>docker pull icr.io/ibmz/jenkins-agent@sha256:5d1d5058fbaa780e6689a5235546e0a312038def927d9e3776276a08289ad6ae</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NWQxZDUwNThmYmFhNzgwZTY2ODlhNTIzNTU0NmUwYTMxMjAzOGRlZjkyN2Q5ZTM3NzYyNzZhMDgyODlhZDZhZSJ9/issues" target="_blank">Vulnerability Report</a></td><td>04-04-2022</td></tr><td>4.11.2-5</td>
-
-<td>docker pull icr.io/ibmz/jenkins-agent@sha256:067cfa74abc9653f3594b625229190a574a2fea2f390e7d93d72d30608e2a7bc</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MDY3Y2ZhNzRhYmM5NjUzZjM1OTRiNjI1MjI5MTkwYTU3NGEyZmVhMmYzOTBlN2Q5M2Q3MmQzMDYwOGUyYTdiYyJ9/issues" target="_blank">Vulnerability Report</a></td><td>02-17-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovamVua2lucy1hZ2VudCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjdmNTI3MmYzYmYxNzk0ZjM0NWJjYTg0YWY3NGNkNDcxM2E3NTFlNTVjNTc0NmY0NDAxNGU2ZGRmOTM1MDdiZCJ9/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -70,8 +58,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 

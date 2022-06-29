@@ -22,7 +22,7 @@
 <p/>
 <span><em>See <a href="https://gcc.gnu.org/">gcc.gnu.org</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -47,11 +47,7 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/gcc@sha256:29272b7c2ed12f3d36f75354bfeed4ac59212a8ab9a5c3dcff2079517cc2aac4</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2NjIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoyOTI3MmI3YzJlZDEyZjNkMzZmNzUzNTRiZmVlZDRhYzU5MjEyYThhYjlhNWMzZGNmZjIwNzk1MTdjYzJhYWM0In0=/issues" target="_blank">Vulnerability Report</a></td><td>10-05-2021</td></tr><td>12 12-bullseye 12.1 12.1-bullseye 12.1.0 12.1.0-bullseye bullseye</td>
-
-<td>docker pull icr.io/ibmz/gcc@sha256:1233c6caa7697dbcf2d11d7bdf204af64d4c8e88d86f7aad8ddeeed7e3d93282</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2NjIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoxMjMzYzZjYWE3Njk3ZGJjZjJkMTFkN2JkZjIwNGFmNjRkNGM4ZTg4ZDg2ZjdhYWQ4ZGRlZWVkN2UzZDkzMjgyIn0=/issues" target="_blank">Vulnerability Report</a></td><td>05-19-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2NjIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoyOTI3MmI3YzJlZDEyZjNkMzZmNzUzNTRiZmVlZDRhYzU5MjEyYThhYjlhNWMzZGNmZjIwNzk1MTdjYzJhYWM0In0=/issues" target="_blank">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -61,8 +57,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -86,7 +80,8 @@ The most straightforward way to use this image is to use a gcc container as both
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN gcc -o myapp main.c
-CMD ["./myapp"]</code></pre></p>
+CMD ["./myapp"]
+</code></pre></p>
 
 Then, build and run the Docker image:
 

@@ -498,37 +498,35 @@
                                         <!-- Introduction begin -->
                                         <div class="ibm-band ibm-background-white-core ibm-textcolor-default ibm-padding-top-1 ibm-padding-bottom-1" id="intro">
                                             <div class="ibm-fluid">
-                                                <div class="ibm-col-12-4">
-                                                    <div class="ibm-padding-top-1 ibm-video-player-con" data-widget="videoplayer" data-videodisplay="overlayandtrigger" data-videotype="kaltura" data-videoid="1_p2e797km" data-overlayplayersize="large" data-showvideoduration="false" data-showvideotitle="false" data-imagesize="large" data-customplaceholder="true">
-                                                        <div>
-                                                            <!-- TODO: Update this link ... -->
-                                                            <a href="https://mediacenter.ibm.com/media/t/1_p2e797km" class="ibm-video-placeholder" aria-label="MediaCenter - zCX overview">
-                                                                <span class="ibm-play-link"></span>
-                                                                <img src="./page_files/ICR_intro_video_title_card.png" alt="ICR ID" class="ibm-downsize" style="max-height:320px;"/>
-                                                            </a>
-                                                        </div>
-                                                    </div>                                      
-                                                    <a style="font-size:0.875rem" href="https://izswebpage.mybluemix.net/docs/transcripts/z-OS-Container-Extensions-(zCX)-Overview-Transcript.pdf" target="_blank" alt="Open overview video transcript in pdf format">Transcript</a>
+                                                <div class="ibm-col-12-4 ibm-padding-top-3">
+                                                    <br/><br/>
+                                                    <a href="https://mediacenter.ibm.com/media/IBM+Z+and+LinuxONE+Container+Registry+Overview/1_p2jvsvth" 
+                                                        class="ibm-video-placeholder" target="_blank" aria-label="MediaCenter - ICR overview">
+                                                        <span class="ibm-play-link"></span>
+                                                        <img src="./page_files/ICR_intro_video_title_card.png" alt="ICR ID" class="ibm-downsize" style="max-height:320px;"/>
+                                                    </a>
                                                 </div>
                                                 <div class="ibm-col-12-8">
-                                                    <h2 class="ibm-h2 ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">Container Images for IBM Z</h2>
+                                                    <h2 class="ibm-h2 ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">Container Images for IBM Z and LinuxONE</h2>
                                                     <div class="ibm-textcolor-black-core ibm-padding-top-1 ibm-padding-bottom-1">
                                                         <div class="ibm-padding-bottom-1">
                                                             <p>This is a channel of open source container images available for use, free of
                                                             charge, that can be pulled and managed through the common graphical and command
-                                                            line interfaces that support containerized workloads across platforms.
+                                                            line interfaces that support containerized workloads.
                                                             </p>
                                                             <p>These images run in both the Linux, and zCX environments of z/OS on IBM Z.
                                                             All of these images are OCI-compliant, and built for deployment in a local
-                                                            environment.  If you are looking for cloud-enabled containers for IBM Z, you
-                                                            may want to visit the <a href="https://marketplace.redhat.com/en-us/search?q=%22ibmz%22">Red Hat Marketplace</a>.
+                                                            environment.  If you are looking for Kubernetes or OpenShift enabled container images, you
+                                                            can visit the <a href="https://cloud.ibm.com/catalog?search=IBM%20Z#search_results" target="_blank">IBM cloud</a> or
+                                                            <a href="https://marketplace.redhat.com/en-us/search?q=%22ibmz%22" target="_blank">Red Hat Marketplace</a>
+                                                            and search for IBM Z.
                                                             </p>
                                                             <p>Several steps have been taken to ensure the veracity of these container images:
                                                                 <ul>
-                                                                    <li>The images are built from source - they are not assembled from images hosted at other registries.</li>
+                                                                    <li>The images are build from source - they are not assembled from images hosted at other registries.</li>
                                                                     <li>Build tests from the originating project are run when the container image is built.</li>
                                                                     <li>Container images are scanned for known vulnerabilities and the reports are provided at the image's associated web page.</li>
-                                                                    <li>The hash for each container image is published.  This enables users to avoid installing an inintended image version.</li>
+                                                                    <li>The hash for each container image is published to enable references to the specific image instance.</li>
                                                                 </ul>
                                                             </p>
                                                         </div>
@@ -539,11 +537,9 @@
                                         <!-- Introduction end -->
 
                                         <!-- Terms of Use begin -->
-                                        <div class="ibm-band ibm-background-neutral-white-10 ibm-textcolor-default ibm-padding-top-1 ibm-padding-bottom-1" id="termsuse">
+                                        <div class="ibm-band ibm-background-blue-50 ibm-textcolor-white-core ibm-padding-top-1 ibm-padding-bottom-1" id="termsuse">
                                             <div class="ibm-fluid">
-                                                <h2 class="ibm-h2 ibm-left ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">
-                                                    <span>Terms of Use</span>
-                                                </h2>
+                                                <h2 class="ibm-h2 ibm-left ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-white-core">Terms of Use</h2>
                                                 <div id="agreementTextArea" data-widget="scrollable" data-height="500" style="height: 500px;" class="nano has-scrollbar ibm-widget-processed">
                                                     <div class="nano-content" tabindex="0" style="right: -16px;">
                                                         <p class="ibm-h3"> IBM Open Source Container Image Agreement </p>
@@ -551,7 +547,7 @@
                                                         <p>
                                                             <em>These container images are third party offerings made available through this 
                                                                 registry as a convenience to Client. &nbsp;Each of these third party 
-                                                                &nbsp;offerings are "Separately Licensed Code" (or "non-IBM Product(s)" 
+                                                                &nbsp;offerings are "Separately Licensed Code" (or "non-IBM Product(s) 
                                                                 under IBM's Customer Relationship Agreement and Cloud Services 
                                                                 Agreement) made available by the third party to Client under the terms 
                                                                 of the applicable third party license agreement(s), and not any 
@@ -601,7 +597,7 @@
                                                     <br>
                                                     <p class="ibm-btn-row ibm-button-link">
                                                         <button id="confirmButton"onclick="checkAgreement();" 
-                                                                class="ibm-btn-pri ibm-btn-blue-50" 
+                                                                class="ibm-btn-pri ibm-btn-white-10" 
                                                                 title="You must click the 'I Agree' checkbox before proceeding">Proceed to container image list</button>
                                                       </p>
                                                 </div>
@@ -623,36 +619,118 @@
                                         <!-- Getting Started start -->
                                         <div class="ibm-band ibm-background-white-core ibm-textcolor-default ibm-padding-top-1 ibm-padding-bottom-1" id="gettingstarted">
                                             <div class="ibm-fluid">
-                                                <div class="ibm-col-12-4">
-                                                    <div class="ibm-padding-top-1 ibm-video-player-con" data-widget="videoplayer" data-videodisplay="overlayandtrigger" data-videotype="kaltura" data-videoid="1_p2e797km" data-overlayplayersize="large" data-showvideoduration="false" data-showvideotitle="false" data-imagesize="large" data-customplaceholder="true">
-                                                        <div>
-                                                            <!-- TODO: Update this link ... -->
-                                                            <a href="https://mediacenter.ibm.com/media/t/1_p2e797km" class="ibm-video-placeholder" aria-label="MediaCenter - zCX overview">
-                                                                <span class="ibm-play-link"></span>
-                                                                <img src="./page_files/ICR_get_started_video_title_card.png" alt="ICR ID" class="ibm-downsize" style="max-height:320px;"/>
-                                                            </a>
+                                                <br/><br/>
+                                                <h2 class="ibm-h2 ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">Getting Started</h2>
+                                                <div class="ibm-textcolor-black-core ibm-padding-top-1 ibm-padding-bottom-1">
+                                                    <div class="ibm-padding-bottom-1">
+                                                        <div id="gettingStartedArea" data-widget="scrollable" data-height="300" style="height: 500px;" class="nano has-scrollbar ibm-widget-processed">
+                                                            <div class="nano-content" tabindex="0" style="right: -16px;">
+                                                                <p>This collection of container images is hosted at the 
+                                                                <a href="https://www.ibm.com/cloud/container-registry" target="_blank">IBM Cloud Container Registry</a> 
+                                                                (icr.io).  An IBM Cloud ID is required to pull images from the registry.  Any type of 
+                                                                IBM Cloud ID will work, including "lite" IDs with no associated cost.  If you don't 
+                                                                have an ID already, please visit <a href="https://cloud.ibm.com" target="_blank">cloud.ibm.com</a> and
+                                                                create one.
+                                                                </p>
+                                                                <p>You are welcome to browse the set of available images here without an IBM Cloud ID,
+                                                                but the ID is required at docker/podman login time.
+                                                                </p>
+                                                                <h3 class="ibm-h3 ibm-left ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">
+                                                                    <span>User credentials</span>
+                                                                </h3>
+                                                                <p>All container image registries require users log in, and as mentioned above, ICR requires
+                                                                an IBM Cloud ID.  IBM Cloud makes extensive use of keys and passphrases for user 
+                                                                authentication.  You can manage your identity keys from the IBM Cloud web site using the
+                                                                <strong><em>Manage</em></strong> pulldown to navigate to the <strong><em>Access (IAM)</em></strong>
+                                                                interface.  From there, choose API keys, and then Create an IBM Cloud API key.  You should 
+                                                                see a window for naming and describing your access key.
+                                                                </p>
+                                                                <p>Once you enter a name and description, the IBM Cloud will generate the key, and give you 
+                                                                5 minutes to download the file (named apikey.json), or cut/paste the text of the key to a 
+                                                                file of your choice.  Save this file to a safe place and give it a useful name.  Should 
+                                                                you ever lose it, use the API keys interface to delete it and define a new one to remain 
+                                                                secure. This key is alone is what identifies you to ICR. 
+                                                                </p>
+                                                                <p>The contents of the key file looks like this:
+                                                                </p>
+                                                                <p class="ibm-plex-mono-regular"><br />
+                                                                    <span style="font-size:16px;">{<br />
+                                                                    &nbsp;&nbsp; &nbsp;&quot;name&quot;: &quot;Sample IAMAPIKEY&quot;,<br />
+                                                                    &nbsp;&nbsp; &nbsp;&quot;description&quot;: &quot;A sample IBM Cloud API key&quot;,<br />
+                                                                    &nbsp;&nbsp; &nbsp;&quot;createdAt&quot;: &quot;2021-02-08T20:01+0000&quot;,<br />
+                                                                    &nbsp;&nbsp; &nbsp;&quot;apikey&quot;: &quot;<span style="color:#2980b9;">B08t7_qWo60P123456789IXybgvgGqAty8ULka8ZnMAT</span>&quot;</span>
+                                                                </p>
+                                                                <p class="ibm-plex-mono-regular">
+                                                                    <span style="font-size:18px;">}</span>
+                                                                </p>
+                                                                <p class="ibm-plex-mono-regular">&nbsp;</p>
+                                                                <p class="ibm-textcolor-black-core">The apikey text highlighted in blue above is the key string 
+                                                                needed for authenticating to ICR.
+                                                                </p>
+                                                                <h3 class="ibm-h3 ibm-left ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">
+                                                                    <span>The IBMCLOUD Command Line Interfaces</span>
+                                                                </h3>
+                                                                <p>The IBM Cloud has a command line interface (CLI) that provides many of the same functions 
+                                                                that can be found on the web.   If you are familiar with the ibmcloud CLI, feel free to use 
+                                                                it.  It is not required to use the ICR registry from a container CLI like Docker or Podman, 
+                                                                and we will not be using it in any of our best practices.
+                                                                </p>
+                                                                <h3 class="ibm-h3 ibm-left ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">
+                                                                    <span>Pulling an Image From the ibmz Namespace at ICR</span>
+                                                                </h3>
+                                                                <p>Once you have your IAMAPIKEY credentials created, you're ready to log in to ICR and pull 
+                                                                images.  The process is effectively the same as for any other registry.  Simply log into the 
+                                                                ICR global region at icr.io, with a user name of <strong><em>iamapikey</em></strong>.  When 
+                                                                ICR sees this userid, it will expect to receive an apikey for your IBM cloud userid at the
+                                                                password prompt.  If you have multiple keys generated for your userid, any of them should work.
+                                                                </p>
+                                                                <p>After logging in to ICR, simply pull the image using the fully qualified path to the 
+                                                                image you want.  We recommend using the pull string provided in the details page for the
+                                                                specific image of interest.  Note that while it is possible to pull an image by name and 
+                                                                version (tag), we recommend using the full sha256 hash for the image digest to be sure you 
+                                                                get exactly the image you request.
+                                                                </p>
+                                                                <p>
+                                                                    Here is an example login and pull command:
+                                                                </p>
+                                                                <p class="ibm-plex-mono-regular">
+                                                                    <span style="font-size:16px;">&gt; 
+                                                                        <strong>docker login -u iamapikey icr.io</strong><br />
+                                                                        Password:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:#2980b9;">&lt;-Paste the text of your apikey here</span><br />
+                                                                        Login Succeeded
+                                                                    </span>
+                                                                </p>
+                                                                    
+                                                                <p class="ibm-plex-mono-regular">
+                                                                    <span style="font-size:16px;">&gt; 
+                                                                        <strong>docker pull icr.io/ibmz/kafka@sha256:4419e017475e4082f8a03574f2b74195a689650c3f1ed8962874783e3dd4bf4a</strong><br />
+                                                                        sha256:4419e017475e4082f8a03574f2b74195a689650c3f1ed8962874783e3dd4bf4a: Pulling from ibmz/kafka<br />
+                                                                        d777bd6e5a8d: Already exists&nbsp;<br />
+                                                                        c2fc12e4949d: Already exists&nbsp;<br />
+                                                                        a15ab9f4a460: Already exists&nbsp;<br />
+                                                                        cd76eb949805: Pull complete&nbsp;<br />
+                                                                        Digest: sha256:4419e017475e4082f8a03574f2b74195a689650c3f1ed8962874783e3dd4bf4a<br />
+                                                                        Status: Downloaded newer image for icr.io/ibmz/kafka@sha256:4419e017475e4082f8a03574f2b74195a689650c3f1ed8962874783e3dd4bf4a<br />
+                                                                        icr.io/ibmz/kafka@sha256:4419e017475e4082f8a03574f2b74195a689650c3f1ed8962874783e3dd4bf4a
+                                                                    </span><br />
+                                                                &nbsp;
+                                                                </p>
+                                                                
+                                                                Once you have the image pulled to your environment, you are free to use it as documented.
+                                                            </div>
+                                                            <div class="nano-pane" style="opacity: 1; visibility: visible;">
+                                                                <div class="nano-slider" style="height: 466px; transform: translate(0px);">
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>                                      
-                                                    <a style="font-size:0.875rem" href="https://izswebpage.mybluemix.net/docs/transcripts/z-OS-Container-Extensions-(zCX)-Overview-Transcript.pdf" target="_blank" alt="Open overview video transcript in pdf format">Transcript</a>
+                                                    </div>
                                                 </div>
-                                                <div class="ibm-col-12-8">
-                                                    <h2 class="ibm-h2 ibm-padding-top-1 ibm-padding-bottom-1 ibm-textcolor-black-core">Getting Started</h2>
-                                                    <div class="ibm-textcolor-black-core ibm-padding-top-1 ibm-padding-bottom-1">
-                                                        <div class="ibm-padding-bottom-1">
-                                                            <p>This collection of container images is hosted at the 
-                                                            <a href="https://www.ibm.com/cloud/container-registry">IBM Cloud Container Registry</a> (icr.io).  An
-                                                            IBM Cloud ID is required to pull images from the registry.  Any type of IBM Cloud ID will work, 
-                                                            including "lite" IDs with no associated cost.  You are welcome to browse the set of available images
-                                                            here, but the ID is required at docker/podman login time.
-                                                            </p>
-                                                            <p>Each container image has a home page with details about container use, a vulnerability report, and
-                                                            a docker pull string.  It is strongly recommended that you pull images using the sha256 hashes provided
-                                                            to ensure that you get the container image instance you are requesting. 
-                                                            </p>
-                                                            <p>Please see the demonstration video in this section for an example of how to request an IBM cloud ID,
-                                                            and use it from the docker command line to login and pull a cointainer image.
-                                                            </p>
-                                                        </div>
+                                                <div class="ibm-band ibm-background-blue-50 ibm-textcolor-white-core ibm-padding-top-1 ibm-padding-bottom-1" id="termsuse">
+                                                    <div class="ibm-textcolor-white-core ibm-padding-top-1 ibm-padding-bottom-1">
+                                                        <h4 class="ibm-h4">Be in Touch</h2>
+                                                        <p>To request a new image for the registry, or report a problem, please open an issue at
+                                                        <a href="https://github.com/IBM/ibm-z-oss-hub" class="ibm-textcolor-white-core" target="_blank">https://github.com/IBM/ibm-z-oss-hub</a>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
