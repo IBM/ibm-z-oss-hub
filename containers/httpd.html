@@ -16,19 +16,19 @@
 <div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
 <h1>httpd</h1>
-<p/><img src="n/a" width=200 height=200 alt="n/a"><p/>
-<span>n/a
+<p/><img src="https://www.apache.org/logos/res/httpd/default.png" width=200 height=200 alt="httpd"><p/>
+<span><span>The Apache HTTP Server, colloquially called Apache, is a Web server application notable for playing a key role in the initial growth of the World Wide Web. Originally based on the NCSA HTTPd server, development of Apache began in early 1995 after work on the NCSA code stalled. Apache quickly overtook NCSA HTTPd as the dominant HTTP server, and has remained the most popular HTTP server in use since April 1996.</span>
 </span>
 <p/>
-<span><em>See <a href="n/a">n/a</a> for more information</em></span>
+<span><em>See <a href="https://httpd.apache.org/">httpd.apache.org</a> for more information</em></span>
 <p/>
-<b>This image is built to run on the IBM Z architecture.</b>
+<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
 <p/>
 <hr/>
 <p/>
 <b><span>License</span></b>
 <p/>
-View license information <a href="n/a">here</a>
+View license information <a href="https://github.com/docker-library/httpd/blob/master/LICENSE">here</a>
 <p/>
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 <p/>
@@ -43,11 +43,23 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>2.4.46</td>
+<td>2.4.52</td>
+
+<td>docker pull icr.io/ibmz/httpd@sha256:c8b4cf5c517f6e3ae1717000eb1a820c6fae7830bfde015ce0889cfd2ccd528a</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmM4YjRjZjVjNTE3ZjZlM2FlMTcxNzAwMGViMWE4MjBjNmZhZTc4MzBiZmRlMDE1Y2UwODg5Y2ZkMmNjZDUyOGEifQ==/issues" target="_blank">Vulnerability Report</a></td><td>02-08-2022</td></tr><td>2.4.53 2.4.53-bullseye</td>
+
+<td>docker pull icr.io/ibmz/httpd@sha256:79f22621fb3e783c53b8ed046a2758fcec070bf964d0211f5db1865e8c546a5b</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2Ojc5ZjIyNjIxZmIzZTc4M2M1M2I4ZWQwNDZhMjc1OGZjZWMwNzBiZjk2NGQwMjExZjVkYjE4NjVlOGM1NDZhNWIifQ==/issues" target="_blank">Vulnerability Report</a></td><td>06-06-2022</td></tr><td>2 2-bullseye 2.4 2.4-bullseye 2.4.54 2.4.54-bullseye bullseye</td>
+
+<td>docker pull icr.io/ibmz/httpd@sha256:5f3680a67b0bf08bde391e4c5bd0bef22dea834c0451b89aaa84814532130034</td>
+
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjVmMzY4MGE2N2IwYmYwOGJkZTM5MWU0YzViZDBiZWYyMmRlYTgzNGMwNDUxYjg5YWFhODQ4MTQ1MzIxMzAwMzQifQ==/issues" target="_blank">Vulnerability Report</a></td><td>06-10-2022</td></tr><td>2.4.46</td>
 
 <td>docker pull icr.io/ibmz/httpd@sha256:3e316cb396952b64ce1fcdc466a528ad600ce15f6d11df40d2720ed72e573086</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjNlMzE2Y2IzOTY5NTJiNjRjZTFmY2RjNDY2YTUyOGFkNjAwY2UxNWY2ZDExZGY0MGQyNzIwZWQ3MmU1NzMwODYifQ==/issues" target="_blank">Vulnerability Report</a></td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovaHR0cGQiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjNlMzE2Y2IzOTY5NTJiNjRjZTFmY2RjNDY2YTUyOGFkNjAwY2UxNWY2ZDExZGY0MGQyNzIwZWQ3MmU1NzMwODYifQ==/issues" target="_blank">Vulnerability Report</a></td><td>12-08-2020</td></tr>
 <thead>
 
 <tr>
@@ -57,6 +69,8 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
+
+<th scope="col">Created</th>
 
 </tr>
 
@@ -72,7 +86,34 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-n/a
+<p>This image only contains Apache httpd with the defaults from upstream. If you want to run a simple HTML server, create a simple Dockerfile to your project alongside a folder <code>public-html/</code> containing your HTML to be hosted.</p>
+<span>Create a webpage in public-html/index.html as such: </span>
+<p><code>
+&#60;!DOCTYPE html&#62;<br>
+&#60;html lang="en"&#62;<br>
+        &#60;head&#62;<br>
+                    &#60;meta charset="UTF-8"&#62;<br>
+                        &#60;title&#62;Successfully hosted content on httpd!&#60;/title&#62;<br>
+        &#60;/head&#62;<br>
+        &#60;body&#62;<br>
+                    &#60;h1&#62;Successfully hosted content on httpd!&#60;/h1&#62;<br>
+        &#60;/body&#62;<br>
+&#60;/html&#62;
+</p></code>
+<span>Create a Dockerfile in the same directory as public-html:</span>
+<p><code>
+FROM icr.io/ibmz/httpd:[version]<br>
+COPY ./public-html/index.html /usr/local/apache2/htdocs/<br>
+EXPOSE 80
+</p></code>
+<p>Now you can run the commands to build and run the image:</p>
+<p><code>
+docker build -t my-httpd . <br>
+docker run -dit --name my-running-app -p 8097:80 my-httpd
+</p></code>
+<p>Now, visit <code>[your system IP]:8097</code> on a web broswer to see the contents of <code>index.html</code> hosted!</p>
+<p>Further usage notes and instructions can be found on the <a href="https://github.com/docker-library/docs/tree/master/httpd">docker httpd docs page.</a>
+</p>
 
 </div>
 </body>
