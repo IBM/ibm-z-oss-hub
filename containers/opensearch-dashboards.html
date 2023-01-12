@@ -43,11 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.2.0</td>
+<td>3.0.0</td>
 
-<td>docker pull icr.io/ibmz/opensearch-dashboards@sha256:d9d626b57a3d7a57276a00aca9bfc61951db48746faf6a37596fb1944b69b486</td>
+<td>docker pull icr.io/ibmz/opensearch-dashboards@sha256:8483ba82c9596f626a6f200af65511284a237991b327a29ade2aab0c7ef8d3e9</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbnNlYXJjaC1kYXNoYm9hcmRzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkOWQ2MjZiNTdhM2Q3YTU3Mjc2YTAwYWNhOWJmYzYxOTUxZGI0ODc0NmZhZjZhMzc1OTZmYjE5NDRiNjliNDg2In0=/issues" target="_blank">Vulnerability Report</a></td><td>03-10-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovb3BlbnNlYXJjaC1kYXNoYm9hcmRzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo4NDgzYmE4MmM5NTk2ZjYyNmE2ZjIwMGFmNjU1MTEyODRhMjM3OTkxYjMyN2EyOWFkZTJhYWIwYzdlZjhkM2U5In0=/issues" target="_blank">Vulnerability Report</a></td><td>01-11-2023</td></tr>
 <thead>
 
 <tr>
@@ -80,7 +80,7 @@ Exposed Ports: <pre><code>5601 5603</code></pre>
 <p>This file `opensearch-dashboards.yml` is responsible for configuring your connection to a running opensearch cluster. Find more on these settings and others at https://opensearch.org/docs/latest/dashboards/install/tls/</p>
 <p>Please note that 'admin' is the default username/password for the opensearch image offered by this container registry.</p>
 
-<p><pre><code>server.host: "0.0.0.0"
+<p><pre><code>server.host: '0.0.0.0'
 opensearch.hosts: ["https://[host-ip-of-running-opensearch-cluster]:9200"]
 opensearch.username: "admin" 
 opensearch.password: "admin"
