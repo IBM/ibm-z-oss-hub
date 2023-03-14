@@ -34,7 +34,7 @@
 <p/>
 <span><em>See <a href="https://quay.io">quay.io</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -59,11 +59,7 @@ Use the pull string below for the version of this image you require.
 
 <td>docker pull icr.io/ibmz/quay@sha256:a94333a653e6f21ac85da4e7a7e057360c5f7b67111e707e03ad8983a0af9b57</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcXVheSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YTk0MzMzYTY1M2U2ZjIxYWM4NWRhNGU3YTdlMDU3MzYwYzVmN2I2NzExMWU3MDdlMDNhZDg5ODNhMGFmOWI1NyJ9/issues" target="_blank">Vulnerability Report</a></td><td>12-08-2020</td></tr><td>3.5.2</td>
-
-<td>docker pull icr.io/ibmz/quay@sha256:a892322b3df463841864c869690805541a65e5b5edb246997797a7045252d580</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcXVheSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YTg5MjMyMmIzZGY0NjM4NDE4NjRjODY5NjkwODA1NTQxYTY1ZTViNWVkYjI0Njk5Nzc5N2E3MDQ1MjUyZDU4MCJ9/issues" target="_blank">Vulnerability Report</a></td><td>10-26-2021</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovcXVheSIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YTk0MzMzYTY1M2U2ZjIxYWM4NWRhNGU3YTdlMDU3MzYwYzVmN2I2NzExMWU3MDdlMDNhZDg5ODNhMGFmOWI1NyJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -73,8 +69,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -90,56 +84,61 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-<p><b>Start a Redis container from the icr.io/ibmz/redis:6.0 image.</b></p>
 
-<p><pre><code>docker run --name quay-redis -d -p 6379:6379 icr.io/ibmz/redis:6.0</code></pre></p>
 
-<p><b>Start a PostgreSQL container from the quay.io/ibm/postgres image.</b></p>
+    <p>Start a Redis container from the icr.io/ibmz/redis:6.0 image.</p>
 
-<pre><code>docker run --name quay-postgres -e POSTGRES_PASSWORD=<password> \
-    -d -p 5432:5432 icr.io/ibmz/postgres:13</pre></code>
+<p><code>docker run --name quay-redis -d -p 6379:6379 icr.io/ibmz/redis:6.0</code></p>
 
-<p><b>Wait about 10 seconds for PostgreSQL to be ready, and then make sure that PostgreSQL has the pg_trgm extension.</b></p>
+    <p>Start a PostgreSQL container from the quay.io/ibm/postgres image.</p>
 
-<p><pre><code>docker exec --user postgres quay-postgres psql -d postgres -c "create extension pg_trgm"</code></pre></p>
+<br><p><pre><code>docker run --name quay-postgres -e POSTGRES_PASSWORD=<password> \
+        -d -p 5432:5432 icr.io/ibmz/postgres:13</code></pre></p>
 
-<p><b>Create Docker volumes for the Quay config file and Quay's persistant storage.</b></p>
+    <p>Wait about 10 seconds for PostgreSQL to be ready, and then make sure that PostgreSQL has the pg_trgm extension.</p>
 
-<p><pre><code>docker volume create quay-config
-docker volume create quay-storage</code></pre></p>
+<p><code>docker exec --user postgres quay-postgres psql -d postgres -c "create extension pg_trgm"</code></p>
 
-<p><b>Start a container from the icr.io/ibmz/quay:[tag] image in "config mode".</b></p>
+    <p>Create Docker volumes for the Quay config file and Quay's persistant storage.</p>
 
-<pre><code>docker run --name configure-quay -d \
-        -p 8443:8443 \
-        -p 8080:8080 \
-        -v quay-storage:/datastorage \
-        icr.io/ibmz/quay:solo config <password></code></pre>
+<p><code>docker volume create quay-config</code></p>
 
-<p><b>From a web browser, sign into the Quay configureation web UI.</b></p>
+<p><code>docker volume create quay-storage</code></p>
 
-<p><pre><code>http://host/ip where quay is running:8080</code></pre></p>
+    <p>Start a container from the icr.io/ibmz/quay:solo image in "config mode".</p>
 
-<b>Follow Chapter 4 of Deploy Red Hat Quay - Basic in the Red Hat Quay Documentation to generate your Quay config file.</b>
-<p><br>
-<b>Extract config.yaml from quay-config.tar.gz, and place config.yaml in the quay-config volume that you created earlier.</b>
+<br><p><pre><code>docker run --name configure-quay -d \ 
+            -p 8443:8443 \
+            -p 8080:8080 \
+            -v quay-storage:/datastorage \ 
+            icr.io/ibmz/quay:solo config <password></code></pre></p>
 
-<p><pre><code>tar -xzvf quay-config.tar.gz config.yaml</code></pre></p>
+    <p>From a web browser, sign into the Quay configureation web UI.</p>
 
-<p><b>Remove the configure-quay container.</b></p>
+    <p><code>http://host/ip where quay is running:8080</code></p>
 
-<p><pre><code>docker rm -f configure-quay</code></pre></p>
+    Follow Chapter 4 of Deploy Red Hat Quay - Basic in the Red Hat Quay Documentation to generate your Quay config file.
 
-<p><b>Start a Quay container from the quay.io/ibm/quay image. (Not in config mode this time)</b></p>
+    Extract config.yaml from quay-config.tar.gz, and place config.yaml in the quay-config volume that you created earlier.
 
-<pre><code>`docker run --name quay -d\
-          -p 8443:8443 \
-          -p 8080:8080 \
-          -v quay-config:/conf/stack \
-          -v quay-storage:/datastorage \
-          icr.io/ibmz/quay:solo</code></pre>
+<p><code>tar -xzvf quay-config.tar.gz`
+<p><code>config.yaml</code></p>
 
-<p><b>Wait about a minute for Quay to be ready, and then view the Quay web UI at the host/ip that you configured earlier to verify that Quay is working.</b></p>
+    <p>Remove the configure-quay container.</p>
+
+<p><code>docker rm -f configure-quay</code></p>
+
+    <p>Start a Quay container from the quay.io/ibm/quay image. (Not in config mode this time)</p>
+
+<br><p><pre><code>docker run --name quay -d\
+>            -p 8443:8443 \
+>            -p 8080:8080 \
+>            -v quay-config:/conf/stack \
+>            -v quay-storage:/datastorage \
+>            icr.io/ibmz/quay:solo</code></pre></p>
+
+    <p>Wait about a minute for Quay to be ready, and then view the Quay web UI at the host/ip that you configured earlier to verify that Quay is working.</p>
+
 
 </div>
 </body>

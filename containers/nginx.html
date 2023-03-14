@@ -22,7 +22,7 @@
 <p/>
 <span><em>See <a href="https://nginx.org/">nginx.org</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -43,19 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.21 1.21.6</td>
+<td>1.19.4</td>
 
-<td>docker pull icr.io/ibmz/nginx@sha256:692304f94c2ccebc7e5de8b1c333b92c22c578398edf637e4a2f429fdf024531</td>
+<td>docker pull icr.io/ibmz/nginx@sha256:d8b56b90eaa75f7c2819565cf1f4b8b8af1a73021d33cb34bb1c473c362667d9</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbmdpbngiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjY5MjMwNGY5NGMyY2NlYmM3ZTVkZThiMWMzMzNiOTJjMjJjNTc4Mzk4ZWRmNjM3ZTRhMmY0MjlmZGYwMjQ1MzEifQ==/issues" target="_blank">Vulnerability Report</a></td><td>06-10-2022</td></tr><td>1 1.23 1.23.1 mainline</td>
-
-<td>docker pull icr.io/ibmz/nginx@sha256:4d86144c4e399881b1ceb056a25f185453136d4b202ded3199dff6416c2561cb</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbmdpbngiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjRkODYxNDRjNGUzOTk4ODFiMWNlYjA1NmEyNWYxODU0NTMxMzZkNGIyMDJkZWQzMTk5ZGZmNjQxNmMyNTYxY2IifQ==/issues" target="_blank">Vulnerability Report</a></td><td>08-26-2022</td></tr><td>1.21.3</td>
-
-<td>docker pull icr.io/ibmz/nginx@sha256:2ec9f7168d9c0e679c61d2656183ad921c919cfc77c58d4f2f7c0e59da0b7b8a</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbmdpbngiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjJlYzlmNzE2OGQ5YzBlNjc5YzYxZDI2NTYxODNhZDkyMWM5MTljZmM3N2M1OGQ0ZjJmN2MwZTU5ZGEwYjdiOGEifQ==/issues" target="_blank">Vulnerability Report</a></td><td>10-01-2021</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovbmdpbngiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmQ4YjU2YjkwZWFhNzVmN2MyODE5NTY1Y2YxZjRiOGI4YWYxYTczMDIxZDMzY2IzNGJiMWM0NzNjMzYyNjY3ZDkifQ==/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -65,8 +57,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -83,17 +73,17 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 
-<h5>Hosting some simple static content:</h5>
+<h5>Hosting some simple static content</h5>
 
 <p><pre><code>docker run --name some-nginx -v {nginx-volume}:/usr/share/nginx/html:ro \
-        -d icr.io/ibmz/nginx:[version]
+        -d icr.io/ibmz/nginx:1.19.4
 </pre></code><br>
 
 <div class="note"><b>Note:</b> As a security measure, bind mounts are disabled in ZCX. Instead, please use Docker Volumes to specify configuration files.</div><br>
 
 <span>Alternatively, a simple Dockerfile can be used to generate a new image that includes the necessary content (which is a much cleaner solution than the bind mount above):</span>
 
-<p><pre><code>FROM icr.io/ibmz/nginx:[version]
+<p><pre><code>FROM icr.io/ibmz/nginx:1.19.4
 COPY static-html-directory /usr/share/nginx/html
 </pre></code><br>
 
@@ -101,11 +91,11 @@ COPY static-html-directory /usr/share/nginx/html
 
 <span><p><pre><code>run docker build -t some-content-nginx .</pre></code><br> then start your container:</span>
 
-<p><pre><code>docker run --name some-nginx -d icr.io/ibmz/nginx:[version]</pre></code><br>
+<p><pre><code>docker run --name some-nginx -d icr.io/ibmz/nginx:1.19.4</pre></code><br>
 
 <h5>Exposing an External Port</h5>
 
-<p><pre><code>docker run --name some-nginx -d -p 8080:80 icr.io/ibmz/nginx:[version]</pre></code><br>
+<p><pre><code>docker run --name some-nginx -d -p 8080:80 icr.io/ibmz/nginx:1.19.4</pre></code><br>
 
 <span>Then you can access host-ip:8080 in your browser.</span><p/>
 
@@ -115,14 +105,14 @@ COPY static-html-directory /usr/share/nginx/html
 
 <span>For information on the syntax of the nginx configuration files, see the <a href="http://nginx.org/en/docs/beginners_guide.html">official documentation</a>.  If you wish to adapt the default configuration, use something like the following to copy it from a running nginx container:</span>
 
-<p><pre><code>docker run --name tmp-nginx-container -d icr.io/ibmz/nginx:[version]
+<p><pre><code>docker run --name tmp-nginx-container -d icr.io/ibmz/nginx:1.19.4
 docker cp tmp-nginx-container:/etc/nginx/nginx.conf /host/path/nginx.conf
 docker rm -f tmp-nginx-container
 </pre></code><br>
 
 <span>This can also be accomplished more cleanly using a simple Dockerfile (in /host/path/):</span>
 
-<p><pre><code>FROM icr.io/ibmz/nginx:[version]
+<p><pre><code>FROM icr.io/ibmz/nginx:1.19.4
 COPY nginx.conf /etc/nginx/nginx.conf
 </pre></code><br>
 

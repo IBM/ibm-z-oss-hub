@@ -22,7 +22,7 @@
 <p/>
 <span><em>See <a href="https://www.sonarqube.org">sonarqube.org</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -43,19 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>9.2.4-community</td>
-
-<td>docker pull icr.io/ibmz/sonarqube@sha256:fc7d3a11c7b3903f136771217da3402936087459a228e8fd116486a394690cdd</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXJxdWJlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpmYzdkM2ExMWM3YjM5MDNmMTM2NzcxMjE3ZGEzNDAyOTM2MDg3NDU5YTIyOGU4ZmQxMTY0ODZhMzk0NjkwY2RkIn0=/issues" target="_blank">Vulnerability Report</a></td><td>01-14-2022</td></tr><td>8.5.1.38104</td>
+<td>8.5.1.38104</td>
 
 <td>docker pull icr.io/ibmz/sonarqube@sha256:d202cc5cf9d8789401d703f5e266d8ba840caaccb3a7cf77b41794b1c70e26c5</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXJxdWJlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkMjAyY2M1Y2Y5ZDg3ODk0MDFkNzAzZjVlMjY2ZDhiYTg0MGNhYWNjYjNhN2NmNzdiNDE3OTRiMWM3MGUyNmM1In0=/issues" target="_blank">Vulnerability Report</a></td><td>12-08-2020</td></tr><td>9.3.0-community</td>
-
-<td>docker pull icr.io/ibmz/sonarqube@sha256:ad26604713b70a829f48e25ead46c82953941fe7d2a69cbc904fc41d1675890f</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXJxdWJlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjphZDI2NjA0NzEzYjcwYTgyOWY0OGUyNWVhZDQ2YzgyOTUzOTQxZmU3ZDJhNjljYmM5MDRmYzQxZDE2NzU4OTBmIn0=/issues" target="_blank">Vulnerability Report</a></td><td>03-18-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovc29uYXJxdWJlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkMjAyY2M1Y2Y5ZDg3ODk0MDFkNzAzZjVlMjY2ZDhiYTg0MGNhYWNjYjNhN2NmNzdiNDE3OTRiMWM3MGUyNmM1In0=/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -65,8 +57,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -84,13 +74,13 @@ Use the pull string below for the version of this image you require.
 <p/>
 
 
-Start a SonarQube container:
+Start a SonarQube container
 
-<br><p><pre><code>docker run --name sonarqube -d -p 9000:9000 icr.io/ibmz/sonarqube:[version]</code></pre></p>
+<br><p><pre><code>docker run --name sonarqube -d -p 9000:9000 icr.io/ibmz/sonarqube:8.5.1.38104</code></pre></p><br>
 
-Get Started in Two Minutes Guide:<br><br>
+Get Started in Two Minutes Guide<br><br>
 
-To quickly run a demo instance, see Using Docker on the Get Started in Two Minutes Guide page. When you are ready to move to a more sustainable setup, take some time to read the Configuration section below.<br>
+To quickly run a demo instance, see Using Docker on the Get Started in Two Minutes Guide page. When you are ready to move to a more sustainable setup, take some time to read the Configuration section below.
 
 <p><b>Configuration</b></p>
 
@@ -99,8 +89,8 @@ By default, the image will use an embedded H2 database that is not suited for pr
     
     <p><em>Warning: Only a single instance of SonarQube can connect to a database schema. If you're using a Docker Swarm or Kubernetes, make sure that multiple SonarQube instances are never running on the same database schema simultaneously. This will cause SonarQube to behave unpredictably and data will be corrupted. There is no safeguard until SONAR-10362.</em></p>
 
-Set up a database by following the "Installing the Database" section of <a href="https://docs.sonarqube.org/latest/setup/install-server/">the official docs</a>.<br>
-<p><b>Use volumes</b></p>
+Set up a database by following the "Installing the Database" section of <a href="https://docs.sonarqube.org/latest/setup/install-server/">the official docs</a>.
+<p><b>Use volumes</b></p><br>
 
 We recommend creating volumes for the following directories:
 
@@ -111,33 +101,32 @@ We recommend creating volumes for the following directories:
 
 Warning: You cannot use the same volumes on multiple instances of SonarQube.</code></pre></p>
 
-<p><b>First Installation</b></p>
+<p><b>First Installation</b></p><br>
 
-For installation instructions, see Installing the Server from the Docker Image on the Install the Server page.<br><br>
+For installation instructions, see Installing the Server from the Docker Image on the Install the Server page.<br>
 
 <p><b>Upgrading</b></p><br>
 
 For upgrade instructions, see Upgrading from the Docker Image on the Upgrade the Server page.<br>
-
-<b>Advanced configuration:</b><br><br>
+Advanced configuration<br>
 
 In some environments, it may make more sense to prepare a custom image containing your configuration. A Dockerfile to achieve this may be as simple as:<br>
 
-<br><p><pre><code>FROM icr.io/ibmz/sonarqube:[version]
+<br><p><pre><code>FROM icr.io/ibmz/sonarqube:8.5.1.38104
 COPY sonar.properties /opt/sonarqube/conf/</code></pre></p>
 
 You could then build and try the image with something like:
 
-<br><p><pre><code>docker build --tag=sonarqube-custom .</code></pre></p>
-<br><p><pre><code>docker run -ti sonarqube-custom</code></pre></p>
+<p><code>docker build --tag=sonarqube-custom .</code></p>
+<p><code>docker run -ti sonarqube-custom</code></p>
 
 <p><b>Avoid hard termination of SonarQube</b></p><br>
 
 Starting from SonarQube 7.8, SonarQube stops gracefully, waiting for any tasks in progress to finish. Waiting for in-progress tasks to finish can take a large amount of time which the docker does not expect by default when stopping. To avoid having the SonarQube instance killed by the Docker daemon after 10 seconds, it is best to configure a timeout to stop the container with <code>--stop-timeout</code>.<br>
 
-<p>For example:</p>
+<p>For example:</p><br>
 
-<p><pre><code>docker run --stop-timeout 3600 icr.io/ibmz/sonarqube:[version]</code></pre></p>
+<p><code>docker run --stop-timeout 3600 icr.io/ibmz/sonarqube:8.5.1.38104</code></p>
 
 </div>
 </body>

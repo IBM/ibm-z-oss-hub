@@ -22,7 +22,7 @@
 <p/>
 <span><em>See <a href="https://busybox.net/">busybox.net</a> for more information</em></span>
 <p/>
-<b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
+<b>This image is built to run on the IBM Z architecture.</b>
 <p/>
 <hr/>
 <p/>
@@ -43,15 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>1.33.1</td>
+<td>musl</td>
 
-<td>docker pull icr.io/ibmz/busybox@sha256:d77edfa3d87c8f61bab964eb7d2ccdeca98d0a903cd021b914598258d3a09604</td>
+<td>docker pull icr.io/ibmz/busybox@sha256:6269a72bfcf2ad42b8091100f1373b83fff97c366f0b2e2b7e4b255a521b6ef6</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVzeWJveCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZDc3ZWRmYTNkODdjOGY2MWJhYjk2NGViN2QyY2NkZWNhOThkMGE5MDNjZDAyMWI5MTQ1OTgyNThkM2EwOTYwNCJ9/issues" target="_blank">Vulnerability Report</a></td><td>10-01-2021</td></tr><td>1.34.1</td>
-
-<td>docker pull icr.io/ibmz/busybox@sha256:02a93285f4e09b041382a58d96e07dca73d2b3a3e861d470e9d772b002ca0572</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVzeWJveCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MDJhOTMyODVmNGUwOWIwNDEzODJhNThkOTZlMDdkY2E3M2QyYjNhM2U4NjFkNDcwZTlkNzcyYjAwMmNhMDU3MiJ9/issues" target="_blank">Vulnerability Report</a></td><td>02-17-2022</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYnVzeWJveCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjI2OWE3MmJmY2YyYWQ0MmI4MDkxMTAwZjEzNzNiODNmZmY5N2MzNjZmMGIyZTJiN2U0YjI1NWE1MjFiNmVmNiJ9/issues">Vulnerability Report</a></td></tr>
 <thead>
 
 <tr>
@@ -61,8 +57,6 @@ Use the pull string below for the version of this image you require.
 <th scope="col">Pull String</th>
 
 <th scope="col">Security (IBM Cloud)</th>
-
-<th scope="col">Created</th>
 
 </tr>
 
@@ -78,10 +72,11 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-Primarily used as a base image:
-<br><p><pre><code>FROM icr.io/ibmz/busybox:[version]</code></pre></p>
-Run statement:
-<br><p><pre><code>docker run -it --rm icr.io/ibmz/busybox:[version]</code></pre></p>
+
+Primarily used as a base image...
+
+<br><p><pre><code>docker run -it --rm icr.io/ibmz/busybox:musl</code></pre></p>
+
 This will drop you into an sh shell to allow you to do what you want inside a BusyBox system.
 
 </div>
