@@ -15,13 +15,12 @@
 <body>
 <div style="bottom: 0; position: fixed; background-color: black; width: 100%; color: white; height: 25px;"><a href="./index.html" style="padding: 10px; color: white">Return to Image List</a></div>
 <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
-<h1>debian</h1>
-<p/><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Debian-OpenLogo.svg" width=200 height=200 alt="logo"><p/>
-<span><p> Debian is an operating system which is composed primarily of free and open-source software, most of which is under the GNU General Public License, and developed by a group of individuals known as the Debian project. Debian is one of the most popular Linux distributions for personal computers and network servers, and has been used as a base for several other Linux distributions.</p>
-
+<h1>fluent-bit</h1>
+<p/><img src="https://avatars.githubusercontent.com/u/859518?s=48&v=4" width=200 height=200 alt="fluent-bit"><p/>
+<span>Fluent-Bit is a Fast and Lightweight Logs and Metrics processor.
 </span>
 <p/>
-<span><em>See <a href="https://www.debian.org/">debian.org</a> for more information</em></span>
+<span><em>See <a href="https://github.com/fluent/fluent-bit">github.com</a> for more information</em></span>
 <p/>
 <b>This image is built by IBM to run on the IBM Z architecture and is not affiliated with any other community that provides a version of this image.</b>
 <p/>
@@ -29,7 +28,7 @@
 <p/>
 <b><span>License</span></b>
 <p/>
-View license information <a href="https://github.com/debuerreotype/docker-debian-artifacts/blob/master/LICENSE">here</a>
+View license information <a href="https://github.com/fluent/fluent-bit/blob/master/LICENSE">here</a>
 <p/>
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 <p/>
@@ -44,15 +43,11 @@ Use the pull string below for the version of this image you require.
 
 
 <table class="table table-striped table-bordered">
-<td>bullseye</td>
+<td>1.7.1</td>
 
-<td>docker pull icr.io/ibmz/debian@sha256:20ac441e606566100640506a61ea0f83ba2d59d21735a731173de68efb030c3b</td>
+<td>docker pull icr.io/ibmz/fluent-bit@sha256:ad3db2140a00451fad2b946e5fbd6a57a4f67c07633aebfaa11b4b2686a6a50c</td>
 
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGViaWFuIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjoyMGFjNDQxZTYwNjU2NjEwMDY0MDUwNmE2MWVhMGY4M2JhMmQ1OWQyMTczNWE3MzExNzNkZTY4ZWZiMDMwYzNiIiwidGFncyI6IltidWxsc2V5ZV0ifQo=/issues" target="_blank">Vulnerability Report</a></td><td>09-13-2023</td></tr><td>buster</td>
-
-<td>docker pull icr.io/ibmz/debian@sha256:a02404662bec2bf54924dcdcfbc025538e273c51fbad0bae98d1c50a9d1481fc</td>
-
-<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGViaWFuIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjphMDI0MDQ2NjJiZWMyYmY1NDkyNGRjZGNmYmMwMjU1MzhlMjczYzUxZmJhZDBiYWU5OGQxYzUwYTlkMTQ4MWZjIiwidGFncyI6IltidXN0ZXJdIn0K/issues" target="_blank">Vulnerability Report</a></td><td>09-13-2023</td></tr>
+<td><a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmx1ZW50LWJpdCIsImxvbmdEaWdlc3QiOiJzaGEyNTY6YWQzZGIyMTQwYTAwNDUxZmFkMmI5NDZlNWZiZDZhNTdhNGY2N2MwNzYzM2FlYmZhYTExYjRiMjY4NmE2YTUwYyIsInRhZ3MiOiJbMS43LjFdIn0K/issues" target="_blank">Vulnerability Report</a></td><td>09-13-2023</td></tr>
 <thead>
 
 <tr>
@@ -79,10 +74,16 @@ Use the pull string below for the version of this image you require.
 
 <b><h3>Usage Notes</h3></b>
 <p/>
-Primarily used as a base image:
-<br><p><pre><code>FROM icr.io/ibmz/debian:[version]</code></pre></p>
-Run statement:
-<br><p><pre><code>docker run -it --name deb icr.io/ibmz/debian:[version]</code></pre></p>
+Exposed Ports: <pre><code>24224</code></pre>
+
+<p>Run a Fluent Bit instance that will receive messages over TCP port 24224 through the Forward protocol, and send the messages to the STDOUT interface in JSON format every second:</p>
+
+<p><pre><code>docker run -i -p 24224:24224 icr.io/ibmz/fluent-bit:1.7.1 /fluent-bit/bin/fluent-bit -i forward -o stdout -p format=json_lines -f 1 </pre></code>
+
+<p>Now run a separate container that will send a test message. This time the Docker container will use the Fluent Forward Protocol as the logging driver:</p>
+<p><pre><code>docker run --log-driver=fluentd -t icr.io/ibmz/ubuntu:22.04 echo "Testing a log message"</code></pre></p>
+
+<p>You will see the stdout print on the fluent-bit container!</p>
 
 </div>
 </body>
