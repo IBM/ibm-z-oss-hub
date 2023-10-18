@@ -106,7 +106,7 @@ Access your notebook server by this URL and replacing your system IP with the IP
 <h5>Using your own notebooks</h5>
 
 If you wish to use pre-existing notebooks with the notebook server you should mount them in a volume to /home/notebooks
-<p></p><small>It is worth noting that the ip flag is not specified here, as it's assumed that 'localhost' has been replaced in the mounted config</small></p>
+<p><small>It is worth noting that the ip flag is not specified here, as it's assumed that 'localhost' has been replaced in the mounted config</small></p>
 
 <p><code><pre>docker run --rm -it -p 8888:8888 -v myvolume:/home/notebooks icr.io/ibmz/jupyter-notebook:6.4.5 </code></pre></p>
 
