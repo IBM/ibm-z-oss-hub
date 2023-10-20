@@ -76,7 +76,7 @@ Use the pull string below for the version of this image you require.
 <p/>
 (This image contains ansible-core)
 
-Below is a straightforward hello-world example using this ansible image:
+Below is a straightforward hello-world example using this ansible image.. </br>
 
 Save this file as hello-world.yml:
 <br><p><pre><code>---
@@ -88,16 +88,17 @@ Save this file as hello-world.yml:
       copy:
         content: hello worldn
         dest: /tmp/testfile.txt</code></pre></p>
+</br>
 
-Create a Dockerfile with this content:
+<p>Create a Dockerfile with this content:</p>
 
 <br><p><pre><code>FROM icr.io/ibmz/ansible:[version]
 COPY hello-world.yml /ansible/</code></pre></p>
 
-Build this docker image, and run with the below statement to see 'hello world' printed to your terminal.
-This is done via the local connection configured in the hello-world.yml file you previously created:
-<pre><code>docker build . --tag ansible-test</code></pre>
-<pre><code>docker run -i --name ansible ansible-test hello-world.yml</code></pre>
+<p>Build this docker image, and run with the below statement to see 'hello world' printed to your terminal.</p>
+<p>This is done via the local connection configured in the hello-world.yml file you previously created:</p> </br>
+<p><pre><code>docker build . --tag ansible-test</code></pre></p>
+<p><pre><code>docker run -i --name ansible ansible-test hello-world.yml</code></pre></p>
 
 For more information, please look to the official documentation [here.](https://github.com/ansible/ansible)
 

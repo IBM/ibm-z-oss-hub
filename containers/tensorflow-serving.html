@@ -84,14 +84,19 @@ Use the pull string below for the version of this image you require.
 <p/>
 <p>Exposed Ports: <code>8500</code> (gRPC), <code>8501</code> (REST)</p>
 <span>Please run the following commands as an example of the TensorFlow Serving image:</span>
+<span>Pull the Docker Image and Git Clone Test Data:</span>
+<p><pre><code>docker pull icr.io/ibmz/tensorflow-serving:[version&hash]</code></pre></p>
 <p><pre><code>git clone -b 2.4.0 https://github.com/tensorflow/serving</code></pre></p>
-<span>Create variable TESTDATA:</span>
-<p><pre><code>TESTDATA="$(pwd)/tensorflow_serving/servables/tensorflow/testdata"</code></pre></p>
-<span>Create serving instance:</span>
-<p><pre><code>docker run -t --rm -p 8501:8501 \
-   -v "$TESTDATA/saved_model_half_plus_two_cpu:/models/half_plus_two" \
-   -e MODEL_NAME=half_plus_two icr.io/ibmz/tensorflow-serving:[version] &</code></pre></p>
-   
+<span>Run a Base Container:</span>
+<p><pre><code>docker run -d --name serving_base icr.io/ibmz/tensorflow-serving:[version&hash]</code></pre></p>
+<span>Copy Your Model Data:</span>
+<p><pre><code>docker cp /path/to/your/model_data_from_git_clone_step serving_base:/models/half_plus_two</code></pre></p>
+<span>Create a Custom Container and set MODEL_NAME:</span>
+<p><pre><code>docker commit --change "ENV MODEL_NAME=half_plus_two" serving_base serving_custom</code></pre></p>
+<p><pre><code>docker stop serving_base</code></pre></p>
+<p><pre><code>docker rm serving_base</code></pre></p>
+<span>Run TensorFlow Serving Container:</span>
+<p><pre><code>docker run -t --rm -p 8501:8501 serving_custom</code></pre></p>
 <span>Query the model using the predict API</span>
 <p><pre><code>curl -d '{"instances": [1.0, 2.0, 5.0]}' \
    -X POST http://[host_machine]:8501/v1/models/half_plus_two:predict</code></pre></p>
