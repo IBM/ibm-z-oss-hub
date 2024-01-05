@@ -5587,6 +5587,553 @@
     </table>
 </div>
 
+<div class="selection-result" style="display: none" data-version="2.13.0" data-linux-distro="ubuntu" data-cpu="amd64">
+    <p><b><u>Zowe Version 2.13.0, ubuntu, amd64</u></b></p>
+    <p>Two ways for you to quickly get ready for the Zowe Container:</p>
+    <ul>
+        <li>
+            Use Kubernetes for orchestration: Download
+            <a class="link" data-link-type="containerZipURL">containerization.zip</a>, and follow the
+            <a class="link" data-link-type="instructions">instructions</a>
+        </li>
+        <li>
+            Or refer to the table below and pull each component image manually for offline installation. Make your selection in the dropdowns above that suits your own environment setup, then click <code>Get Images</code>.
+        </li>
+    </ul>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Component Group</th>
+                <th scope="col">Component</th>
+                <th scope="col">Pull String</th>
+                <th scope="col">Security (IBM Cloud)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Zowe API Mediation Layer</td>
+                <td>api-catalog-services</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/api-catalog-services@sha256:fc70e5c00a17b65388d9e941df8a81a210e43aee73476e97ac7e7e58700f7a5d</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBpLWNhdGFsb2ctc2VydmljZXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmZjNzBlNWMwMGExN2I2NTM4OGQ5ZTk0MWRmOGE4MWEyMTBlNDNhZWU3MzQ3NmU5N2FjN2U3ZTU4NzAwZjdhNWQiLCJ0YWdzIjoiWzIuMTMuMi11YnVudHUtYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>discovery-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/discovery-service@sha256:efd5a0faa994705d0a9ae19a0ffcc9f54fc4f186a77bfd9fe7562354f5baf3e4</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGlzY292ZXJ5LXNlcnZpY2UiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmVmZDVhMGZhYTk5NDcwNWQwYTlhZTE5YTBmZmNjOWY1NGZjNGYxODZhNzdiZmQ5ZmU3NTYyMzU0ZjViYWYzZTQiLCJ0YWdzIjoiWzIuMTMuMi11YnVudHUtYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>caching-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/caching-service@sha256:7b2308cd0eda945a0b6ce8dfda99746b756722e788189c4a8afd41fecfe0954c</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2FjaGluZy1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo3YjIzMDhjZDBlZGE5NDVhMGI2Y2U4ZGZkYTk5NzQ2Yjc1NjcyMmU3ODgxODljNGE4YWZkNDFmZWNmZTA5NTRjIiwidGFncyI6IlsyLjEzLjItdWJ1bnR1LWFtZDY0XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>gateway-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/gateway-service@sha256:7ab6f82723e969a7f4d1393fc3f6a093cdffa7ec01491a114efd93ffeaba3d96</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2F0ZXdheS1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo3YWI2ZjgyNzIzZTk2OWE3ZjRkMTM5M2ZjM2Y2YTA5M2NkZmZhN2VjMDE0OTFhMTE0ZWZkOTNmZmVhYmEzZDk2IiwidGFncyI6IlsyLjEzLjItdWJ1bnR1LWFtZDY0XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Install Packaging</td>
+                <td>zowe-launch-scripts</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/zowe-launch-scripts@sha256:ef0b4663364d7a324a47bd319b528daa3d14e2b348cf84710cbfe543c5b5a119</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovem93ZS1sYXVuY2gtc2NyaXB0cyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZWYwYjQ2NjMzNjRkN2EzMjRhNDdiZDMxOWI1MjhkYWEzZDE0ZTJiMzQ4Y2Y4NDcxMGNiZmU1NDNjNWI1YTExOSIsInRhZ3MiOiJbMi4xMi4wLXVidW50dS1hbWQ2NF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Explorer APIs</td>
+                <td>files-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/files-api@sha256:e46aefb9a61d615c93a5de23a5d41ed3aed5a2d6d3d8b9147d9054e88c91f066</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmlsZXMtYXBpIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplNDZhZWZiOWE2MWQ2MTVjOTNhNWRlMjNhNWQ0MWVkM2FlZDVhMmQ2ZDNkOGI5MTQ3ZDkwNTRlODhjOTFmMDY2IiwidGFncyI6IlsyLjAuMjUtdWJ1bnR1LWFtZDY0XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>jobs-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/jobs-api@sha256:bb65c195259915ef7d86c799cf84e258864974411d64ccd8aa374961f4ecdecc</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovam9icy1hcGkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmJiNjVjMTk1MjU5OTE1ZWY3ZDg2Yzc5OWNmODRlMjU4ODY0OTc0NDExZDY0Y2NkOGFhMzc0OTYxZjRlY2RlY2MiLCJ0YWdzIjoiWzIuMC4yNC11YnVudHUtYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Application Framework</td>
+                <td>app-server</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/app-server@sha256:60056cc3ebabef1ba0e3166aefb9e0101c8f7683b17170a4df2d421ff729f64f</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBwLXNlcnZlciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6NjAwNTZjYzNlYmFiZWYxYmEwZTMxNjZhZWZiOWUwMTAxYzhmNzY4M2IxNzE3MGE0ZGYyZDQyMWZmNzI5ZjY0ZiIsInRhZ3MiOiJbMi4xMy4wLXVidW50dS1hbWQ2NF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-jes</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-jes@sha256:d43edd9d510c89bfa9c6ffae488393c5776d7de2e88c96ec55deb22486c9587f</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItamVzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkNDNlZGQ5ZDUxMGM4OWJmYTljNmZmYWU0ODgzOTNjNTc3NmQ3ZGUyZTg4Yzk2ZWM1NWRlYjIyNDg2Yzk1ODdmIiwidGFncyI6IlsyLjAuNy11YnVudHUtYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-uss</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-uss@sha256:e85aeca1ce6932992ecd3289434f8d39760f75f54a9500a82b45994914d8dfaf</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItdXNzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplODVhZWNhMWNlNjkzMjk5MmVjZDMyODk0MzRmOGQzOTc2MGY3NWY1NGE5NTAwYTgyYjQ1OTk0OTE0ZDhkZmFmIiwidGFncyI6IlsyLjAuNy11YnVudHUtYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-mvs</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-mvs@sha256:b3e68b966f79deca851c590d10ebfde4964100994ecbf709e2e372d96b6bf25e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItbXZzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpiM2U2OGI5NjZmNzlkZWNhODUxYzU5MGQxMGViZmRlNDk2NDEwMDk5NGVjYmY3MDllMmUzNzJkOTZiNmJmMjVlIiwidGFncyI6IlsyLjAuNy11YnVudHUtYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-ip</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-ip@sha256:fbf8f4a9874ea6aa8432a317181cf45c09122aee216d23011d1c4f9be5e23b0e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItaXAiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmZiZjhmNGE5ODc0ZWE2YWE4NDMyYTMxNzE4MWNmNDVjMDkxMjJhZWUyMTZkMjMwMTFkMWM0ZjliZTVlMjNiMGUiLCJ0YWdzIjoiWzIuMC4wLXVidW50dS1hbWQ2NF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="selection-result" style="display: none" data-version="2.13.0" data-linux-distro="ubuntu" data-cpu="s390x">
+    <p><b><u>Zowe Version 2.13.0, ubuntu, s390x</u></b></p>
+    <p>Two ways for you to quickly get ready for the Zowe Container:</p>
+    <ul>
+        <li>
+            Use Kubernetes for orchestration: Download
+            <a class="link" data-link-type="containerZipURL">containerization.zip</a>, and follow the
+            <a class="link" data-link-type="instructions">instructions</a>
+        </li>
+        <li>
+            Or make your selection below that suits your own environment setup, click <code>Get Images</code>, then pull each component image manually for offline installation.
+        </li>
+    </ul>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Component Group</th>
+                <th scope="col">Component</th>
+                <th scope="col">Pull String</th>
+                <th scope="col">Security (IBM Cloud)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Zowe API Mediation Layer</td>
+                <td>api-catalog-services</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/api-catalog-services@sha256:88c71d6604f1f189ad660d074a5c155d6af1535afbc6735f9d40c3592607807e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBpLWNhdGFsb2ctc2VydmljZXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2Ojg4YzcxZDY2MDRmMWYxODlhZDY2MGQwNzRhNWMxNTVkNmFmMTUzNWFmYmM2NzM1ZjlkNDBjMzU5MjYwNzgwN2UiLCJ0YWdzIjoiWzIuMTMuMi11YnVudHUtczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>discovery-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/discovery-service@sha256:e5939189ef1ee27967f71c91b7ac4914d9fb078f5de668f801e6a2ea012d372a</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGlzY292ZXJ5LXNlcnZpY2UiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmU1OTM5MTg5ZWYxZWUyNzk2N2Y3MWM5MWI3YWM0OTE0ZDlmYjA3OGY1ZGU2NjhmODAxZTZhMmVhMDEyZDM3MmEiLCJ0YWdzIjoiWzIuMTMuMi11YnVudHUtczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>caching-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/caching-service@sha256:78843df02a90693fffb2cdb5a300281b2f9ba15dc45ec39667a07c5c48dbbef1</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2FjaGluZy1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo3ODg0M2RmMDJhOTA2OTNmZmZiMmNkYjVhMzAwMjgxYjJmOWJhMTVkYzQ1ZWMzOTY2N2EwN2M1YzQ4ZGJiZWYxIiwidGFncyI6IlsyLjEzLjItdWJ1bnR1LXMzOTB4XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>gateway-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/gateway-service@sha256:cebefa58d0701e88078186a2019561ad82dbdcb83641f6e06363da8f0676d943</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2F0ZXdheS1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpjZWJlZmE1OGQwNzAxZTg4MDc4MTg2YTIwMTk1NjFhZDgyZGJkY2I4MzY0MWY2ZTA2MzYzZGE4ZjA2NzZkOTQzIiwidGFncyI6IlsyLjEzLjItdWJ1bnR1LXMzOTB4XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Install Packaging</td>
+                <td>zowe-launch-scripts</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/zowe-launch-scripts@sha256:8c89e256e412bc222c45a0e52ceda94c565700b5f9707b9d09c894a1e636b25e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovem93ZS1sYXVuY2gtc2NyaXB0cyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OGM4OWUyNTZlNDEyYmMyMjJjNDVhMGU1MmNlZGE5NGM1NjU3MDBiNWY5NzA3YjlkMDljODk0YTFlNjM2YjI1ZSIsInRhZ3MiOiJbMi4xMi4wLXVidW50dS1zMzkweF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Explorer APIs</td>
+                <td>files-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/files-api@sha256:afdb57678d2cbf6cbbfcc234cee98e2270df24264207bb11945c9e0e1c0e0981</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmlsZXMtYXBpIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjphZmRiNTc2NzhkMmNiZjZjYmJmY2MyMzRjZWU5OGUyMjcwZGYyNDI2NDIwN2JiMTE5NDVjOWUwZTFjMGUwOTgxIiwidGFncyI6IlsyLjAuMjUtdWJ1bnR1LXMzOTB4XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>jobs-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/jobs-api@sha256:1fb70d9cca6b33ee99d285ccf4a6c087b89bc162294ffa71ce7f5ab017363b79</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovam9icy1hcGkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjFmYjcwZDljY2E2YjMzZWU5OWQyODVjY2Y0YTZjMDg3Yjg5YmMxNjIyOTRmZmE3MWNlN2Y1YWIwMTczNjNiNzkiLCJ0YWdzIjoiWzIuMC4yNC11YnVudHUtczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Application Framework</td>
+                <td>app-server</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/app-server@sha256:957a24d61ef667b0101a8112a8bc34d75994acc04ab1dd3c257f6f92ad0ec4e0</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBwLXNlcnZlciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6OTU3YTI0ZDYxZWY2NjdiMDEwMWE4MTEyYThiYzM0ZDc1OTk0YWNjMDRhYjFkZDNjMjU3ZjZmOTJhZDBlYzRlMCIsInRhZ3MiOiJbMi4xMy4wLXVidW50dS1zMzkweF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-jes</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-jes@sha256:62e9b69fd6d90ef464529b0af0da21aa0a1f04dd5b29cb06adb25a3e709d20c6</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItamVzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo2MmU5YjY5ZmQ2ZDkwZWY0NjQ1MjliMGFmMGRhMjFhYTBhMWYwNGRkNWIyOWNiMDZhZGIyNWEzZTcwOWQyMGM2IiwidGFncyI6IlsyLjAuNy11YnVudHUtczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-uss</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-uss@sha256:95fca24f00e269f4e475f6296afef26c0e9c46bbd8245a6d4fa4f9f4fa0300a8</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItdXNzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo5NWZjYTI0ZjAwZTI2OWY0ZTQ3NWY2Mjk2YWZlZjI2YzBlOWM0NmJiZDgyNDVhNmQ0ZmE0ZjlmNGZhMDMwMGE4IiwidGFncyI6IlsyLjAuNy11YnVudHUtczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-mvs</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-mvs@sha256:4e22f2d9830d12102768970e92a923f9012513a3aaab9aa3e65a632bc7935062</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItbXZzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo0ZTIyZjJkOTgzMGQxMjEwMjc2ODk3MGU5MmE5MjNmOTAxMjUxM2EzYWFhYjlhYTNlNjVhNjMyYmM3OTM1MDYyIiwidGFncyI6IlsyLjAuNy11YnVudHUtczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-ip</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-ip@sha256:2ada2def13cd818431d019708ce90fb3e170bbfcffeb95f1033d0b7c64f0b310</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItaXAiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjJhZGEyZGVmMTNjZDgxODQzMWQwMTk3MDhjZTkwZmIzZTE3MGJiZmNmZmViOTVmMTAzM2QwYjdjNjRmMGIzMTAiLCJ0YWdzIjoiWzIuMC4wLXVidW50dS1zMzkweF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="selection-result" style="display: none" data-version="2.13.0" data-linux-distro="ubi" data-cpu="amd64">
+    <p><b><u>Zowe Version 2.13.0, ubi, amd64</u></b></p>
+    <p>Two ways for you to quickly get ready for the Zowe Container:</p>
+    <ul>
+        <li>
+            Use Kubernetes for orchestration: Download
+            <a class="link" data-link-type="containerZipURL">containerization.zip</a>, and follow the
+            <a class="link" data-link-type="instructions">instructions</a>
+        </li>
+        <li>
+            Or make your selection below that suits your own environment setup, click <code>Get Images</code>, then pull each component image manually for offline installation.
+        </li>
+    </ul>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Component Group</th>
+                <th scope="col">Component</th>
+                <th scope="col">Pull String</th>
+                <th scope="col">Security (IBM Cloud)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Zowe API Mediation Layer</td>
+                <td>api-catalog-services</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/api-catalog-services@sha256:e215fe4dcd134e207e5450b1627b17e658c1f510fbda35dcd5b7ea72133df8e9</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBpLWNhdGFsb2ctc2VydmljZXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmUyMTVmZTRkY2QxMzRlMjA3ZTU0NTBiMTYyN2IxN2U2NThjMWY1MTBmYmRhMzVkY2Q1YjdlYTcyMTMzZGY4ZTkiLCJ0YWdzIjoiWzIuMTMuMi11YmktYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>discovery-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/discovery-service@sha256:e7b429ff86a718506876051da20dca4a9e96dd31b713fa191f254562812d5c8e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGlzY292ZXJ5LXNlcnZpY2UiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmU3YjQyOWZmODZhNzE4NTA2ODc2MDUxZGEyMGRjYTRhOWU5NmRkMzFiNzEzZmExOTFmMjU0NTYyODEyZDVjOGUiLCJ0YWdzIjoiWzIuMTMuMi11YmktYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>caching-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/caching-service@sha256:c1b59c861ea8f8f1260dbcb3b96fdcda58397aa251073c088037b93a67189b5b</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2FjaGluZy1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpjMWI1OWM4NjFlYThmOGYxMjYwZGJjYjNiOTZmZGNkYTU4Mzk3YWEyNTEwNzNjMDg4MDM3YjkzYTY3MTg5YjViIiwidGFncyI6IlsyLjEzLjItdWJpLWFtZDY0XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>gateway-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/gateway-service@sha256:d26d7f42fd3560b7159d30ff1aedf75d382885dcd806656fec69a4fe7842d6f3</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2F0ZXdheS1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpkMjZkN2Y0MmZkMzU2MGI3MTU5ZDMwZmYxYWVkZjc1ZDM4Mjg4NWRjZDgwNjY1NmZlYzY5YTRmZTc4NDJkNmYzIiwidGFncyI6IlsyLjEzLjItdWJpLWFtZDY0XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Install Packaging</td>
+                <td>zowe-launch-scripts</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/zowe-launch-scripts@sha256:dd389ada19531da8d9be35494ddb898e05bbf9c76a2dddf7c522eb94ff241229</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovem93ZS1sYXVuY2gtc2NyaXB0cyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZGQzODlhZGExOTUzMWRhOGQ5YmUzNTQ5NGRkYjg5OGUwNWJiZjljNzZhMmRkZGY3YzUyMmViOTRmZjI0MTIyOSIsInRhZ3MiOiJbMi4xMi4wLXViaS1hbWQ2NF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Explorer APIs</td>
+                <td>files-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/files-api@sha256:b9f4b9072d8b280d6bbebfbc7e68e8c20c9deafa29590aaf997699b7b77f1878</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmlsZXMtYXBpIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpiOWY0YjkwNzJkOGIyODBkNmJiZWJmYmM3ZTY4ZThjMjBjOWRlYWZhMjk1OTBhYWY5OTc2OTliN2I3N2YxODc4IiwidGFncyI6IlsyLjAuMjUtdWJpLWFtZDY0XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>jobs-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/jobs-api@sha256:05398005b6f864507b9a6348f1ce5502e9bcfb9873e7ea72f78910f30ec7cedb</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovam9icy1hcGkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjA1Mzk4MDA1YjZmODY0NTA3YjlhNjM0OGYxY2U1NTAyZTliY2ZiOTg3M2U3ZWE3MmY3ODkxMGYzMGVjN2NlZGIiLCJ0YWdzIjoiWzIuMC4yNC11YmktYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Application Framework</td>
+                <td>app-server</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/app-server@sha256:e6a61beace594c44a58dd431c54c02cde31e6f7c386b02201518ba812f429fe0</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBwLXNlcnZlciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZTZhNjFiZWFjZTU5NGM0NGE1OGRkNDMxYzU0YzAyY2RlMzFlNmY3YzM4NmIwMjIwMTUxOGJhODEyZjQyOWZlMCIsInRhZ3MiOiJbMi4xMy4wLXViaS1hbWQ2NF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-jes</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-jes@sha256:63c39b45e9de8b1876c22e16a1c054c0b71eda746eae2c442def561efc23820e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItamVzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo2M2MzOWI0NWU5ZGU4YjE4NzZjMjJlMTZhMWMwNTRjMGI3MWVkYTc0NmVhZTJjNDQyZGVmNTYxZWZjMjM4MjBlIiwidGFncyI6IlsyLjAuNy11YmktYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-uss</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-uss@sha256:eb488d48ff5a00611daa29455a04cc3a9c10d37e06f5ba46a7a16a598add56df</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItdXNzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjplYjQ4OGQ0OGZmNWEwMDYxMWRhYTI5NDU1YTA0Y2MzYTljMTBkMzdlMDZmNWJhNDZhN2ExNmE1OThhZGQ1NmRmIiwidGFncyI6IlsyLjAuNy11YmktYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-mvs</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-mvs@sha256:74f7464195682c610bab05cf230911fda8f894802ef528202f3ed8331a9f4df9</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItbXZzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo3NGY3NDY0MTk1NjgyYzYxMGJhYjA1Y2YyMzA5MTFmZGE4Zjg5NDgwMmVmNTI4MjAyZjNlZDgzMzFhOWY0ZGY5IiwidGFncyI6IlsyLjAuNy11YmktYW1kNjRdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-ip</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-ip@sha256:9b80479a06cabaf01248551127fe956565389deb4c3a05e16d570b02196b93ad</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItaXAiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjliODA0NzlhMDZjYWJhZjAxMjQ4NTUxMTI3ZmU5NTY1NjUzODlkZWI0YzNhMDVlMTZkNTcwYjAyMTk2YjkzYWQiLCJ0YWdzIjoiWzIuMC4wLXViaS1hbWQ2NF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="selection-result" style="display: none" data-version="2.13.0" data-linux-distro="ubi" data-cpu="s390x">
+    <p><b><u>Zowe Version 2.13.0, ubi, s390x</u></b></p>
+    <p>Two ways for you to quickly get ready for the Zowe Container:</p>
+    <ul>
+        <li>
+            Use Kubernetes for orchestration: Download
+            <a class="link" data-link-type="containerZipURL">containerization.zip</a>, and follow the
+            <a class="link" data-link-type="instructions">instructions</a>
+        </li>
+        <li>
+            Or make your selection below that suits your own environment setup, click <code>Get Images</code>, then pull each component image manually for offline installation.
+        </li>
+    </ul>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Component Group</th>
+                <th scope="col">Component</th>
+                <th scope="col">Pull String</th>
+                <th scope="col">Security (IBM Cloud)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Zowe API Mediation Layer</td>
+                <td>api-catalog-services</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/api-catalog-services@sha256:b299d62535b0a3c92c4f94d5f654a395916c58dddd6d75da342552d698b04b65</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBpLWNhdGFsb2ctc2VydmljZXMiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmIyOTlkNjI1MzViMGEzYzkyYzRmOTRkNWY2NTRhMzk1OTE2YzU4ZGRkZDZkNzVkYTM0MjU1MmQ2OThiMDRiNjUiLCJ0YWdzIjoiWzIuMTMuMi11YmktczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>discovery-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/discovery-service@sha256:e8ef36757e1228a907df4a1279821791f71fb924f62327fa856fae95ec8aa015</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZGlzY292ZXJ5LXNlcnZpY2UiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmU4ZWYzNjc1N2UxMjI4YTkwN2RmNGExMjc5ODIxNzkxZjcxZmI5MjRmNjIzMjdmYTg1NmZhZTk1ZWM4YWEwMTUiLCJ0YWdzIjoiWzIuMTMuMi11YmktczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>caching-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/caching-service@sha256:89e6f26d9c0a9e8fb3c0e113702e35d95bb7aef2e7bafffb6cc969dd13586144</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovY2FjaGluZy1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo4OWU2ZjI2ZDljMGE5ZThmYjNjMGUxMTM3MDJlMzVkOTViYjdhZWYyZTdiYWZmZmI2Y2M5NjlkZDEzNTg2MTQ0IiwidGFncyI6IlsyLjEzLjItdWJpLXMzOTB4XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>gateway-service</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/gateway-service@sha256:c9d53be60ece0be1981fbd7344cf27d327575ffecc48b8dabe25b81dd7469454</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZ2F0ZXdheS1zZXJ2aWNlIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpjOWQ1M2JlNjBlY2UwYmUxOTgxZmJkNzM0NGNmMjdkMzI3NTc1ZmZlY2M0OGI4ZGFiZTI1YjgxZGQ3NDY5NDU0IiwidGFncyI6IlsyLjEzLjItdWJpLXMzOTB4XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Install Packaging</td>
+                <td>zowe-launch-scripts</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/zowe-launch-scripts@sha256:27143785dee0da1e402b62800bba92131228a1527ef3470d90fd4c7878f82b2d</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovem93ZS1sYXVuY2gtc2NyaXB0cyIsImxvbmdEaWdlc3QiOiJzaGEyNTY6MjcxNDM3ODVkZWUwZGExZTQwMmI2MjgwMGJiYTkyMTMxMjI4YTE1MjdlZjM0NzBkOTBmZDRjNzg3OGY4MmIyZCIsInRhZ3MiOiJbMi4xMi4wLXViaS1zMzkweF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Explorer APIs</td>
+                <td>files-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/files-api@sha256:f4cc76e9bcada16a0c8282491532ec7252fe64202483a90a7c3dbf478d8f2fb5</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZmlsZXMtYXBpIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpmNGNjNzZlOWJjYWRhMTZhMGM4MjgyNDkxNTMyZWM3MjUyZmU2NDIwMjQ4M2E5MGE3YzNkYmY0NzhkOGYyZmI1IiwidGFncyI6IlsyLjAuMjUtdWJpLXMzOTB4XSJ9Cg==/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>jobs-api</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/jobs-api@sha256:14b6a84fbc91006bccd45349d72d3c213e702ba63f95987035fd5a06447f4859</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovam9icy1hcGkiLCJsb25nRGlnZXN0Ijoic2hhMjU2OjE0YjZhODRmYmM5MTAwNmJjY2Q0NTM0OWQ3MmQzYzIxM2U3MDJiYTYzZjk1OTg3MDM1ZmQ1YTA2NDQ3ZjQ4NTkiLCJ0YWdzIjoiWzIuMC4yNC11YmktczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zowe Application Framework</td>
+                <td>app-server</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/app-server@sha256:ff3f8808730a1141fe02e0311130aba6de6467a6627866be565f31603774ea80</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovYXBwLXNlcnZlciIsImxvbmdEaWdlc3QiOiJzaGEyNTY6ZmYzZjg4MDg3MzBhMTE0MWZlMDJlMDMxMTEzMGFiYTZkZTY0NjdhNjYyNzg2NmJlNTY1ZjMxNjAzNzc0ZWE4MCIsInRhZ3MiOiJbMi4xMy4wLXViaS1zMzkweF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-jes</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-jes@sha256:b3da878b4ee12993a3cd0c96619faccc16e51e76365fd0117e3a9656257af31e</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItamVzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjpiM2RhODc4YjRlZTEyOTkzYTNjZDBjOTY2MTlmYWNjYzE2ZTUxZTc2MzY1ZmQwMTE3ZTNhOTY1NjI1N2FmMzFlIiwidGFncyI6IlsyLjAuNy11YmktczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-uss</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-uss@sha256:07638dd70fedaea81fef5f057b3a4dbe19b779d875d3ece7cd4e731510e2158d</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItdXNzIiwibG9uZ0RpZ2VzdCI6InNoYTI1NjowNzYzOGRkNzBmZWRhZWE4MWZlZjVmMDU3YjNhNGRiZTE5Yjc3OWQ4NzVkM2VjZTdjZDRlNzMxNTEwZTIxNThkIiwidGFncyI6IlsyLjAuNy11YmktczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-mvs</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-mvs@sha256:71a0a8e72ef21f6b3a80f4848624afb16b4eb5709ac5ca877e50dda1c2aac933</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItbXZzIiwibG9uZ0RpZ2VzdCI6InNoYTI1Njo3MWEwYThlNzJlZjIxZjZiM2E4MGY0ODQ4NjI0YWZiMTZiNGViNTcwOWFjNWNhODc3ZTUwZGRhMWMyYWFjOTMzIiwidGFncyI6IlsyLjAuNy11YmktczM5MHhdIn0K/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>explorer-ip</td>
+                <td class="col-comp-pullstr">docker pull icr.io/ibmz/explorer-ip@sha256:e92e55590d195b82b3fc9e3dbc6fc03364ed276418da9d38eff2df1bce7de293</td>
+                <td>
+                    <a href="https://cloud.ibm.com/registry/images/eyJyZXBvIjoiaWNyLmlvL2libXovZXhwbG9yZXItaXAiLCJsb25nRGlnZXN0Ijoic2hhMjU2OmU5MmU1NTU5MGQxOTViODJiM2ZjOWUzZGJjNmZjMDMzNjRlZDI3NjQxOGRhOWQzOGVmZjJkZjFiY2U3ZGUyOTMiLCJ0YWdzIjoiWzIuMC4wLXViaS1zMzkweF0ifQo=/issues" target="_blank">Vulnerability Report</a>
+                </td>
+            </tr>
+
+            
+        </tbody>
+    </table>
+</div>
+
+
 
 
 
@@ -5607,7 +6154,7 @@
         </footer>
 
         <script>
-            var zoweReleasedVersionList = ['2.2.0', '2.3.0', '2.4.0', '2.5.0', '2.6.0', '2.7.0', '2.8.0', '2.9.0', '2.10.0', '2.11.0','2.12.0']
+            var zoweReleasedVersionList = ['2.2.0', '2.3.0', '2.4.0', '2.5.0', '2.6.0', '2.7.0', '2.8.0', '2.9.0', '2.10.0', '2.11.0','2.12.0', '2.13.0']
             var linktoKeyUpdatesTemplate = 'https://docs.zowe.org/stable/getting-started/release-notes/'
             var zoweIBMKC = 'https://www.ibm.com/docs/en/zdfz/2.0.0?topic=zowe-installing-configuring'
             var containerZipURLs = {
@@ -5621,7 +6168,8 @@
                 "2.9.0" : "https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-NKOS-CDVJVP&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/zowe/container/offerings/2.9.0/zowe-containerization-2.9.0.zip",
                 "2.10.0" : "https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-NKOS-CDVJVP&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/zowe/container/offerings/2.10.0/zowe-containerization-2.10.0.zip",
                 "2.11.0" : "https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-NKOS-CDVJVP&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/zowe/container/offerings/2.11.0/zowe-containerization-2.11.0.zip",
-                "2.12.0" : "https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-NKOS-CDVJVP&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/zowe/container/offerings/2.12.0/zowe-containerization-2.12.0.zip"
+                "2.12.0" : "https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-NKOS-CDVJVP&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/zowe/container/offerings/2.12.0/zowe-containerization-2.12.0.zip",
+                "2.13.0" : "https://www14.software.ibm.com/cgi-bin/weblap/lap.pl?popup=Y&li_formnum=L-NKOS-CDVJVP&accepted_url=https://public.dhe.ibm.com/ibmdl/export/pub/software/zowe/container/offerings/2.13.0/zowe-containerization-2.13.0.zip"
             }
 
             function showTable() {
