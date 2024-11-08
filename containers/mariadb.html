@@ -75,11 +75,11 @@ Use the pull string below for the version of this image you require.
 <b><h3>Usage Notes</h3></b>
 <p/>
 <p>Exposed Ports: <code>3306</code></p>
-<span>Start your container binding the external port 3306. Replace <code>{mariadb-port}</code> with the desired port you would like to point towards mariadb.</span>
+<span>Start your container binding the external port 3306. Replace <code>{assign-pass-here}</code> with the desired password you would like your root user to use..</span>
 
-<p><pre><code>docker run -d --name mariadb -p {mariadb-port}:3306 icr.io/ibmz/mariadb:{tag}</pre></code><br>
+<p><pre><code>docker run -d --name mariadb -p {mariadb-port}:3306 -e MARIADB_ROOT_PASSWORD={assign-pass-here} icr.io/ibmz/mariadb:{tag}</pre></code><br>
 
-Further documentation can be found at <a href="https://hub.docker.com/_/mariadb">hub.docker.com</a>
+Further documentation can be found at <a href="https://mariadb.com/resources/blog/get-started-with-mariadb-using-docker-in-3-steps/">mariadb.com</a>
 
 </div>
 </body>
