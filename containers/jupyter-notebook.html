@@ -95,7 +95,7 @@ Use the pull string below for the version of this image you require.
 
 By default the the notebook server will run on port <code>8888</code> so these ports must be exposed when issuing the docker run:
 
-<p><pre><code>docker run --rm -it -p 8888:8888 icr.io/ibmz/jupyter-notebook:6.4.5 -ip 0.0.0.0</code></pre></p>
+<p><pre><code>docker run --rm -it -p 8888:8888 icr.io/ibmz/jupyter-notebook:6.4.5 --ip 0.0.0.0</code></pre></p>
 
 The server should now be accessible at the IP of your system on port 8888, but will require an authorization token to log in. By checking the logs you can find the access token to use.
 <p/><br>
@@ -114,7 +114,7 @@ If you wish to use pre-existing notebooks with the notebook server you should mo
 
 If you would like to use a different path aside from /home/notebooks you may do so by specifying the NBDIR environment variable.
 
-<p><code><pre>docker run --rm -it -p 8888:8888 -e NBDIR=/home/ANOTHERDIR icr.io/ibmz/jupyter-notebook:6.4.5 -ip 0.0.0.0 </code></pre></p>
+<p><code><pre>docker run --rm -it -p 8888:8888 -e NBDIR=/home/ANOTHERDIR icr.io/ibmz/jupyter-notebook:6.4.5  0.0.0.0 </code></pre></p>
 
 </div>
 </body>
