@@ -78,7 +78,7 @@ Exposed Ports: <pre><code>24224</code></pre>
 
 <p>Run a Fluent Bit instance that will receive messages over TCP port 24224 through the Forward protocol, and send the messages to the STDOUT interface in JSON format every second:</p>
 
-<p><pre><code>docker run -i -p 24224:24224 icr.io/ibmz/fluent-bit:1.7.1 /fluent-bit/bin/fluent-bit -i forward -o stdout -p format=json_lines -f 1 </pre></code>
+<p><pre><code>docker run -i -p 24224:24224 icr.io/ibmz/fluent-bit:4.2.2 fluent-bit -i forward -o stdout -p format=json_lines -f 1 </pre></code>
 
 <p>Now run a separate container that will send a test message. This time the Docker container will use the Fluent Forward Protocol as the logging driver:</p>
 <p><pre><code>docker run --log-driver=fluentd -t icr.io/ibmz/ubuntu:22.04 echo "Testing a log message"</code></pre></p>
